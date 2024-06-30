@@ -1,10 +1,9 @@
 import './App.css';
-
+import Eleven  from './components/11';
+import Footer from './components/footer';
 function App() {
   return (
-    <div className="App">
-      <h1>IIIT SURAT</h1>
-    </div>
+    <Eleven />
   );
 }
 
