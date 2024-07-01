@@ -8,12 +8,12 @@ export default function Footer() {
             <div>
                 <p className='text-custom-red font-semibold text-[20px] leading-[32px]'>USEFUL LINKS</p>
                 <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}  className='text-footer-gray font-normal text-[18px] leading-[35px]'>
-                    <li>National Overseas Scholarship Scheme For The 2022-23</li>
-                    <li>Loksabha Research Fellowships</li>
-                    <li>National Scholarship Portal</li>
-                    <li>Uttar Pradesh Government - Scholarship System</li>
-                    <li>Sitemap</li>
-                    <li>Term Of Use</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>National Overseas Scholarship Scheme For The 2022-23</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>Loksabha Research Fellowships</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>National Scholarship Portal</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>Uttar Pradesh Government - Scholarship System</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>Sitemap</li>
+                    <li className='cursor-pointer hover:text-[#660000]'>Term Of Use</li>
                 </ul>
             </div>
             <div>

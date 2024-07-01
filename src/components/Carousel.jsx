@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 function Carousel() {
@@ -11,6 +11,18 @@ function Carousel() {
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+    }
+    , 5000);
+    return () => clearTimeout(interval);
+    // eslint-disable-next-line
+  }, [currentIndex]);
+
 
   const nextSlide = () => {
     const isLastSlide = currentIndex === slides.length - 1;

@@ -1,15 +1,14 @@
 import React from 'react'
-import Footer from './footer'
 
-export default function Eleven() {
+const Eleven = () => {
   return (
     <div>
-        <div className='grid grid-cols-5 bg-background-blue m-[125px] mt-[50px] rounded-md gap-x-[200px] mb-0 '>
+        <div className='mt-20 grid grid-cols-5 bg-background-blue m-[125px] rounded-lg gap-x-[200px] mb-0 '>
             <div className='col-span-3 pl-[50px] pb-[25px] pt-[25px] pr-[60px]'>
                 <p className='text-custom-blue font-semibold text-[25px] leading-[35px]'>Vision & Mission Statements</p>
                 <p className='text-custom-gray font-normal text-[18px]  leading-[27px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati magni voluptates nihil iure quaerat.</p>
-                <button className='bg-custom-blue text-white h-[31px] w-[126px] rounded-[50px] font-medium text-[18px] leading-[27px] mt-[30px]'>About us</button>
-                <button className='bg-custom-blue text-white h-[31px] w-[258px] rounded-[50px] font-medium text-[18px] leading-[27px] ml-[15px]'>Message from director desk</button>
+                <button className='bg-custom-blue text-white h-[31px] px-8 rounded-[50px] font-medium text-[18px] leading-[27px] mt-[30px]'>About us</button>
+                <button className='bg-custom-blue text-white h-[31px] px-10 rounded-[50px] font-medium text-[18px] leading-[27px] ml-[15px]'>Message from director desk</button>
             </div>
             <div className='col-span-2 pr-[50px] pt-[9px]'>
                 <img src="./images/mission.png" alt="mission-image" className='h-[196px] w-[323px] ' />
@@ -36,9 +35,8 @@ export default function Eleven() {
           </div>
         </div>
 
-        <Footer />
-
     </div>
   )
 }
 
+export default Eleven

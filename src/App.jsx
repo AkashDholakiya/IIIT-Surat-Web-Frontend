@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Eleven  from './components/11';
+import Eleven  from './Pages/11';
 import Footer from './components/footer';
 import './index.css'
-import Navbarr from './component/Navbarr';
+import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
             <Route path='/' element={<Home/>} />
             <Route path='/vision' element={<Eleven />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
