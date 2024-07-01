@@ -1,38 +1,54 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback  } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 function Carousel() {
   const slides = ["/images/main.png", "/images/img-1.png","/images/img-2.jpg","/images/img-3.jpg","/images/img-4.jpg","/images/img-5.jpg"]
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
+  //previous slide with memoization
+  const prevSlide = useCallback(() => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-  };
-
-  useEffect(() => {
-    const interval = setTimeout(() => {
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-    }
-    , 5000);
-    return () => clearTimeout(interval);
-    // eslint-disable-next-line
-  }, [currentIndex]);
+  }, [currentIndex, slides.length]);
 
 
-  const nextSlide = () => {
+  //next slide with memoization so load it fast
+  const nextSlide = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, slides.length]);
+  
+  //optimised slider animation
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearTimeout(interval);
+  }, [nextSlide]);
+  
+
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+  //keyboard sliding event added!
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (event.key === 'ArrowRight') {
+        nextSlide();
+      }
+    };
+  
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [prevSlide, nextSlide]);
+  
 
   return (
     <div className='h-[650px] w-full m-auto relative group'>
