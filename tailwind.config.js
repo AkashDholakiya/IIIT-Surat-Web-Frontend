@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{jsx,js}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
       colors: {
+        'nav-color' : '#EAF2FE',
+        'nav-text-color' : '#003482',
         "custom-green": "#08BD7E",
         "custom-blue": "#003482",
         "background-blue": "#F4F8FE",
@@ -14,11 +18,10 @@ module.exports = {
         "custom-red": "#660000",
         "footer-gray": "#6C6C6C",
         "custom-sky": "#2F80F9",
-      },
-      fontFamily: {
-        poppins: ["Poppins"],
-      },
+      }
     },
   },
-  plugins: [],
-};
+  plugins: [],    
+  darkMode: 'selector'
+}
+
