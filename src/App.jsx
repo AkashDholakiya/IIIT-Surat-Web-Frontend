@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import './index.css'
 import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
+import AboutTnp from './components/AboutTnp';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/vision' element={<Eleven />} />
+            <Route path='/about-tnp' element={<AboutTnp/>} />
         </Routes>
         <Footer />
       </Router>
