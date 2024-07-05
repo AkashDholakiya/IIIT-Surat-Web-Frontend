@@ -8,13 +8,14 @@ import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
 import AboutTnp from './components/AboutTnp';
 import AboutTnp_Tnp_Officer from './components/AboutTnp_Tnp_Officer';
-
+import AboutTnp_Placement_team from './components/AboutTnp_Placement_team';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
    
         <div className={`${darkMode && 'dark'}`}>
+          
       <Router>
         <Navbarr setDarkMode={setDarkMode} darkMode={darkMode} />
         <Routes>
@@ -22,6 +23,7 @@ function App() {
             <Route path='/vision' element={<Eleven />} />
             <Route path='/about-tnp' element={<AboutTnp/>} />
             <Route path='/tnp-officer' element={<AboutTnp_Tnp_Officer/>} />
+            <Route path='/tnppt' element={<AboutTnp_Placement_team/> } />
         </Routes>
         <Footer />
       </Router>
