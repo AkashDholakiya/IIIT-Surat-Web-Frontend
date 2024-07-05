@@ -7,6 +7,7 @@ import './index.css'
 import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
 import AboutTnp from './components/AboutTnp';
+import Departments from './components/Departments';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <Navbarr setDarkMode={setDarkMode} darkMode={darkMode} />
         <Routes>
             <Route path='/' element={<Home/>} />
+            <Route path='/department' element={<Departments />} />
             <Route path='/vision' element={<Eleven />} />
             <Route path='/about-tnp' element={<AboutTnp/>} />
         </Routes>

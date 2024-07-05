@@ -55,7 +55,9 @@ const Navbarr = ({ setDarkMode }) => {
                             <li className='font-medium cursor-pointer hover:underline'>Discover IIIT <br /> Surat</li>
                             <li className='font-medium cursor-pointer hover:underline'>Admission</li>
                             <li className='font-medium cursor-pointer hover:underline'>Academics</li>
-                            <li className='font-medium cursor-pointer hover:underline'>Departments</li>
+                            <li className='font-medium cursor-pointer hover:underline'>
+                                <Link to='/department'>Departments</Link>
+                            </li>
                             <li className='font-medium cursor-pointer hover:underline'>
                                 <Link to='/about-tnp'>Training & <br /> placement</Link>
                             </li>
