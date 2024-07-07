@@ -6,7 +6,7 @@ import FiveComponent from '../containers/05_temp';
 
 const Six = () => {
 
-    const [activeContent, setActiveContent] = useState('about');
+    const [activeContent, setActiveContent] = useState('faculty');
     const renderComponent=()=>{
         console.log(activeContent);
         // console.log(content);
