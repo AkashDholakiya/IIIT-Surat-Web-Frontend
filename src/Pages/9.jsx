@@ -1,7 +1,7 @@
 import DirectorImg from "../components/Director/DirectorImg";
 import DirectorInfo from "../components/Director/DirectorInfo";
 import Info from "../components/Director/Info";
-import video from "../../public/images/video.png";
+import video from "../assets/images/video.png";
 export default function Nine(){
     return (
         <>
