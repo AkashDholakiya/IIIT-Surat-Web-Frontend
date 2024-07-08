@@ -1,4 +1,4 @@
-import Directorimg from "../../../public/images/Hod.png"
+import Directorimg from "../../assets/images/Hod.png"
 export default function DirectorImg(){
     return (
         <div className=" min-w-[15rem]">
