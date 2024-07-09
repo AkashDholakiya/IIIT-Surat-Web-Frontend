@@ -52,16 +52,15 @@ const ButtonGroup = ({ selected, setSelected }) => {
         <button
           key={button}
           className={`flex items-center px-4 pb-8 text-base font-medium 
-                              ${selected === button ? 'text-red-800 font-bold' : 'text-blue-800'}
+                              ${selected === button ? 'text-[#660000] font-bold' : 'text-blue-800'}
                               ${selected === button ? 'border-none' : 'hover:underline'}
                               focus:outline-none`}
           onClick={() => setSelected(button)}
         >
-          {selected === button && <span className="text-red-800">● </span>}
+          {selected === button && <span className="text-[#660000]">●</span>}
           {button}
         </button>
       ))}
-      <div className="flex-grow ml-4 border-t border-blue-800 border-bold"></div>
     </div>
   );
 };
