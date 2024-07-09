@@ -8,7 +8,7 @@ import ThreeComponent from '../containers/03_temp';
 
 const Six = () => {
 
-  const [activeContent, setActiveContent] = useState('faculty');
+  const [activeContent, setActiveContent] = useState('about');
   const renderComponent = () => {
     console.log(activeContent);
     // console.log(content);
@@ -32,10 +32,8 @@ const Six = () => {
     }
   };
   return (
-    <div className="h-full w-full flex flex-col items-center justify-end overflow-auto mb-16">
-      <div className="h-1/6 w-full flex flex-row justify-between">
-        {/* Akash's part */}
-      </div>
+    <div className="h-full mt-10 w-full flex flex-col items-center justify-end overflow-auto mb-16">
+
       <div className="h-5/6 w-full flex flex-col">
 
 
@@ -45,9 +43,6 @@ const Six = () => {
           <div className="w-5/6 ">
             {renderComponent()}
           </div>
-
-        </div>
-        <div className="h-3/6 w-4/6 ">
 
         </div>
 

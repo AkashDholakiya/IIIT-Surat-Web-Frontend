@@ -1,6 +1,7 @@
 import identity from "../assets/images/case.png"
 import event from "../assets/images/bulb.png"
 import classes from "../assets/images/class.png"
+
 const peoples= [
       {
         "title": "Lorem ipsum, dolor consect adipisic elit.",
@@ -147,5 +148,9 @@ const roles= [
 },
     // Add more cards as needed
 ];
-export default {peoples,roles,focusCardsData,sevendata,hod};
+
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {peoples, roles, focusCardsData, sevendata, hod}
+
   

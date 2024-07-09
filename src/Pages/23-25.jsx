@@ -76,7 +76,7 @@ const renderImage = () => {
                         <p className="text-gray-700 text-sm">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati magni voluptates nihil iure quaerat.
                         </p>
-                        <button className="bg-blue-700 text-white px-2 my-2 text-base rounded-xl">
+                        <button className="bg-[#003482] text-white px-5 py-0.5 my-2 text-base rounded-full">
                             Saras Brochure
                         </button>
                     </div>

@@ -8,21 +8,20 @@ const SevenComponent = () => {
   return (
     <div className="flex flex-col w-full overflow-y">
       <div className="h-4/6 w-11/12 mx-auto">
-        {/* <div className="w-full mx-auto">
-                          <h1 className="text-2xl font-bold text-red-800">Latest Seminar and Achivements</h1> 
-                          
-                        </div> */}
+        <div className="w-full mx-auto">
+          <h1 className="text-xl font-semibold text-[#660000]">Latest Seminar and Achivements</h1>
+        </div>
         <PlaylistView cardsData={sevendata} />
       </div>
 
       <div className="h-3/6 mt-5">
         <div className="h-full w-11/12 mx-auto ">
           <div className="flex items-center mb-2">
-            <div className="w-1 bg-red-800 h-8 rounded mr-4"></div>
+            <div className="w-1 bg-[#660000] h-10 rounded mr-4"></div>
 
             <div className="w-full mx-auto">
-              <h1 className="text-xl font-bold text-red-800">Events and Achivement Gallery</h1>
-              <p className="text-red-800 text-sm">Lorem ipsum, dolor sit amet consecte adipisicing elit Asperiores</p>
+              <h1 className="text-xl font-semibold text-[#660000]">Events and Achivement Gallery</h1>
+              <p className="text-[#660000] text-sm">Lorem ipsum, dolor sit amet consecte adipisicing elit Asperiores</p>
             </div>
           </div>
           <Members
