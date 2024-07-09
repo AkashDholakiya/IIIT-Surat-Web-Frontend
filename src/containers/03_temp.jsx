@@ -1,6 +1,3 @@
-
-
-
 const ThreeComponent = () => {
     return (
         <div className="flex flex-col ml-5 max-md:ml-0 max-md:w-full">
@@ -45,4 +42,4 @@ const ThreeComponent = () => {
     )
 }
 
-export default ThreeComponent;
+export default ThreeComponent;
