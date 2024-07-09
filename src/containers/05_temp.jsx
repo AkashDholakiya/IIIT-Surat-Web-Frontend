@@ -6,7 +6,6 @@ import data from './data';
 const FiveComponent = () => {
   const { hod } = data;
 
-
   const [selected, setSelected] = useState('Assistant professor');
   const renderComponent = () => {
     if (selected === 'All') {
@@ -30,7 +29,7 @@ const FiveComponent = () => {
   return (
 
     <div className="flex flex-col w-11/12 mx-auto overflow-y">
-      <div className="p-4 ">
+      <div className="">
         <ButtonGroup selected={selected} setSelected={setSelected} />
       </div>
       {renderComponent()}
@@ -52,7 +51,7 @@ const ButtonGroup = ({ selected, setSelected }) => {
       {buttons.map((button) => (
         <button
           key={button}
-          className={`flex items-center px-4 py-2 text-base font-medium 
+          className={`flex items-center px-4 pb-8 text-base font-medium 
                               ${selected === button ? 'text-red-800 font-bold' : 'text-blue-800'}
                               ${selected === button ? 'border-none' : 'hover:underline'}
                               focus:outline-none`}

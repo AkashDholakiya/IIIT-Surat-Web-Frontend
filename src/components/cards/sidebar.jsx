@@ -12,8 +12,9 @@ const SideBar = ({ setContent, activeContent  ,content}) => {
 
   return (
     <div className="h-full w-1/6 ml-4 mb-2">
-      <div className="p-4">
+      <div className="px-4">
         <div className="space-y-4 ml-4 cursor-pointer ">
+          <h1 className='text-xl font-semibold text-[#660000]'>Computer Science</h1>
           {links.map(link => (
             <div key={link.key} className="flex  items-center space-x-1 ">
               {activeContent === link.key ? (
