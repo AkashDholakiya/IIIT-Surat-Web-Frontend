@@ -146,11 +146,44 @@ const roles= [
   description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
   imgUrl: `${identity}`,
 },
+{
+  title: "Pradeep Kumar Roy ",
+  description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+  imgUrl: `${identity}`,
+},
+  {
+    title: "Pradeep Kumar Roy ",
+    description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+    imgUrl: `${identity}`,
+},
+{
+  title: "Pradeep Kumar Roy ",
+  description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+  imgUrl: `${identity}`,
+},
+{
+  title: "Pradeep Kumar Roy ",
+  description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+  imgUrl: `${identity}`,
+},
     // Add more cards as needed
 ];
+const LabAssistant = [
+  {
+      title: "Pradeep Kumar Roy ",
+      description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+      imgUrl: `${identity}`,
+  },
+  {
+    title: "Pradeep Kumar Roy ",
+    description: "Hod Computer Science  pradeepkroy@iiitsurat.ac.in",
+    imgUrl: `${identity}`,
+},
 
+  // Add more cards as needed
+];
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {peoples, roles, focusCardsData, sevendata, hod}
+export default {peoples, roles, focusCardsData, sevendata, hod , LabAssistant}
 
   

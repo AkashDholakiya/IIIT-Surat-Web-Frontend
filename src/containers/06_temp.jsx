@@ -5,7 +5,8 @@ import data from "./data";
 const SixComponent = () => {
   const { focusCardsData } = data;
   const { roles } = data;
-  const { hod } = data
+  const { LabAssistant  } = data
+  console.log(LabAssistant)
   return (
     <div className="flex flex-col w-full overflow-y">
       <div className="h-4/6 w-11/12 mx-auto">
@@ -32,7 +33,7 @@ const SixComponent = () => {
         <div className="h-2/6 mt-5">
           <div className="h-full w-11/12 mx-auto ">
             <Playlist
-              cardsData={hod}
+              cardsData={LabAssistant}
             />
           </div>
         </div>
