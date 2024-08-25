@@ -1,9 +1,5 @@
 import * as React from "react";
 
-const NavItem = ({ children }) => (
-  <div className="flex-auto my-auto leading-[110%]">{children}</div>
-);
-
 const SidebarItem = ({ title, subtitle }) => (
   <>
     <div className="mt-8">{title}</div>
@@ -17,7 +13,7 @@ const ProfileCard = ({ name, role, email, phone }) => (
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eb9ddc827ea58edaabf7eb723b69b6736b1705f4fcb76c139ab8618c497def5?apiKey=7c5b01f694034c0fb3ba724488afa998&"
-        alt={`Profile picture of ${name}`}
+        alt={`Profile of ${name}`}
         className="w-full aspect-[1.01]"
       />
     </div>
