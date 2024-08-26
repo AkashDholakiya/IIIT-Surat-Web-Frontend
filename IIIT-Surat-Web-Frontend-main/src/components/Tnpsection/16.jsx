@@ -17,12 +17,12 @@ import image15 from "../../assets/images/Achievers/15.png";
 import image16 from "../../assets/images/Achievers/16.png";
 
 const Tnp16 = () => {
-  const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16];
+  const images = [image1, image2, image13 , image7 , image16 , image14 , image8, image9, image3 ,image15, image4, image5, image6,  image10, image11, image12 ];
 
   return (
     <>
       <h1 className="text-2xl font-bold mb-6 text-blue-900">Our Achievers</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
         {images.map((image, index) => (
           <div key={index} className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
             <img 
