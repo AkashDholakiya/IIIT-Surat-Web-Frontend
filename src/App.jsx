@@ -12,6 +12,7 @@ import AboutTnpOfficer from './components/AboutTnp_Tnp_Officer';
 import AboutTnpPlacementTeam from './components/AboutTnp_Placement_team';
 import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
+import HostelLife from "./Pages/29-32"
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/tnppt' element={<AboutTnpPlacementTeam/> } />
             <Route path='/clubs' element={<Clubs/> } />
             <Route path='/department' element={<Six/> } />
+            <Route path='/hostel' element={<HostelLife/> } />
         </Routes>
         <Footer />
       </Router>
