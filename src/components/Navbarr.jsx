@@ -61,7 +61,9 @@ const Navbarr = ({ setDarkMode }) => {
                             <li className='font-medium cursor-pointer hover:underline'>
                                 <Link to='/about-tnp'>Training & <br /> placement</Link>
                             </li>
-                            <li className='font-medium cursor-pointer hover:underline'>Research & <br /> Innovation</li>
+                            <li className='font-medium cursor-pointer hover:underline'>
+                                <Link to='/rnc'>Research & <br /> innovation</Link>
+                            </li>
                             <li className='font-medium cursor-pointer hover:underline'>Life at <br /> campus</li>
                         </ul>
                     </div>
