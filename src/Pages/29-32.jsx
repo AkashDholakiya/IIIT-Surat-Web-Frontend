@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       {ishead && <HostelImage/>}
-      <main className="flex mt-8">
+      <main className="flex my-10">
         <Sidebar onSelect={selectedtask} selectedIndex={selected} />
         {content}
       </main>
