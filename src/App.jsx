@@ -13,6 +13,7 @@ import AboutTnpPlacementTeam from './components/AboutTnp_Placement_team';
 import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
+import Rnc from "./Pages/17_23"
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -23,15 +24,16 @@ function App() {
       <Router>
         <Navbarr setDarkMode={setDarkMode} darkMode={darkMode} />
         <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/vision' element={<Eleven />} />
-            <Route path='/about-tnp' element={<AboutTnp/>} />
-            <Route path='/director' element={<Nine/>} />
-            <Route path='/tnp-officer' element={<AboutTnpOfficer/>} />
-            <Route path='/tnppt' element={<AboutTnpPlacementTeam/> } />
-            <Route path='/clubs' element={<Clubs/> } />
-            <Route path='/department' element={<Six/> } />
-            <Route path='/hostel' element={<HostelLife/> } />
+          <Route path='/' element={<Home />} />
+          <Route path='/vision' element={<Eleven />} />
+          <Route path='/about-tnp' element={<AboutTnp />} />
+          <Route path='/director' element={<Nine />} />
+          <Route path='/tnp-officer' element={<AboutTnpOfficer />} />
+          <Route path='/tnppt' element={<AboutTnpPlacementTeam />} />
+          <Route path='/clubs' element={<Clubs />} />
+          <Route path='/department' element={<Six />} />
+          <Route path='/rnc' element={<Rnc />} />
+          <Route path='/hostel' element={<HostelLife />} />
         </Routes>
         <Footer />
       </Router>

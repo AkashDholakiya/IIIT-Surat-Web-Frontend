@@ -14,7 +14,7 @@ function App() {
     if(id>0){
       setishead(false);
     }
-    if(id==0){
+    if(id===0){
       setishead(true);
     }
   }

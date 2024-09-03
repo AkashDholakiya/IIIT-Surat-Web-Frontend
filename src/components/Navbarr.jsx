@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbarr = ({ setDarkMode }) => {
     const HandleDark = () => {
         setDarkMode((prevMode) => !prevMode);
+    };
+
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (index) => {
+        if (openDropdown === index) {
+            setOpenDropdown(null); // Close the dropdown if it's already open
+        } else {
+            setOpenDropdown(index); // Open the clicked dropdown
+        }
     };
 
     return (
@@ -52,17 +62,169 @@ const Navbarr = ({ setDarkMode }) => {
                 <div className="absolute -bottom-7 flex justify-center w-full h-14 z-20">
                     <div className="w-3/4 py-8 bg-nav-color rounded-2xl">
                         <ul className='flex w-full h-full text-center justify-evenly items-center'>
-                            <li className='font-medium cursor-pointer hover:underline'>Discover IIIT <br /> Surat</li>
-                            <li className='font-medium cursor-pointer hover:underline'>Admission</li>
-                            <li className='font-medium cursor-pointer hover:underline'>Academics</li>
-                            <li className='font-medium cursor-pointer hover:underline'>
-                                <Link to='/department'>Departments</Link>
-                            </li>
-                            <li className='font-medium cursor-pointer hover:underline'>
-                                <Link to='/about-tnp'>Training & <br /> placement</Link>
-                            </li>
-                            <li className='font-medium cursor-pointer hover:underline'>Research & <br /> Innovation</li>
-                            <li className='font-medium cursor-pointer hover:underline'>Life at <br /> campus</li>
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(1)}
+                                >
+                                    Discover IIIT <br /> Surat
+                                </li>
+                                {openDropdown === 1 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-48 mt-2 bg-white shadow-lg font-semibold">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">About us</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/vision'}>Vision & Mission</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/director'}>Director’s Desk</Link>    
+                                            </li>
+
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Administration</li>
+                                            <div className="bg-[#EAF2FE]">
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Board of governance</li>
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Senate</li>
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Finance committee</li>
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">MOUs</li>
+                                            </div>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Convocation</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(2)}
+                                >
+                                    Admission
+                                </li>
+                                {openDropdown === 2 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-48 mt-2 bg-white shadow-lg font-semibold top-10">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Undergraduate</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Postgraduate</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(3)}
+                                >
+                                    Academics
+                                </li>
+                                {openDropdown === 3 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-52 mt-2 bg-white shadow-lg top-10 font-semibold">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Academic Calendar</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Holiday List</li>
+                                            <div className="bg-[#EAF2FE]">
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">B.Tech. Rule</li>
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">B.Tech. Fees Structure</li>
+                                            </div>
+                                            <div className="bg-[#EAF2FE]">
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Ph.D. Rule</li>
+                                                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Ph.D. Fees Structure</li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(4)}
+                                >
+                                    Departments
+                                </li>
+                                {openDropdown === 4 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-72 mt-2 bg-white shadow-lg top-10 font-semibold">
+                                        <ul className="p-2">
+
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/department'}>Overview</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Computer Science & Engineering</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Electronics & Communication Engineering</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Applied Science & Huminities</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Adjunct professor</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(5)}
+                                >
+                                    Training & <br /> placement
+                                </li>
+                                {openDropdown === 5 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-48 mt-2 bg-white shadow-lg font-semibold">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/about-tnp'}>About TNP</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/tnp-officer'}>TNP Officer</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/tnppt'}>Placement Team</Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(6)}
+                                >
+                                    Research & <br /> innovation
+                                </li>
+                                {openDropdown === 6 && (
+                                    <div className="absolute text-sm text-left rounded-lg left-0 w-48 mt-2 bg-white shadow-lg font-semibold">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/rnc'}>Overview</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Projects</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Publications</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="relative">
+                                <li
+                                    className="font-medium cursor-pointer select-none"
+                                    onClick={() => toggleDropdown(7)}
+                                >
+                                    Life at <br /> campus
+                                </li>
+                                {openDropdown === 7 && (
+                                    <div className="absolute text-sm text-left rounded-lg -left-1/2 w-48 mt-2 bg-white shadow-lg font-semibold">
+                                        <ul className="p-2">
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/hostel'}>Hostel Life</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                                                <Link to={'/clubs'}>Student Clubs</Link>
+                                            </li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Events and gallery</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Annual Fest</li>
+                                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Institute Committee</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
                         </ul>
                     </div>
                 </div>
