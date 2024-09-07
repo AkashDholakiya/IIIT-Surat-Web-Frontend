@@ -4,6 +4,7 @@ const SideRnc = ({ setContent, activeContent, content }) => {
     const links = [
         { key: 'about', label: `About R&c cell` },
         { key: 'head', label: `R&c Officer`, description: 'Dr. Vijaykumar Radadiya' },
+        { key: 'board', label: 'Research Advisory Board', description: 'Working for better future' },
         { key: 'patents', label: 'Patents & Research', description: 'Working for better future' },
         { key: 'publication', label: 'Publiications', description: 'Well equipped 3 labs' },
         { key: 'entrepreneurship', label: 'Entrepreneurship', description: 'Syllabus' },
@@ -15,7 +16,7 @@ const SideRnc = ({ setContent, activeContent, content }) => {
         <div className="h-full w-1/6 ml-4 mb-2">
             <div className="px-4">
                 <div className="space-y-4 ml-4 cursor-pointer ">
-                    <h1 className='text-xl font-semibold text-[#660000]'></h1>
+
                     {links.map(link => (
                         <div key={link.key} className="flex  items-center space-x-1 ">
                             {activeContent === link.key ? (

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import SideRnc from "../components/cards/sidernc";
-import AboutRncCoordinator from '../containers/18_temp';
 import AboutRnc from '../containers/17_temp';
+import AboutRncCoordinator from '../containers/18_temp';
+import Patents from '../containers/19_temp';
+import Entrepreneurship from '../containers/21_temp';
+import RncBoard from '../containers/41_temp';
 
 const Rnc = () => {
 
@@ -14,14 +17,17 @@ const Rnc = () => {
     else if (activeContent === 'head') {
       return <AboutRncCoordinator />
     }
+    else if (activeContent === 'board') {
+      return <RncBoard />
+    }
     else if (activeContent === 'patents') {
-      return
+      return <Patents />
     }
     else if (activeContent === 'publication') {
       return
     }
     else if (activeContent === 'entrepreneurship') {
-      return
+      return <Entrepreneurship />
     }
     else if (activeContent === 'startups') {
         return

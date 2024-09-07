@@ -1,3 +1,5 @@
+import comms from "../assets/images/comms.png";
+
 const ThreeComponent = () => {
     return (
         <div className="flex px-24 flex-col max-md:w-full">
@@ -32,7 +34,9 @@ const ThreeComponent = () => {
                     voluptas. Cumque magnam id, quod sunt optio pariatur ad dolor
                     quis provident omnis nemo placeat quo rerum iste sed sequi eaque
                     animi quidem commodi voluptas repellat obcaecati quos sint
+                    <img className='absolute bottom-25 right-20 pr-20' src={comms} alt="comms" />
                 </div>
+                
                 <div className="mt-8 font-semibold">Dr. Pradeep Kumar Roy</div>
                 <div className="text-base font-medium text-neutral-500">
                     HOD computer science
