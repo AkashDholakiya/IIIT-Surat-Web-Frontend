@@ -56,7 +56,65 @@ const roles= [
         "imgSrc": `${identity}`
       }
   ]
-
+const publications =[
+  {
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },
+  {
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },{
+    "name": "Samarth Gangrade",
+    "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio et molestias perferendis elit. Distinctio et molestias perferendis",
+    "imgSrc": `${identity}`,
+    "linkurl":'#'
+  },
+]
   const focusCardsData = [
     {
       title: "Lorem ipsum, dolor consect adipisic elit. ",
@@ -151,6 +209,6 @@ const roles= [
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {peoples, roles, focusCardsData, sevendata, hod}
+export default {peoples, roles,publications, focusCardsData, sevendata, hod}
 
   

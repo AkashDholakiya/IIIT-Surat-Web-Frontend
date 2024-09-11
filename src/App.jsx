@@ -14,6 +14,7 @@ import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
 import Rnc from "./Pages/17_23"
+import Alumni from './components/Alumni';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/department' element={<Six />} />
           <Route path='/rnc' element={<Rnc />} />
           <Route path='/hostel' element={<HostelLife />} />
+          <Route path='/alumni' element={<Alumni/>}/>
         </Routes>
         <Footer />
       </Router>
