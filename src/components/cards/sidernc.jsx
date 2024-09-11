@@ -6,7 +6,7 @@ const SideRnc = ({ setContent, activeContent, content }) => {
         { key: 'head', label: `R&c Officer`, description: 'Dr. Vijaykumar Radadiya' },
         { key: 'board', label: 'Research Advisory Board', description: 'Working for better future' },
         { key: 'patents', label: 'Patents & Research', description: 'Working for better future' },
-        { key: 'publication', label: 'Publiications', description: 'Well equipped 3 labs' },
+        { key: 'publication', label: 'Publications', description: 'Well equipped 3 labs' },
         { key: 'entrepreneurship', label: 'Entrepreneurship', description: 'Syllabus' },
         { key: 'startups', label: 'Startups', description: 'Research Highlights' },
         { key: 'mou', label: 'Mou', description: 'Research Highlights' },
@@ -27,7 +27,7 @@ const SideRnc = ({ setContent, activeContent, content }) => {
                             <div>
                                 <button
                                     onClick={() => setContent(link.key)}
-                                    className={`text-blue-700 text-base font-semibold ${activeContent === link.key ? 'hover:text-blue-800' : 'hover:text-black'}`}
+                                    className={`text-blue-700 text-base font-semibold text-left ${activeContent === link.key ? 'hover:text-blue-800' : 'hover:text-black'}`}
                                 >
                                     {link.label}
                                 </button>

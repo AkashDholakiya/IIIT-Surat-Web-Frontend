@@ -5,7 +5,8 @@ import AboutRncCoordinator from '../containers/18_temp';
 import Patents from '../containers/19_temp';
 import Entrepreneurship from '../containers/21_temp';
 import RncBoard from '../containers/41_temp';
-
+import Publications from '../containers/20_temp';
+import Startups from '../containers/22_temp';
 const Rnc = () => {
 
   const [activeContent, setActiveContent] = useState('about');
@@ -21,16 +22,16 @@ const Rnc = () => {
       return <RncBoard />
     }
     else if (activeContent === 'patents') {
-      return <Patents />
+      return <Patents/>
     }
     else if (activeContent === 'publication') {
-      return
+      return <Publications/>
     }
     else if (activeContent === 'entrepreneurship') {
       return <Entrepreneurship />
     }
     else if (activeContent === 'startups') {
-        return
+        return <Startups/>
       }
     else {
       return
