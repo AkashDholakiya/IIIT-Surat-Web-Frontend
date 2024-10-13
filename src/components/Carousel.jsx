@@ -51,7 +51,7 @@ function Carousel() {
   
 
   return (
-    <div className='h-[650px] w-full m-auto relative group'>
+    <div className='h-[650px] max-lg:h-[300px] w-full m-auto relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex]})` }}
         className='w-full h-full bg-no-repeat bg-center bg-cover duration-500'
@@ -69,12 +69,12 @@ function Carousel() {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`relative bottom-5 cursor-pointer mx-2 p-1.5 ${slideIndex === currentIndex ? 'bg-[#002050] rounded-3xl px-4' : 'bg-[#EAF2FE] rounded-full'}`}
+            className={`relative bottom-5 cursor-pointer mx-2 p-1.5 max-lg:p-1 ${slideIndex === currentIndex ? 'bg-[#002050] rounded-3xl px-4 max-lg:px-2' : 'bg-[#EAF2FE] rounded-full'}`}
           >
           </div>
         ))}
       </div>
-      <div className="flex w-full justify-center items-center absolute bottom-10">
+      <div className="flex w-full justify-center items-center absolute bottom-10 max-lg:hidden">
           <div className="flex flex-col bg-[#002050] rounded-3xl p-3 items-center justify-center">
             <div className="head">
               <h1 className='text-white font-normal text-lg'>Students services and Academics unit</h1>
