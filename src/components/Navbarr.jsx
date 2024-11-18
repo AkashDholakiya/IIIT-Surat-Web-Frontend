@@ -123,7 +123,7 @@ const Navbarr = ({ setDarkMode }) => {
                         </Link>
                     </div>
                 </div>
-                
+
                 <div className="absolute -bottom-7 flex justify-center w-full h-14 z-20 max-lg:hidden">
                     <div className="w-[85%] py-8 bg-nav-color rounded-2xl hidden md:flex">
                         <ul className='flex w-full h-full text-center justify-evenly items-center'>
