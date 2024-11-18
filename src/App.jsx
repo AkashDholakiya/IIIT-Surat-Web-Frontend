@@ -15,6 +15,7 @@ import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
 import Rnc from "./Pages/17_23"
 import Alumni from './components/Alumni';
+import Page from './Pages/page';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/rnc' element={<Rnc />} />
           <Route path='/hostel' element={<HostelLife />} />
           <Route path='/alumni' element={<Alumni/>}/>
+          <Route path='/page' element={<Page/>}/>
         </Routes>
         <Footer />
       </Router>
