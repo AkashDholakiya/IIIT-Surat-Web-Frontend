@@ -1,16 +1,15 @@
 import React from 'react';
 import Sidebar from './Sidebar'; // Import the existing Sidebar component
+import stats1 from "../assets/images/stats1.png";
+import stats2 from "../assets/images/stats2.png";
+import stats3 from "../assets/images/stats3.png";
+import stats4 from "../assets/images/stats4.png";
+import stats5 from "../assets/images/stats5.png";
+import stats6 from "../assets/images/stats6.png";
 
 function AboutTnp_stats() {
   // Sample chart image URLs (replace these with actual URLs)
-  const chartImages = [
-    'https://via.placeholder.com/300', // Replace with your chart image URLs
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-  ];
+  const chartImages = [stats1, stats2, stats3, stats4, stats5, stats6];
 
   return (
     <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
