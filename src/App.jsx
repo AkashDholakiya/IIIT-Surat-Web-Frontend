@@ -17,6 +17,7 @@ import Rnc from "./Pages/17_23"
 import Alumni from './components/Alumni';
 import Page from './Pages/page';
 import AboutTnp_stats from './components/AboutTnp_stats';
+import OurAchievers from "./components/OurAchievers";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -43,6 +44,7 @@ function App() {
           <Route path='/page' element={<Page/>}/>
 
           <Route path='/placement-statistics' element={<AboutTnp_stats/> } />
+          <Route path="/our-achievers" element={<OurAchievers />} />
 
         </Routes>
         <Footer />

@@ -89,7 +89,8 @@ const Navbarr = ({ setDarkMode }) => {
                                 { label: "About TNP", to: "/about-tnp" },
                                 { label: "TNP Officer", to: "/tnp-officer" },
                                 { label: "Placement Team", to: "/tnppt" },
-                                { label: "Placement Stats", to: "/placement-statistics" }
+                                { label: "Placement Stats", to: "/placement-statistics" },
+                                { label: "Our Achievers", to: "/our-achievers" }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
@@ -166,7 +167,8 @@ const Navbarr = ({ setDarkMode }) => {
                                 { label: "About TNP", to: "/about-tnp" },
                                 { label: "TNP Officer", to: "/tnp-officer" },
                                 { label: "Placement Team", to: "/tnppt" },
-                                { label: "Placement Stats", to: "/placement-statistics" }
+                                { label: "Placement Stats", to: "/placement-statistics" },
+                                { label: "Our Achievers", to: "/our-achievers" }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[

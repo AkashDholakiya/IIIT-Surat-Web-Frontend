@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa'; // Hamburger icon from react-icons
-//made it responsive
+import { FaTimes } from 'react-icons/fa'; // Close icon for mobile view
+
 const Sidebar = () => {
   const location = useLocation(); // Get the current route
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
 
-  // Function to check if the current path matches the link's path 
+  // Function to check if the current path matches the link's path
   const isActive = (path) => location.pathname === path;
 
   // Function to toggle the sidebar in mobile view
@@ -18,7 +19,7 @@ const Sidebar = () => {
   const getCurrentPageName = () => {
     switch (location.pathname) {
       case '/about-tnp':
-        return 'About Tnp cell';
+        return 'About Tnp Cell';
       case '/tnp-officer':
         return 'T&P Officer';
       case '/tnppt':
@@ -42,13 +43,13 @@ const Sidebar = () => {
         <span>{getCurrentPageName()}</span>
         {/* Hamburger Menu Icon */}
         <button onClick={toggleSidebar}>
-          <FaBars size={24} />
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
       {/* Sidebar Links */}
       <div
-        className={`${
+        className={`transition-all duration-300 ${
           isOpen ? 'block' : 'hidden'
         } md:block md:flex flex-col text-[18px] font-[Poppins] font-semibold text-blue-900`}
       >
@@ -60,7 +61,7 @@ const Sidebar = () => {
           }`}
           onClick={() => setIsOpen(false)} // Close menu on link click in mobile
         >
-          <div className="flex-auto my-auto">About Tnp cell</div>
+          About Tnp Cell
         </Link>
 
         {/* T&P Officer */}
