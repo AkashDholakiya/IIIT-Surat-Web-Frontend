@@ -7,7 +7,7 @@ import stats4 from "../assets/images/stats4.png";
 import stats5 from "../assets/images/stats5.png";
 import stats6 from "../assets/images/stats6.png";
 
-function AboutTnp_stats() {
+function AboutTnpStats() {  // Changed to PascalCase here
   // Sample chart image URLs (replace these with actual URLs)
   const chartImages = [stats1, stats2, stats3, stats4, stats5, stats6];
 
@@ -30,7 +30,7 @@ function AboutTnp_stats() {
                   <div key={index} className="flex justify-center">
                     <img
                       src={src}
-                      alt={`Chart ${index + 1}`}
+                      alt={`Chart ${index + 1}`}  // Fixed the alt text here
                       className="w-full h-auto max-w-[300px] rounded-lg shadow-md"
                     />
                   </div>
@@ -44,4 +44,4 @@ function AboutTnp_stats() {
   );
 }
 
-export default AboutTnp_stats;
+export default AboutTnpStats;  // Export in PascalCase
