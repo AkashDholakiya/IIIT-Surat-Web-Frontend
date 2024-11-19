@@ -28,11 +28,11 @@ function AboutTnpPlacementTeam() {
 
   // Array of profiles with categories
   const profiles = [
-    { name: "Pardeep Kumar Roy", role: "Faculty In-charge, CSE", email: "ui21cs29@iiitsurat.ac.in", phone: "+91 8400812891", category: "Faculty In-charge" },
-    { name: "Rajeev Sharma", role: "Student Coordinator, CSE", email: "ui21cs30@iiitsurat.ac.in", phone: "+91 8400812892", category: "Student Coordinator(2022-23)" },
-    { name: "Amit Singh", role: "Member, CSE", email: "ui21cs31@iiitsurat.ac.in", phone: "+91 8400812893", category: "Member(2023-24)" },
-    { name: "Anita Desai", role: "Student Coordinator, ECE", email: "ui22ec10@iiitsurat.ac.in", phone: "+91 8400812894", category: "Student Coordinator(2022-23)" },
-    { name: "Suresh Gupta", role: "Faculty In-charge, ECE", email: "ui22ec11@iiitsurat.ac.in", phone: "+91 8400812895", category: "Faculty In-charge" },
+    { name: "Sachin Sir", role: "Faculty In-charge, CSE", email: "ui22cs03@iiitsurat.ac.in", phone: "+91 8400812891", category: "Faculty In-charge" },
+    { name: "Rajeev Sir", role: "Student Coordinator, CSE", email: "ui22cs03@iiitsurat.ac.in", phone: "+91 8400812892", category: "Student Coordinator(2022-23)" },
+    { name: "Aditya kumar", role: "Member, CSE", email: "ui21cs03@iiitsurat.ac.in", phone: "+91 8400812893", category: "Member(2023-24)" },
+    { name: "Anita Desai", role: "Student Coordinator, ECE", email: "ui22cs03@iiitsurat.ac.in", phone: "+91 8400812894", category: "Student Coordinator(2022-23)" },
+    { name: "Suresh Gupta", role: "Faculty In-charge, ECE", email: "ui22cs03@iiitsurat.ac.in", phone: "+91 8400812895", category: "Faculty In-charge" },
     // Add more profiles as needed
   ];
 

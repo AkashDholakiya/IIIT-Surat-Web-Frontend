@@ -18,8 +18,8 @@ import Alumni from './components/Alumni';
 import Page from './Pages/page';
 //import AboutTnp_stats from './components/AboutTnp_stats';
 import OurAchievers from "./components/OurAchievers";
-import AboutTnpStats from './components/AboutTnpStats';  // Correct import in PascalCase
-
+import AboutTnpStats from './components/AboutTnpStats';  
+import PlacementGuidelines from './components/PlacementGuidelines';  
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -46,6 +46,7 @@ function App() {
 
           <Route path='/placement-statistics' element={<AboutTnpStats/> } />
           <Route path="/our-achievers" element={<OurAchievers />} />
+          <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
 
         </Routes>
         <Footer />
