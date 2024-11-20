@@ -1,12 +1,13 @@
+import research from "../assets/images/Rnc.png"
 const AboutRnc = () => {
   return (
     <div className="flex flex-col px-20 -mt-8 w-full max-w-[100%] max-md:px-5">
       <div className="relative overflow-hidden flex justify-center items-center mt-12 w-full max-w-[1262px] min-h-[205px] max-md:mt-10 max-md:max-w-full top-10 ">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b79f4eee81893d1d01e947439d842445dcecf7871c6618f1319907aa7303a476?apiKey=7c5b01f694034c0fb3ba724488afa998"
+          src={research}
           className="absolute inset-0 object-cover w-full h-full left-100 "
-          alt="tnp-image"
+          alt="rnc-image"
         />
         <div className="relative flex flex-col items-start px-12 py-7 max-md:px-5 max-md:max-w-full">
           <div className="text-2xl font-semibold leading-9 text-blue-900 max-md:max-w-full">
@@ -33,6 +34,8 @@ const AboutRnc = () => {
             <div className="flex flex-col mt-2.5 text-xl font-semibold text-red-950 max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-wrap">
                 <div className="grow">About department</div>
+                <div className="flex-grow border-t border-[#660000] border-bold" />
+
               </div>
               <div className="mt-9 text-lg text-justify text-zinc-700 max-md:max-w-full">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
@@ -62,6 +65,7 @@ const AboutRnc = () => {
                 animi quidem commodi voluptas repellat obcaecati quos sint
               </div>
               <div className="mt-10 max-md:max-w-full">Research</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
               <div className="mt-6 text-lg text-justify text-zinc-700 max-md:max-w-full">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
                 placeat fugiat necessitatibus. Et ab id minus tenetur consectetur
@@ -81,6 +85,7 @@ const AboutRnc = () => {
                 molestias expedita minima delectus hic facere.
               </div>
               <div className="mt-10 max-md:max-w-full">Innovation</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
               <div className="mt-6 text-lg text-justify text-zinc-700 max-md:max-w-full my-11">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
                 placeat fugiat necessitatibus. Et ab id minus tenetur consectetur

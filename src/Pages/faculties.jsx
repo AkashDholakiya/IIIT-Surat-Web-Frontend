@@ -1,26 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
-import AboutRnc from '../containers/17_temp';
-import AboutRncCoordinator from '../containers/18_temp';
-import Patents from '../containers/19_temp';
-import Entrepreneurship from '../containers/21_temp';
-import RncBoard from '../containers/41_temp';
-import Publications from '../containers/20_temp';
-import Startups from '../containers/22_temp';
-const Page = () => {
+import ThreeComponent from './ThreeComponent';
+import FourComponent from './FourComponent';
+import FiveComponent from './FiveComponent';
+import SixComponent from './SixComponent';
+import SevenComponent from './SevenComponent';
+
+const INFO = () => {
   const [activeContent, setActiveContent] = useState('about');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState('auto');
   const contentRef = useRef(null);
 
   const links = [
-    { key: 'about', label: `About R&c cell` },
-    { key: 'head', label: `R&c Officer`, description: 'Dr. Vijaykumar Radadiya' },
-    { key: 'board', label: 'Research Advisory Board', description: 'Working for better future' },
-    { key: 'patents', label: 'Patents & Research', description: 'Working for better future' },
-    { key: 'publication', label: 'Publications', description: 'Well equipped 3 labs' },
-    { key: 'entrepreneurship', label: 'Entrepreneurship', description: 'Syllabus' },
-    { key: 'startups', label: 'Startups', description: 'Research Highlights' },
-    { key: 'mou', label: 'Mou', description: 'Research Highlights' },
+    { key: 'about', label: 'About', description: 'Dr. Vijaykumar Radadiya' },
+    { key: 'qual', label: 'Qualification', description: 'Alumni work in top MNC' },
+    { key: 'experience', label: 'Experience', description: 'Alumni work in top MNC' },
+    { key: 'publications', label: 'Research Publications', description: 'Well equipped 3 labs' },
+    { key: 'achievements', label: 'Achievements', description: 'SSIP Gujarat gov. policy' },
+    { key: 'services', label: 'Hon. Services', description: 'SSIP Gujarat gov. policy' },
+    { key: 'activities', label: 'Academic activities', description: 'Consultancy' },
   ];
 
   useEffect(() => {
@@ -55,22 +53,19 @@ const Page = () => {
     <div className="relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: contentHeight }}>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-50 ease-in-out z-10 overflow-y-auto
+        className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-200 ease-in-out z-10 overflow-y-auto
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
           md:relative md:translate-x-0 md:w-1/4 lg:w-1/5`}
       >
         <div className="px-4 py-6">
-          <button
-            className="w-full text-left flex items-center px-2 py-1 font-semibold text-gray-700 mb-6"
-            onClick={() => handleContentChange('about')}
-          >
-          </button>
+          <h1 className="text-xl font-semibold text-blue-700 ml-4">Computer Science</h1>
           {links.map((link) => (
-            <div key={link.key} className="mb-4 ml-10">
+            <div key={link.key} className="mb-4 ml-4">
               <button
                 onClick={() => handleContentChange(link.key)}
-                className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-50 ${activeContent === link.key ? 'text-blue-700 transform scale-105' : 'text-gray-700'
-                  }`}
+                className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-200 ${
+                  activeContent === link.key ? 'text-blue-700 transform scale-105' : 'text-gray-700'
+                }`}
               >
                 {activeContent === link.key && (
                   <span className="inline-block w-1 h-6 mr-2 bg-blue-700 rounded-full"></span>
@@ -93,7 +88,6 @@ const Page = () => {
 
       {/* Main Content Area */}
       <div className="flex-1 p-6 overflow-y-auto max-w-full">
-        {/* Menu Icon for mobile */}
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
@@ -116,19 +110,16 @@ const Page = () => {
           </button>
         )}
 
-        {/* Conditional Rendering of Components */}
         <div ref={contentRef}>
-          {activeContent === 'about' && <AboutRnc />}
-          {activeContent === 'head' && <AboutRncCoordinator />}
-          {activeContent === 'board' && <RncBoard />}
-          {activeContent === 'patents' && <Patents />}
-          {activeContent === 'publication' && <Publications />}
-          {activeContent === 'entrepreneurship' && <Entrepreneurship />}
-          {activeContent === 'startups' && <Startups />}
+          {activeContent === 'about' && <ThreeComponent />}
+          {activeContent === 'qual' && <FourComponent />}
+          {activeContent === 'experience' && <FiveComponent />}
+          {activeContent === 'publications' && <SixComponent />}
+          {activeContent === 'achievements' && <SevenComponent />}
         </div>
       </div>
     </div>
   );
 };
 
-export default Page;
+export default INFO;

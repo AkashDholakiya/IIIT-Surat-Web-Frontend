@@ -14,6 +14,12 @@ import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
 import Rnc from "./Pages/17_23"
+import Alumni from './components/Alumni';
+import Page from './Pages/page';
+//import AboutTnp_stats from './components/AboutTnp_stats';
+import OurAchievers from "./components/OurAchievers";
+import AboutTnpStats from './components/AboutTnpStats';  
+import PlacementGuidelines from './components/PlacementGuidelines';  
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -34,6 +40,14 @@ function App() {
           <Route path='/department' element={<Six />} />
           <Route path='/rnc' element={<Rnc />} />
           <Route path='/hostel' element={<HostelLife />} />
+          <Route path='/alumni' element={<Alumni/>}/>
+
+          <Route path='/page' element={<Page/>}/>
+
+          <Route path='/placement-statistics' element={<AboutTnpStats/> } />
+          <Route path="/our-achievers" element={<OurAchievers />} />
+          <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
+
         </Routes>
         <Footer />
       </Router>
