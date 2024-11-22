@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Sidebar from './Sidebar';
+// import  { useRef } from 'react';
+function AboutTnpTnpOfficer() {
+  // const aboutRef = useRef(null);
 
-function AboutTnp_Tnp_Officer() {
-  const aboutRef = useRef(null);
-
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToSection = (ref) => {
+  //   if (ref.current) {
+  //     ref.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <div className="flex z-10 flex-col px-20 mt-0 w-full max-md:px-5 max-md:max-w-full">
@@ -92,4 +92,4 @@ function AboutTnp_Tnp_Officer() {
   );
 }
 
-export default AboutTnp_Tnp_Officer;
+export default AboutTnpTnpOfficer;

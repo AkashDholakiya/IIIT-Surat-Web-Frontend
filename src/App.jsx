@@ -8,7 +8,7 @@ import './index.css'
 import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
 import AboutTnp from './components/AboutTnp';
-import AboutTnpOfficer from './components/AboutTnp_Tnp_Officer';
+import AboutTnpOfficer from './components/AboutTnpTnpOfficer';
 import AboutTnpPlacementTeam from './components/AboutTnp_Placement_team';
 import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
@@ -20,6 +20,7 @@ import Page from './Pages/page';
 import OurAchievers from "./components/OurAchievers";
 import AboutTnpStats from './components/AboutTnpStats';  
 import PlacementGuidelines from './components/PlacementGuidelines';  
+import AllTnp from './components/AllTnp';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -41,13 +42,11 @@ function App() {
           <Route path='/rnc' element={<Rnc />} />
           <Route path='/hostel' element={<HostelLife />} />
           <Route path='/alumni' element={<Alumni/>}/>
-
           <Route path='/page' element={<Page/>}/>
-
           <Route path='/placement-statistics' element={<AboutTnpStats/> } />
           <Route path="/our-achievers" element={<OurAchievers />} />
           <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
-
+          <Route path="/alltnp" element={<AllTnp />} />
         </Routes>
         <Footer />
       </Router>

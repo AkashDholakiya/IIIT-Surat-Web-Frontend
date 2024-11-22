@@ -23,7 +23,7 @@ const PlacementGuidelines = () => {
               <div className="flex items-center mb-5">
                 <div
                   style={{
-                    width: "10px",
+                    width: "4px",
                     height: "40px",
                     backgroundColor: "#660000",
                     marginRight: "10px",
