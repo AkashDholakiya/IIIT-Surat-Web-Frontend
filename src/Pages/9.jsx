@@ -11,12 +11,16 @@ export default function Nine() {
       </main>
       <section className=" flex my-16 mx-24">
         <div className=" min-w-[50rem] mr-8 ">
-          <img className="rounded-xl float-left max-w-[40rem] mr-6 mb-6" src={video} alt="vid" />
+          <img
+            className="rounded-xl float-left max-w-[40rem] mr-6 mb-6"
+            src={video}
+            alt="vid"
+          />
           <div>
-              <h1 className="text-xl text-[#932323] text-justify font-bold">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, debitis!
-              </h1>
+            <h1 className="text-xl text-[#932323] text-justify font-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, debitis!
+            </h1>
             <Info>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Perspiciatis illo corrupti aliquid ipsam quod labore omnis rerum
