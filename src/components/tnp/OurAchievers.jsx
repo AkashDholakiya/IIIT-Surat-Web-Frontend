@@ -47,7 +47,7 @@ const OurAchievers = () => {
 
               {/* Large Image */}
               <img
-                src={require("../assets/images/achievers-big-image.png")} // Replace with the correct image path
+                src={require("../../assets/images/achievers-big-image.png")} // Replace with the correct image path
                 alt="Our Achievers"
                 style={{
                   width: "100%",

@@ -7,9 +7,9 @@ import Footer from './components/footer';
 import './index.css'
 import Navbarr from './components/Navbarr';
 import Home from './Pages/Home';
-import AboutTnp from './components/AboutTnp';
-import AboutTnpOfficer from './components/AboutTnpTnpOfficer';
-import AboutTnpPlacementTeam from './components/AboutTnp_Placement_team';
+import AboutTnp from './components/tnp/AboutTnp';
+import AboutTnpOfficer from './components/tnp/AboutTnpTnpOfficer';
+import AboutTnpPlacementTeam from './components/tnp/AboutTnp_Placement_team';
 import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
@@ -17,10 +17,10 @@ import Rnc from "./Pages/17_23"
 import Alumni from './components/Alumni';
 import Page from './Pages/page';
 //import AboutTnp_stats from './components/AboutTnp_stats';
-import OurAchievers from "./components/OurAchievers";
-import AboutTnpStats from './components/AboutTnpStats';  
-import PlacementGuidelines from './components/PlacementGuidelines';  
-import AllTnp from './components/AllTnp';
+import OurAchievers from "./components/tnp/OurAchievers";
+import AboutTnpStats from './components/tnp/AboutTnpStats';  
+import PlacementGuidelines from './components/tnp/PlacementGuidelines';  
+import AllTnp from './components/tnp/AllTnp';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
