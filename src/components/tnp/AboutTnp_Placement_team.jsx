@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Sidebar from "./Sidebar"; // Import the existing Sidebar component
 
 const ProfileCard = ({ name, role, onClick }) => (
   <div
-    className="flex flex-col items-center mt-5 max-md:mt-10 cursor-pointer"
+    className="flex flex-col items-center mt-5 max-md:mt-10 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
     onClick={onClick}
   >
-    <div className="flex justify-center items-center w-40 h-40 md:w-48 md:h-48 bg-sky-100 rounded-full overflow-hidden">
+    <div className="flex justify-center items-center w-40 h-40 md:w-48 md:h-48 bg-sky-100 rounded-full overflow-hidden mb-4">
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eb9ddc827ea58edaabf7eb723b69b6736b1705f4fcb76c139ab8618c497def5?apiKey=7c5b01f694034c0fb3ba724488afa998&"
@@ -84,17 +83,15 @@ function AboutTnpPlacementTeam() {
 
   return (
     <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
-      <main className="mt-16 w-full max-w-[1317px]">
+      <main className="mt-16 w-full max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:w-full">
-          <Sidebar />
-
-          <section className="flex flex-col w-[74%] max-md:w-full max-md:ml-0">
+          <section className="flex flex-col w-full max-md:w-full max-md:ml-0">
             <div className="flex flex-col mt-5 max-md:mt-10">
-              <div className="flex gap-3 items-center text-lg text-blue-500 mb-5 max-md:text-sm">
+              <div className="flex gap-3 items-center text-lg text-blue-500 mb-5 max-md:text-sm flex-wrap justify-center mx-auto">
                 {["All", "Faculty In-charge", "Student Coordinator(2022-23)", "Member(2023-24)"].map((category) => (
                   <div
                     key={category}
-                    className="flex items-center cursor-pointer"
+                    className="flex items-center cursor-pointer mb-2 md:mb-0"
                     onClick={() => handleCategoryClick(category)}
                   >
                     {activeCategory === category && (

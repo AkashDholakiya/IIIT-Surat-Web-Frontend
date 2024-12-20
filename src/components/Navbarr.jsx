@@ -86,10 +86,10 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About TNP", to: "/about-tnp" },
-                                { label: "TNP Officer", to: "/tnp-officer" },
-                                { label: "Placement Team", to: "/tnppt" },
-                                { label: "Placement Stats", to: "/placement-statistics" },
+                                { label: "About TNP", to: "/tnp" },
+                                { label: "TNP Officer", to: "/tnp" },
+                                { label: "Placement Team", to: "/tnp" },
+                                { label: "Placement Stats", to: "/tnp" },
                                 { label: "Our Achievers", to: "/our-achievers" }
                             ]} />
 
@@ -164,10 +164,10 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About TNP", to: "/about-tnp" },
-                                { label: "TNP Officer", to: "/tnp-officer" },
-                                { label: "Placement Team", to: "/tnppt" },
-                                { label: "Placement Stats", to: "/placement-statistics" },
+                                { label: "About TNP", to: "/tnp" },
+                                { label: "TNP Officer", to: "/tnp" },
+                                { label: "Placement Team", to: "/tnp" },
+                                { label: "Placement Stats", to: "/tnp" },
                                 { label: "Our Achievers", to: "/our-achievers" }
                             ]} />
 

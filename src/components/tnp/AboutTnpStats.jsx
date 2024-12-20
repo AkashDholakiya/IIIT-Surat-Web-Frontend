@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from './Sidebar'; // Import the existing Sidebar component
+// import Sidebar from './Sidebar'; // Import the existing Sidebar component
 import stats1 from "../../assets/images/stats1.png";
 import stats2 from "../../assets/images/stats2.png";
 import stats3 from "../../assets/images/stats3.png";
@@ -13,22 +13,51 @@ function AboutTnpStats() {  // Changed to PascalCase here
   const chartImages = [stats1, stats2, stats3, stats4, stats5, stats6];
 
   return (
-    <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
-      <main className="mt-16 w-full max-w-[1317px]">
-        <div className="flex gap-5 max-md:flex-col max-md:w-full">
-          <Sidebar />
+    <div className="flex flex-col items-center px-5 w-full mt-0">
+      <main className="mt-16 w-full">
+        <div className="flex gap-5 flex-col max-md:flex-col w-full">
 
           {/* Main Section */}
-          <section className="flex flex-col w-[74%] max-md:w-full max-md:ml-0">
+          <section className="flex flex-col w-full md:w-[90%] max-md:w-full">
             <div className="flex flex-col mt-5 max-md:mt-10">
-              <h1 className="text-4xl font-bold text-center text-blue-500 mb-5 max-md:text-2xl">
-                Placement Statistics
-              </h1>
+              {/* Page Header */}
+              <div className="flex items-center mb-5">
+                <div
+                  style={{
+                    width: "4px",
+                    height: "40px",
+                    backgroundColor: "#660000", // Red border for header
+                    marginRight: "10px",
+                  }}
+                ></div>
+                <h1
+                  style={{
+                    fontFamily: "Poppins, sans-serif",
+                    fontSize: "25px",
+                    color: "#660000", // Red header color
+                    margin: "0",
+                  }}
+                >
+                  Placement Statistics
+                </h1>
+              </div>
+
+              {/* Description */}
+              <p
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: "15px",
+                  color: "#003366", // Blue description text color
+                  marginBottom: "20px",
+                }}
+              >
+                Here are some important placement statistics that reflect the placement trends and success rates over the years.
+              </p>
 
               {/* Chart Images */}
-              <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1 sm:grid-cols-2">
+              <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1 sm:grid-cols-2 justify-center mx-auto w-full">
                 {chartImages.map((src, index) => (
-                  <div key={index} className="flex justify-center">
+                  <div key={index} className="flex justify-center items-center">
                     <img
                       src={src}
                       alt={`Chart ${index + 1}`}  // Fixed the alt text here

@@ -13,12 +13,12 @@ const AllTnp = () => {
   const contentRef = useRef(null);
 
   const links = [
-    { key: 'about-tnp', label: 'About TNP Cell', description: 'Learn about the Training and Placement Cell and its objectives.' },
-    { key: 'tnp-officer', label: 'T&P Officer', description: 'Meet Dr. Vijaykumar Radadiya, leading the TNP efforts.' },
-    { key: 'placement-team', label: 'Placement Team', description: 'Meet the team working tirelessly for better opportunities.' },
-    { key: 'placement-stats', label: 'Placement Statistics', description: 'Detailed stats of placements and company collaborations.' },
-    { key: 'achievers', label: 'Our Achievers', description: 'A look at the top achievers from our institute.' },
-    { key: 'guidelines', label: 'Placement Guidelines', description: 'Important guidelines for students participating in placements.' },
+    { key: 'about-tnp', label: 'About TNP Cell', description: '' },
+    { key: 'tnp-officer', label: 'T&P Officer', description: 'Dr. Vijaykumar Radadiya' },
+    { key: 'placement-team', label: 'Placement Team', description: 'Working for better future' },
+    { key: 'placement-stats', label: 'Placement Statistics', description: 'Well equipped 3 labs ' },
+    { key: 'achievers', label: 'Our Achievers', description: 'Syllabus' },
+    { key: 'guidelines', label: 'Placement Guidelines', description: 'Research Highlights' },
   ];
 
   useEffect(() => {
@@ -28,21 +28,19 @@ const AllTnp = () => {
         setContentHeight(`${height}px`);
       }
     };
-  
+
     updateHeight();
-  
+
     const resizeObserver = new ResizeObserver(updateHeight);
-    const currentRef = contentRef.current; // Copy ref to a variable
-    if (currentRef) {
-      resizeObserver.observe(currentRef);
+    if (contentRef.current) {
+      resizeObserver.observe(contentRef.current);
     }
     return () => {
-      if (currentRef) {
-        resizeObserver.unobserve(currentRef); // Use local variable here
+      if (contentRef.current) {
+        resizeObserver.unobserve(contentRef.current);
       }
     };
   }, [activeContent]);
-  
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -60,19 +58,12 @@ const AllTnp = () => {
           md:relative md:translate-x-0 md:w-1/4 lg:w-1/5`}
       >
         <div className="px-4 py-6">
-          <button
-            className="w-full text-left flex items-center px-2 py-1 font-semibold text-gray-700 mb-6"
-            onClick={() => handleContentChange('about-tnp')}
-          >
-            <span className="text-blue-700 ml-10">TNP Cell</span>
-          </button>
           {links.map((link) => (
             <div key={link.key} className="mb-4 ml-10">
               <button
                 onClick={() => handleContentChange(link.key)}
-                className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-50 ${
-                  activeContent === link.key ? 'text-blue-700 transform scale-105' : 'text-gray-700'
-                }`}
+                className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-50 ${activeContent === link.key ? 'text-blue-700 transform scale-105' : 'text-gray-700'
+                  }`}
               >
                 {activeContent === link.key && (
                   <span className="inline-block w-1 h-6 mr-2 bg-blue-700 rounded-full"></span>

@@ -36,7 +36,7 @@ function App() {
           <Route path='/about-tnp' element={<AboutTnp />} />
           <Route path='/director' element={<Nine />} />
           <Route path='/tnp-officer' element={<AboutTnpOfficer />} />
-          <Route path='/tnppt' element={<AboutTnpPlacementTeam />} />
+          <Route path='/tnp-team' element={<AboutTnpPlacementTeam />} />
           <Route path='/clubs' element={<Clubs />} />
           <Route path='/department' element={<Six />} />
           <Route path='/rnc' element={<Rnc />} />
@@ -46,7 +46,7 @@ function App() {
           <Route path='/placement-statistics' element={<AboutTnpStats/> } />
           <Route path="/our-achievers" element={<OurAchievers />} />
           <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
-          <Route path="/alltnp" element={<AllTnp />} />
+          <Route path="/tnp" element={<AllTnp />} />
         </Routes>
         <Footer />
       </Router>

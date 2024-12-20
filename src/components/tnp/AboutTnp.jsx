@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef } from "react"; 
 import { Link } from 'react-router-dom';
-import Sidebar from './Sidebar';
-
+// import Sidebar from './Sidebar';
+import tnpImage from "../../assets/images/Frame5.png";
 function AboutTnp() {
   // Create references for each section
   const aboutRef = useRef(null);
@@ -25,7 +25,7 @@ function AboutTnp() {
       <div className="relative overflow-hidden flex justify-center items-center mt-6 sm:mt-10 w-full max-w-7xl min-h-[205px]">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b79f4eee81893d1d01e947439d842445dcecf7871c6618f1319907aa7303a476?apiKey=7c5b01f694034c0fb3ba724488afa998"
+          src={tnpImage}
           className="absolute inset-0 object-cover w-full h-full"
           alt="tnp-image"
         />
@@ -52,13 +52,14 @@ function AboutTnp() {
         <div className="flex flex-col lg:flex-row gap-5">
           
           {/* Sidebar */}
-          <Sidebar scrollToSection={scrollToSection} aboutRef={aboutRef} />
+          {/* <Sidebar scrollToSection={scrollToSection} aboutRef={aboutRef} /> */}
 
           {/* Main Section */}
           <div className="flex flex-col w-full lg:w-4/5">
             {/* About Department */}
-            <div className="text-lg sm:text-xl font-semibold text-red-950 mt-6" ref={aboutRef}>
-              About department
+            <div className="flex items-center text-lg sm:text-xl font-semibold text-[#660000] mt-6" ref={aboutRef}>
+              <span>About department</span>
+              <div className="flex-1 border-t-2 border-[#660000] ml-2"></div> {/* Line after About department */}
             </div>
             <div className="mt-4 sm:mt-6 text-sm sm:text-base text-justify text-zinc-700">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet placeat fugiat necessitatibus. Et ab id minus tenetur consectetur molestias expedita minima delectus hic facere dicta rem fugit labore repudiandae ad deleniti tempore deserunt quisquam unde, consequuntur quaerat voluptas? 
@@ -66,7 +67,7 @@ function AboutTnp() {
             </div>
 
             {/* Training Section */}
-            <div className="text-lg sm:text-xl font-semibold text-red-950 mt-10" ref={tnpOfficerRef}>
+            <div className="text-lg sm:text-xl font-semibold text-[#660000] mt-10" ref={tnpOfficerRef}>
               Training
             </div>
             <div className="mt-4 sm:mt-6 text-sm sm:text-base text-justify text-zinc-700">
@@ -75,7 +76,7 @@ function AboutTnp() {
             </div>
 
             {/* Placement Section */}
-            <div className="text-lg sm:text-xl font-semibold text-red-950 mt-10" ref={placementTeamRef}>
+            <div className="text-lg sm:text-xl font-semibold text-[#660000] mt-10" ref={placementTeamRef}>
               Placement
             </div>
             <div className="mt-4 sm:mt-6 text-sm sm:text-base text-justify text-zinc-700">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "./Sidebar"; // Sidebar component for consistent navigation
+// import Sidebar from "./Sidebar"; // Sidebar component for consistent navigation
 
 const PlacementGuidelines = () => {
   // State to track the active section
@@ -14,7 +14,7 @@ const PlacementGuidelines = () => {
     <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
       <main className="mt-16 w-full max-w-[1317px]">
         <div className="flex gap-5 max-md:flex-col max-md:w-full">
-          <Sidebar /> {/* Sidebar for navigation */}
+          {/* <Sidebar /> Sidebar for navigation */}
 
           {/* Main Section */}
           <section className="flex flex-col w-[74%] max-md:w-full max-md:ml-0">
