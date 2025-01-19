@@ -42,43 +42,45 @@ const SixComponent=()=>{
 };
 
 const PlaylistView = ({ cardsData }) => {
-    return (
-      <div className="w-full overflow-x-auto scrollbar-hide">
-        <div className="flex space-x-4 my-2">
-          {cardsData.map((item, index) => (
-            <Card
-              key={index}
-              title={item.title}
-              description={item.description}
-              imgUrl={item.imgUrl}
-            />
-          ))}
+  return (
+    <div className="w-full overflow-x-auto scrollbar-hide">
+      <div className="flex space-x-4 my-2 px-4 md:px-0">
+        {cardsData.map((item, index) => (
+          <Card
+            key={index}
+            title={item.title}
+            description={item.description}
+            imgUrl={item.imgUrl}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Card = ({ title, description, imgUrl }) => {
+  return (
+    <div className="bg-white shadow-lg m-3 p-4 rounded-lg flex-none w-64 md:w-1/2 lg:w-1/4">
+      <div className="pb-2 pt-2">
+        <div className="w-full h-40 md:h-48 rounded-lg overflow-hidden mx-auto">
+          <img
+            className="w-full h-full object-cover"
+            src={imgUrl}
+            alt={title}
+          />
         </div>
       </div>
-    );
-  };
-  
-  const Card = ({ title, description, imgUrl }) => {
-    return (
-      <div className="bg-lightBlue m-3 py-1 px-2 rounded-lg flex-none md:w-1/2 lg:w-1/4 scrollbar-hide">
-        <div className="pb-2 pt-2">
-          <div className="w-full h-full rounded-lg overflow-hidden mx-auto">
-            <img
-              className="w-full h-26 object-cover bg-lightBlue"
-              src={imgUrl}
-              alt={title}
-            />
-          </div>
-        </div>
-        <div className="text-black font-semibold  py-3 mx-auto w-11/12 text-justify">{title}</div>
-        <div className="text-black text-sm w-11/12 mx-auto text-justify">
-          {description}
-        </div>
-        <div className="text-black text-sm w-11/12 mx-auto text-justify">
-          <a href="https://www.google.com/" className="text-blue-600 font-semibold hover:underline">Read more</a>
-        </div>
+      <div className="text-black font-semibold text-lg text-center py-3">
+        {title}
       </div>
-    );
-  };
+      <div className="text-black text-sm text-center px-2">
+        {description}
+      </div>
+      <div className="text-blue-600 text-sm font-semibold text-center pt-3">
+        <a href="https://www.google.com/" className="hover:underline">Read more</a>
+      </div>
+    </div>
+  );
+};
 
 export default SixComponent;

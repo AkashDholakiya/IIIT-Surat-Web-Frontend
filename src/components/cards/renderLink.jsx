@@ -1,101 +1,124 @@
-import React from 'react';
+import React, { useState } from "react";
+import RenderLinkComponent from "./renderlinkcomponent";
 
+const TitleBar = ({
+  setParentContent,
+  setChildContent,
+  parentContent,
+  showChildDropdown = false, // New prop to toggle child dropdown
+}) => {
+  const [childContent, setchildContent] = useState("");
 
-const RenderLinkComponent = ({ text, contentToSet ,setContent }) => {
- 
-  
-  
-    const renderLink = (text, contentToSet) => {
-        const handleClick = () => {
-          setContent(contentToSet);
-          
-          
-        };
-        return (
-          <button 
-            onClick={handleClick} 
-            className={`mr-1 ml-1 px-2 py-1 rounded text-base focus:ring-1 hover:bg-blue-800 hover:text-white focus:ring-blue-800`}
-          >
-            {text}
-          </button>
-        );
-      };
+  const [isParentDropdownOpen, setParentDropdownOpen] = useState(false);
+  const [isChildDropdownOpen, setChildDropdownOpen] = useState(false);
 
-    return <p >{renderLink(text,contentToSet)}</p>
-};
+  const childLinksMap = {
+    Sports: ["Saras", "Abstract", "Swrang"],
+    Cultural: ["Malhar", "Groove", "Antra"],
+    Technical: ["Cineworks", "Exposure", "Management"],
+    Entrepreneur: ["Business Plan", "StartUp Fest", "Networking"],
+  };
 
-const TitleBar=({setContent})=>{
+  const toggleParentDropdown = () => {
+    setParentDropdownOpen(!isParentDropdownOpen);
+  };
+
+  const toggleChildDropdown = () => {
+    setChildDropdownOpen(!isChildDropdownOpen);
+  };
+
   return (
-    <div >
-      <div className="w-5/6 h-1/12 bg-navColor flex items-center my-2 mx-auto px-4">
-        <RenderLinkComponent
-          text={'Sports Club'}
-          contentToSet={'Sports'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Cultural Club'}
-          contentToSet={'Cultural'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Technical Club'}
-          contentToSet={'Technical'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Entrepreneurship club'}
-          contentToSet={'Entrepreneur'}
-          setContent={setContent}
-        />
+    <div>
+      {/* Parent and Child Links for Small Screens */}
+      <div className="sm:hidden w-5/6 bg-navColor flex flex-row justify-between items-center my-2 mx-auto px-4 text-sm space-x-2">
+        {/* Parent Dropdown */}
+        <div className="relative flex-1">
+          <button
+            className="w-full px-4 py-2 border border-blue-500 rounded-md bg-white text-blue-600 font-medium flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
+            onClick={toggleParentDropdown}
+          >
+            <span>{parentContent || "Clubs"}</span>
+          </button>
+          {isParentDropdownOpen && (
+            <div className="absolute left-0 w-full bg-white border border-gray-300 rounded mt-1 z-10">
+              {Object.keys(childLinksMap).map((parent) => (
+                <RenderLinkComponent
+                  key={parent}
+                  text={`${parent}_Club`}
+                  contentToSet={parent}
+                  setContent={(content) => {
+                    setParentContent(content); // Update parent content
+                    setChildContent(""); // Reset child content
+                    setParentDropdownOpen(false); // Close dropdown
+                  }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Child Dropdown (conditionally rendered) */}
+        {parentContent && showChildDropdown && (
+          <div className="relative flex-1">
+            <button
+              className="w-full px-4 py-2 border border-blue-500 rounded-md bg-white text-blue-600 font-medium flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
+              onClick={toggleChildDropdown}
+            >
+              <span>{childContent || "Internal Clubs"}</span>
+            </button>
+            {isChildDropdownOpen && (
+              <div className="absolute left-0 w-full bg-white border border-gray-300 rounded mt-1 z-10">
+                {childLinksMap[parentContent]?.map((child) => (
+                  <RenderLinkComponent
+                    key={child}
+                    text={child}
+                    contentToSet={child}
+                    setContent={(content) => {
+                      setchildContent(content);
+                      setChildContent(content);
+                      setChildDropdownOpen(false); // Close dropdown
+                    }}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
-      <div className="w-5/6 h-1/12 bg-navColor flex items-center my-2 mx-auto px-4">
-        <RenderLinkComponent
-          text={'Saras'}
-          contentToSet={'Saras'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Abstract'}
-          contentToSet={'Abstract'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Swrang'}
-          contentToSet={'Swrang'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={' Malhar'}
-          contentToSet={'Malhar'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Groove'}
-          contentToSet={'Groove'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Antra'}
-          contentToSet={'Antra'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Cineworks'}
-          contentToSet={'Cineworks'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Exposure'}
-          contentToSet={'Exposure'}
-          setContent={setContent}
-        />|
-        <RenderLinkComponent
-          text={'Content & management team'}
-          contentToSet={'Management'}
-          setContent={setContent}
-        />
+
+      {/* Parent and Child Links for Large Screens */}
+      <div className="hidden sm:flex w-5/6 bg-navColor items-center my-2 mx-auto px-4 space-x-6">
+        {/* Parent Links */}
+        {Object.keys(childLinksMap).map((parent, index, arr) => (
+          <React.Fragment key={parent}>
+            <RenderLinkComponent
+              text={`${parent}_Club`}
+              contentToSet={parent}
+              setContent={(content) => {
+                setParentContent(content);
+                setchildContent("");
+                setChildContent("");
+              }}
+            />
+            {index < arr.length - 1 && <span className="text-black">|</span>}
+          </React.Fragment>
+        ))}
       </div>
+      {parentContent && showChildDropdown && (
+        <div className="hidden sm:flex w-5/6 bg-navColor items-center my-2 mx-auto px-4 space-x-6">
+          {/* Child Links */}
+          {childLinksMap[parentContent]?.map((child, index, arr) => (
+            <React.Fragment key={child}>
+              <RenderLinkComponent
+                text={child}
+                contentToSet={child}
+                setContent={setChildContent}
+              />
+              {index < arr.length - 1 && <span className="text-black">|</span>}
+            </React.Fragment>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

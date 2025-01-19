@@ -12,7 +12,17 @@ import AboutTnp_Tnp_Officer from './components/AboutTnp_Tnp_Officer';
 import AboutTnp_Placement_team from './components/AboutTnp_Placement_team';
 import Departments from './components/Departments';
 import Clubs from "./Pages/23-25"
-import Six from "./Pages/5_7"
+import Six from "./Pages/3_7"
+import HostelLife from "./Pages/29-32"
+import Rnc from "./Pages/17_23"
+import Alumni from './components/Alumni';
+import Page from './Pages/page';
+import Feasta from './Pages/26_28';
+//import AboutTnp_stats from './components/AboutTnp_stats';
+import OurAchievers from "./components/OurAchievers";
+import AboutTnpStats from './components/AboutTnpStats';  
+import PlacementGuidelines from './components/PlacementGuidelines';  
+import AllTnp from './components/AllTnp';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -23,15 +33,23 @@ function App() {
       <Router>
         <Navbarr setDarkMode={setDarkMode} darkMode={darkMode} />
         <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/department' element={<Departments />} />
-            <Route path='/vision' element={<Eleven />} />
-            <Route path='/about-tnp' element={<AboutTnp/>} />
-            <Route path='/director' element={<Nine/>} />
-            <Route path='/tnp-officer' element={<AboutTnp_Tnp_Officer/>} />
-            <Route path='/tnppt' element={<AboutTnp_Placement_team/> } />
-            <Route path='/clubs' element={<Clubs/> } />
-            <Route path='/dept' element={<Six/> } />
+          <Route path='/' element={<Home />} />
+          <Route path='/vision' element={<Eleven />} />
+          <Route path='/about-tnp' element={<AboutTnp />} />
+          <Route path='/director' element={<Nine />} />
+          <Route path='/tnp-officer' element={<AboutTnpOfficer />} />
+          <Route path='/tnppt' element={<AboutTnpPlacementTeam />} />
+          <Route path='/clubs' element={<Clubs />} />
+          <Route path='/department' element={<Six />} />
+          <Route path='/rnc' element={<Rnc />} />
+          <Route path='/hostel' element={<HostelLife />} />
+          <Route path='/alumni' element={<Alumni/>}/>
+          <Route path='/page' element={<Page/>}/>
+          <Route path='/feasta' element={<Feasta/>}/>
+          <Route path='/placement-statistics' element={<AboutTnpStats/> } />
+          <Route path="/our-achievers" element={<OurAchievers />} />
+          <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
+          <Route path="/alltnp" element={<AllTnp />} />
         </Routes>
         <Footer />
       </Router>

@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import TitleBar from "../components/cards/renderLink";
 import Group from "../containers/23_temp";
 import SarasComponent from "../containers/24_temp";
-import Events from "../containers/25_temp";
+import Events from "../containers/28_temp";
+
 
 const Slide1 = () => {
   // State variables for parent and child content
@@ -18,7 +19,7 @@ const Slide1 = () => {
   const renderComponent = () => {
     switch (activeContent) {
       case "lead":
-        return <SarasComponent childContent={childContent } parentContent={parentContent} />;
+        return <SarasComponent childContent={childContent } parentContent={parentContent}/>;
       case "about":
         return <Group childContent={childContent } parentContent={parentContent} />;
       case "events":
