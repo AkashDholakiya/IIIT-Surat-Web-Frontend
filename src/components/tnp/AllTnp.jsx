@@ -35,9 +35,12 @@ const AllTnp = () => {
     if (contentRef.current) {
       resizeObserver.observe(contentRef.current);
     }
+
+    // Capture the ref in a variable before cleanup
     return () => {
-      if (contentRef.current) {
-        resizeObserver.unobserve(contentRef.current);
+      const currentRef = contentRef.current;
+      if (currentRef) {
+        resizeObserver.unobserve(currentRef);
       }
     };
   }, [activeContent]);

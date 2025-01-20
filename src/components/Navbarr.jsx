@@ -90,7 +90,7 @@ const Navbarr = ({ setDarkMode }) => {
                                 { label: "TNP Officer", to: "/tnp" },
                                 { label: "Placement Team", to: "/tnp" },
                                 { label: "Placement Stats", to: "/tnp" },
-                                { label: "Our Achievers", to: "/our-achievers" }
+                                { label: "Our Achievers", to: "/tnp" }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
@@ -168,7 +168,7 @@ const Navbarr = ({ setDarkMode }) => {
                                 { label: "TNP Officer", to: "/tnp" },
                                 { label: "Placement Team", to: "/tnp" },
                                 { label: "Placement Stats", to: "/tnp" },
-                                { label: "Our Achievers", to: "/our-achievers" }
+                                { label: "Our Achievers", to: "/tnp" }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[

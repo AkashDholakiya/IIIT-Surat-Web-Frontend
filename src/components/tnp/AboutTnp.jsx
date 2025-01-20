@@ -1,23 +1,23 @@
-import React, { useRef } from "react"; 
-import { Link } from 'react-router-dom';
-// import Sidebar from './Sidebar';
+import React, { useRef } from "react";
+// import { Link } from 'react-router-dom';  // Comment out or remove Link if not used
 import tnpImage from "../../assets/images/Frame5.png";
+
 function AboutTnp() {
   // Create references for each section
   const aboutRef = useRef(null);
   const tnpOfficerRef = useRef(null);
   const placementTeamRef = useRef(null);
-  const placementStatsRef = useRef(null);
-  const Our_Achievers = useRef(null);
-  const guidelinesRef = useRef(null);
-  const researchHighlightsRef = useRef(null);
+  // const placementStatsRef = useRef(null);  // Remove unused refs
+  // const Our_Achievers = useRef(null);
+  // const guidelinesRef = useRef(null);
+  // const researchHighlightsRef = useRef(null);
 
   // Function to scroll to the specified section
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  // const scrollToSection = (ref) => {  // Remove unused function
+  //   if (ref.current) {
+  //     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
 
   return (
     <div className="flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
