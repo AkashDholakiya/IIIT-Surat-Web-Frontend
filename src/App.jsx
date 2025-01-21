@@ -18,10 +18,10 @@ import Alumni from './components/Alumni';
 import Page from './Pages/page';
 import Feasta from './Pages/26_28';
 //import AboutTnp_stats from './components/AboutTnp_stats';
-import OurAchievers from "./components/tnp/OurAchievers";
-import AboutTnpStats from './components/tnp/AboutTnpStats';  
-import PlacementGuidelines from './components/tnp/PlacementGuidelines';  
-import AllTnp from './components/tnp/AllTnp';
+import OurAchievers from "./components/OurAchievers";
+import AboutTnpStats from './components/AboutTnpStats';  
+import PlacementGuidelines from './components/PlacementGuidelines';  
+import AllTnp from './components/AllTnp';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -37,7 +37,7 @@ function App() {
           <Route path='/about-tnp' element={<AboutTnp />} />
           <Route path='/director' element={<Nine />} />
           <Route path='/tnp-officer' element={<AboutTnpOfficer />} />
-          <Route path='/tnp-team' element={<AboutTnpPlacementTeam />} />
+          <Route path='/tnppt' element={<AboutTnpPlacementTeam />} />
           <Route path='/clubs' element={<Clubs />} />
           <Route path='/department' element={<Six />} />
           <Route path='/rnc' element={<Rnc />} />
@@ -48,7 +48,7 @@ function App() {
           <Route path='/placement-statistics' element={<AboutTnpStats/> } />
           <Route path="/our-achievers" element={<OurAchievers />} />
           <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />
-          <Route path="/tnp" element={<AllTnp />} />
+          <Route path="/alltnp" element={<AllTnp />} />
         </Routes>
         <Footer />
       </Router>
