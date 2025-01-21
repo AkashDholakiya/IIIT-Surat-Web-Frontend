@@ -16,6 +16,7 @@ import HostelLife from "./Pages/29-32"
 import Rnc from "./Pages/17_23"
 import Alumni from './components/Alumni';
 import Page from './Pages/page';
+import Feasta from './Pages/26_28';
 //import AboutTnp_stats from './components/AboutTnp_stats';
 import OurAchievers from "./components/tnp/OurAchievers";
 import AboutTnpStats from './components/tnp/AboutTnpStats';  
@@ -43,6 +44,7 @@ function App() {
           <Route path='/hostel' element={<HostelLife />} />
           <Route path='/alumni' element={<Alumni/>}/>
           <Route path='/page' element={<Page/>}/>
+          <Route path='/feasta' element={<Feasta/>}/>
           <Route path='/placement-statistics' element={<AboutTnpStats/> } />
           <Route path="/our-achievers" element={<OurAchievers />} />
           <Route path="/Placement-Guidelines" element={<PlacementGuidelines />} />

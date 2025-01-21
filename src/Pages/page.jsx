@@ -122,7 +122,7 @@ const Page = () => {
           {activeContent === 'head' && <FourComponent />}
           {activeContent === 'faculty' && <FiveComponent />}
           {activeContent === 'lab' && <SixComponent />}
-          {activeContent === 'events' && <SevenComponent />}
+          {activeContent === 'seminar' && <SevenComponent />}
         </div>
       </div>
     </div>
