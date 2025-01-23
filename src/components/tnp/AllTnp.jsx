@@ -5,7 +5,7 @@ import AboutTnpStats from './AboutTnpStats';
 import AboutTnpTnpOfficer from './AboutTnpTnpOfficer';
 import PlacementGuidelines from './PlacementGuidelines';
 import OurAchievers from './OurAchievers';
-
+import Our_Recruiters from './Our_Recruiters';
 const AllTnp = () => {
   const [activeContent, setActiveContent] = useState('about-tnp');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -19,6 +19,8 @@ const AllTnp = () => {
     { key: 'placement-stats', label: 'Placement Statistics', description: 'Well equipped 3 labs ' },
     { key: 'achievers', label: 'Our Achievers', description: 'Syllabus' },
     { key: 'guidelines', label: 'Placement Guidelines', description: 'Research Highlights' },
+    { key: 'Recruiters', label: 'Our Recruiters', description: 'Our Recruiters' },
+    
   ];
 
   useEffect(() => {
@@ -120,6 +122,7 @@ const AllTnp = () => {
           {activeContent === 'placement-stats' && <AboutTnpStats />}
           {activeContent === 'achievers' && <OurAchievers />}
           {activeContent === 'guidelines' && <PlacementGuidelines />}
+          {activeContent === 'Recruiters' && <Our_Recruiters/>}
         </div>
       </div>
     </div>
