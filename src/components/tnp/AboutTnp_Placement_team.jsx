@@ -32,13 +32,13 @@ function AboutTnpPlacementTeam() {
   });
 
   return (
-    <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
-      <main className="mt-16 w-full max-w-[1317px]">
+    <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4">
+      <main className=" w-full max-w-[1317px]">
         <div className="flex gap-5 max-md:flex-col max-md:w-full">
-
+  
           {/* Main Section */}
           <section className="flex flex-col w-[74%] max-md:w-full max-md:ml-0">
-            <div className="flex flex-col mt-5 max-md:mt-10">
+            <div className="flex flex-col mt-0 max-md:mt-0"> {/* Removed extra top margins */}
               {/* Category Selection */}
               <div className="flex gap-3 items-center text-lg text-blue-500 mb-5 max-md:text-sm">
                 {["All", "Faculty In-charge", "Student Coordinator(2022-23)", "Member(2023-24)"].map((category) => (
@@ -56,7 +56,7 @@ function AboutTnpPlacementTeam() {
                   </div>
                 ))}
               </div>
-
+  
               {/* Profile Cards */}
               <div className="mt-10 grid grid-cols-4 gap-5 max-md:grid-cols-1 max-md:gap-10">
                 {filteredProfiles.map((member, index) => (
@@ -65,7 +65,7 @@ function AboutTnpPlacementTeam() {
                     pteam_name={member.pteam_name}
                     role={member.pteam_role}
                    // email={member.pteam_email}
-                 //   phone={member.pteam_mobile}
+                   // phone={member.pteam_mobile}
                     // Uncomment and replace with unique image URLs if available
                     // imgSrc={`http://127.0.0.1:8000/media/${member.pteam_photo}`}
                   />
@@ -77,6 +77,7 @@ function AboutTnpPlacementTeam() {
       </main>
     </div>
   );
+  
 }
 
 const ProfileCard = ({ pteam_name, role, email, phone, imgSrc }) => (

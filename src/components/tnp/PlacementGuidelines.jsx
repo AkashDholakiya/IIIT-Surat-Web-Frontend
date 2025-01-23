@@ -12,7 +12,8 @@ const PlacementGuidelines = () => {
 
   return (
     <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4 mt-0">
-      <main className="mt-16 w-full max-w-[1317px]">
+      <main className="mt-[-20px] w-full max-w-[1317px]">
+
         <div className="flex gap-5 max-md:flex-col max-md:w-full">
           {/* <Sidebar /> Sidebar for navigation */}
 

@@ -4,15 +4,12 @@ function AboutTnpTnpOfficer() {
   return (
     <div className="flex z-10 flex-col px-5 md:px-20 mt-0 w-full max-w-screen-xl mx-auto">
       {/* Main content container */}
-      <div className="mt-16 md:mt-10 w-full">
+      <div className="mt-0 w-full">
         <div className="flex flex-col md:flex-row gap-5 md:gap-10">
-          
-          {/* Left Sidebar (Commented out, but you can enable it later) */}
-          {/* <Sidebar /> */}
-
+  
           {/* Main Content */}
           <div className="flex flex-col md:w-[77%] w-full">
-            <div className="grow mt-8 md:mt-10">
+            <div className="grow">
               <div className="flex flex-col md:flex-row gap-5">
                 
                 {/* Profile Section */}
@@ -31,7 +28,7 @@ function AboutTnpTnpOfficer() {
                     </div>
                   </div>
                 </div>
-
+  
                 {/* Profile Information */}
                 <div className="flex flex-col md:w-[71%] w-full">
                   <div className="mt-2.5 text-2xl font-semibold text-[#660000] font-[Poppins]">
@@ -64,7 +61,7 @@ function AboutTnpTnpOfficer() {
           </div>
         </div>
       </div>
-
+  
       {/* Words from T&P Officer Section */}
       <div className="mt-14 text-2xl font-semibold font-[Poppins] leading-9 text-[#660000] flex justify-start items-center">
         Words from T&P Officer
@@ -86,6 +83,7 @@ function AboutTnpTnpOfficer() {
       </div>
     </div>
   );
+  
 }
 
 export default AboutTnpTnpOfficer;

@@ -53,7 +53,7 @@ const AllTnp = () => {
   };
 
   return (
-    <div className="relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: contentHeight }}>
+    <div className=" relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: contentHeight }}>
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-50 ease-in-out z-10 overflow-y-auto

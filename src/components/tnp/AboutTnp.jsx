@@ -20,9 +20,9 @@ function AboutTnp() {
   // };
 
   return (
-    <div className="flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
+    <div className="mt-[-20px] h-full flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
       {/* Hero Section */}
-      <div className="relative overflow-hidden flex justify-center items-center mt-6 sm:mt-10 w-full max-w-7xl min-h-[205px]">
+      <div className=" h-full relative overflow-hidden flex justify-center items-center mt-6 sm:mt-10 w-full max-w-7xl min-h-[205px]">
         <img
           loading="lazy"
           src={tnpImage}
