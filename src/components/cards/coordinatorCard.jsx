@@ -3,7 +3,8 @@ import React from 'react';
 const Members = ({ cardsData }) => {
     return (
       <div className="w-full ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-1 ">
+        <div className="grid max-[400px]:grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-1">
+
           {cardsData.map((item, index) => (
             <CoordinatorCard
               key={index}
@@ -51,7 +52,7 @@ const FinalDiv=({title,cardsData,para})=>{
 
       </div>
           <div className="h-2/6 mt-5">
-            <div className="h-full w-11/12 mx-auto ">
+            <div className="h-full w-full mx-auto ">
               <Members 
                 cardsData={cardsData}
               />
