@@ -13,6 +13,7 @@ import AboutTnpPlacementTeam from './components/AboutTnp_Placement_team';
 import Clubs from "./Pages/23-25"
 import Six from "./Pages/3_7"
 import HostelLife from "./Pages/29-32"
+import Admission from "./Pages/Admission1"
 import Rnc from "./Pages/17_23"
 import Alumni from './components/Alumni';
 import Page from './Pages/page';
@@ -40,6 +41,7 @@ function App() {
           <Route path='/department' element={<Six />} />
           <Route path='/rnc' element={<Rnc />} />
           <Route path='/hostel' element={<HostelLife />} />
+          <Route path='/admission' element={<Admission />} />
           <Route path='/alumni' element={<Alumni/>}/>
 
           <Route path='/page' element={<Page/>}/>
