@@ -21,18 +21,17 @@ const Our_Recruiters = () => {
           <section className="flex flex-col w-full px-5 md:w-[90%]">
             <div className="flex flex-col mt-5">
               {/* Description */}
-              <p
+              {/* <p
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "1rem", // Responsive font size for the paragraph
-                  color: "#660000",
+                  color: "black",
                   marginBottom: "20px",
                   textAlign: "left", // Align description text to the left
                 }}
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Asperiores.
-              </p>
+                Here is Our Recruters list
+              </p> */}
   
               {/* Large Image */}
               <div className="flex justify-center w-full">

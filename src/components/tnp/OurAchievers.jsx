@@ -19,19 +19,18 @@ const OurAchievers = () => {
         <div className="flex flex-col gap-5 max-md:flex-col w-full">
           {/* Main Section */}
           <section className="flex flex-col w-full px-5 md:w-[90%]">
-            <div className="flex flex-col mt-5">
+            <div className="flex flex-col mt-0">
               {/* Description */}
               <p
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "1rem", // Responsive font size for the paragraph
-                  color: "#660000",
-                  marginBottom: "20px",
+                  color: "black",
+                  marginBottom: "30px",
                   textAlign: "left", // Align description text to the left
                 }}
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Asperiores.
+                Celebrating the remarkable accomplishments of our talented achievers.
               </p>
   
               {/* Large Image */}

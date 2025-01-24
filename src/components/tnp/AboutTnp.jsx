@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 // import { Link } from 'react-router-dom';  // Comment out or remove Link if not used
 import tnpImage from "../../assets/images/Frame5.png";
+import tnp_pdf from "../../assets/pdf/TNP_Brochure_2024_25_U1.pdf";
 
 function AboutTnp() {
   // Create references for each section
@@ -41,7 +42,14 @@ function AboutTnp() {
               T & P Officer
             </button>
             <button className="px-6 sm:px-8 py-2.5 bg-blue-900 rounded-full text-white">
-              Tnp Brochure
+            <a
+                  href={tnp_pdf}
+                  download="TNP_Brochure_2024_25_U1.pdf"
+            
+                >
+                  Tnp Brochure
+                </a>
+              
             </button>
           </div>
         </div>

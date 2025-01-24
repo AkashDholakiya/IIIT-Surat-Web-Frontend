@@ -33,7 +33,7 @@ function AboutTnpStats() {
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "15px",
-                  color: "#003366", // Blue description text color
+                  color: "black", // Blue description text color
                   marginBottom: "10px",
                 }}
               >
