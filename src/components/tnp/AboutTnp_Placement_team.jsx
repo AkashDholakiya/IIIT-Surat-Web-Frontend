@@ -35,6 +35,7 @@ function AboutTnpPlacementTeam() {
     <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4">
       <main className="w-full max-w-[1317px]">
         <div className="flex gap-5 max-md:flex-col max-md:w-full">
+          {/* Main Section */}
           <section className="flex flex-col w-full max-md:w-full max-md:ml-0">
             <div className="flex flex-col mt-0 max-md:mt-0">
               {/* Category Selection */}
@@ -64,7 +65,7 @@ function AboutTnpPlacementTeam() {
                     role={member.pteam_role}
                     email={member.pteam_email}
                     phone={member.pteam_mobile}
-                    photo={member.pteam_photo}
+                    photoName={member.pteam_photo}
                   />
                 ))}
               </div>
@@ -75,11 +76,17 @@ function AboutTnpPlacementTeam() {
     </div>
   );
 }
-
-const ProfileCard = ({ pteam_name, email, phone, photo }) => {
-  const baseImagePath = "http://127.0.0.1:8000/static/images/";
-  const defaultImage = "https://cdn.builder.io/api/v1/image/assets/TEMP/7eb9ddc827ea58edaabf7eb723b69b6736b1705f4fcb76c139ab8618c497def5?apiKey=7c5b01f694034c0fb3ba724488afa998&";
-  const imageUrl = photo ? `${baseImagePath}${photo}` : defaultImage;
+const ProfileCard = ({ pteam_name, role, email, phone, photoName }) => {
+  let imgSrc;
+  console.log(photoName);
+  try {
+    // Dynamically require the image based on the photo name
+    imgSrc = require(`../../assets/placement/${photoName}`);
+  } catch (error) {
+    // Fallback image if the photo is not found
+    //console.error(`Image not found for ${photoName}`, error);
+    imgSrc = require("../../assets/placement/default.png"); // Ensure you have a `default.png` in the folder
+  }
 
   return (
     <div className="mr-4 flex flex-col items-center mt-8 max-md:mt-10 ml-2 w-full">
@@ -87,7 +94,7 @@ const ProfileCard = ({ pteam_name, email, phone, photo }) => {
       <div className="relative flex justify-center items-center w-40 h-40 max-md:w-32 max-md:h-32 bg-sky-100 rounded-full overflow-hidden group hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out">
         <img
           loading="lazy"
-          src={imageUrl}
+          src={imgSrc}
           alt={`Profile of ${pteam_name}`}
           className="w-full h-full object-cover rounded-full"
         />
