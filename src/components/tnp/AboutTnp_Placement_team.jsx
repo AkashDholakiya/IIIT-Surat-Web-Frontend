@@ -78,14 +78,14 @@ function AboutTnpPlacementTeam() {
 }
 const ProfileCard = ({ pteam_name, role, email, phone, photoName }) => {
   let imgSrc;
-  console.log(photoName);
+  // console.log(photoName);
   try {
     // Dynamically require the image based on the photo name
     imgSrc = require(`../../assets/placement/${photoName}`);
   } catch (error) {
     // Fallback image if the photo is not found
     //console.error(`Image not found for ${photoName}`, error);
-    imgSrc = require("../../assets/placement/default.png"); // Ensure you have a `default.png` in the folder
+    imgSrc = require("../../assets/placement/default.png"); // i have set `default.png` in the folder if any iamge not load
   }
 
   return (

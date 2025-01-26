@@ -86,11 +86,14 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About TNP", to: "/tnp" },
-                                { label: "TNP Officer", to: "/tnp" },
-                                { label: "Placement Team", to: "/tnp" },
-                                { label: "Placement Stats", to: "/tnp" },
-                                { label: "Our Achievers", to: "/tnp" }
+                                { label: "About TNP", to: "/tnp/about-tnp" },
+                                { label: "TNP Officer", to: "/tnp/tnp-officer" },
+                                { label: "Placement Team", to: "/tnp/placement-team" },
+                                { label: "Placement Stats", to: "/tnp/placement-statistics" },
+                                { label: "Our Achievers", to: "/tnp/our-achievers" },
+                                {
+                                    label: "Placement Guidelines", to: "/tnp/placement-guidelines"
+                                }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
@@ -164,11 +167,14 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About TNP", to: "/tnp" },
-                                { label: "TNP Officer", to: "/tnp" },
-                                { label: "Placement Team", to: "/tnp" },
-                                { label: "Placement Stats", to: "/tnp" },
-                                { label: "Our Achievers", to: "/tnp" }
+                                 { label: "About TNP", to: "/tnp/about-tnp" },
+                                 { label: "TNP Officer", to: "/tnp/tnp-officer" },
+                                 { label: "Placement Team", to: "/tnp/placement-team" },
+                                 { label: "Placement Stats", to: "/tnp/placement-statistics" },
+                                 { label: "Our Achievers", to: "/tnp/our-achievers" },
+                                 {
+                                     label: "Placement Guidelines", to: "/tnp/placement-guidelines"
+                                 }
                             ]} />
 
                             <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[

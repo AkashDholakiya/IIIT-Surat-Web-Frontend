@@ -2,23 +2,26 @@ import React, { useRef } from "react";
 // import { Link } from 'react-router-dom';  // Comment out or remove Link if not used
 import tnpImage from "../../assets/images/Frame5.png";
 import tnp_pdf from "../../assets/pdf/TNP_Brochure_2024_25_U1.pdf";
+import { useNavigate } from "react-router-dom";
 
 function AboutTnp() {
+  const navigate = useNavigate();
+
   // Create references for each section
   const aboutRef = useRef(null);
   const tnpOfficerRef = useRef(null);
   const placementTeamRef = useRef(null);
-  // const placementStatsRef = useRef(null);  // Remove unused refs
-  // const Our_Achievers = useRef(null);
-  // const guidelinesRef = useRef(null);
-  // const researchHighlightsRef = useRef(null);
+  const placementStatsRef = useRef(null);  // Remove unused refs
+  const Our_Achievers = useRef(null);
+  const guidelinesRef = useRef(null);
+  const researchHighlightsRef = useRef(null);
 
-  // Function to scroll to the specified section
-  // const scrollToSection = (ref) => {  // Remove unused function
-  //   if (ref.current) {
-  //     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   }
-  // };
+ // Function to scroll to the specified section
+  const scrollToSection = (ref) => {  // Remove unused function
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="mt-[-20px] h-full flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
@@ -38,9 +41,13 @@ function AboutTnp() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati magni voluptates nihil iure quaerat.
           </div>
           <div className="flex gap-4 mt-6 sm:mt-8 flex-wrap">
-            <button className="px-6 sm:px-8 py-2.5 bg-blue-900 rounded-full text-white">
-              T & P Officer
-            </button>
+          <button
+  className="px-6 sm:px-8 py-2.5 bg-blue-900 rounded-full text-white"
+  onClick={() => navigate("/tnp/tnp-officer")}
+>
+  T & P Officer
+</button>
+
             <button className="px-6 sm:px-8 py-2.5 bg-blue-900 rounded-full text-white">
             <a
                   href={tnp_pdf}
