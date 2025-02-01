@@ -22,32 +22,15 @@ const Entrepreneurship = () => {
                         <div className="flex-grow border-t border-[#660000] border-bold" />
                     </div>
                     <div className="mt-9 text-lg text-justify text-[#474747] max-md:max-w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                        placeat fugiat necessitatibus. Et ab id minus tenetur consectetur
-                        molestias expedita minima delectus hic facere dicta rem fugit
-                        labore repudiandae ad deleniti tempore deserunt quisquam unde,
-                        consequuntur quaerat voluptas? Eos adipisci sunt eaque delectus
-                        voluptatibus! Enim animi quidem perferendis amet blanditiis
-                        commodi ex temporibus maxime dolore mollitia earum soluta non
-                        inventore harum at, dicta beatae quasi eius maiores numquam dolor
-                        sint odit consequuntur hic! Veniam sapiente accusantium tempora
-                        voluptas. Cumque magnam id, quod sunt optio pariatur ad dolor
-                        quis provident omnis nemo placeat quo rerum iste sed sequi eaque
-                        animi quidem commodi voluptas repellat obcaecati quos sint
+                    The Student Startup and Innovation Policy (SSIP) policy was launched by the Government of Gujarat in January 2022. 
+                    The institute has received funds of around 1.87 cr under this policy for a period of 5 years. 
+                    The institute provides funding assistance, mentorship, incubation, and accelerator support to the student startups 
+                    through this policy.
                         <br />
                         <br />
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                        placeat fugiat necessitatibus. Et ab id minus tenetur consectetur
-                        molestias expedita minima delectus hic facere dicta rem fugit
-                        labore repudiandae ad deleniti tempore deserunt quisquam unde,
-                        consequuntur quaerat voluptas? Eos adipisci sunt eaque delectus
-                        voluptatibus! Enim animi quidem perferendis amet blanditiis
-                        commodi ex temporibus maxime dolore mollitia earum soluta non
-                        inventore harum at, dicta beatae quasi eius maiores numquam dolor
-                        sint odit consequuntur hic! Veniam sapiente accusantium tempora
-                        voluptas. Cumque magnam id, quod sunt optio pariatur ad dolor
-                        quis provident omnis nemo placeat quo rerum iste sed sequi eaque
-                        animi quidem commodi voluptas repellat obcaecati quos sint
+                        The institute aims to create an innovation-driven ecosystem and develop a culture of 
+                        entrepreneurship among students. It seeks to foster innovation, creativity, and collaboration among 
+                        startups, industry, academia, and government.
                     </div>
                 </div>
             </div>
