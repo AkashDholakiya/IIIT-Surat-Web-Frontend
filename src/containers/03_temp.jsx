@@ -9,35 +9,26 @@ const ThreeComponent = () => {
                     <div className="flex-grow border-t border-[#660000] border-bold" />
                 </div>
                 <div className="mt-9 text-lg text-justify text-[#474747] max-md:max-w-full">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                    placeat fugiat necessitatibus. Et ab id minus tenetur consectetur
-                    molestias expedita minima delectus hic facere dicta rem fugit
-                    labore repudiandae ad deleniti tempore deserunt quisquam unde,
-                    consequuntur quaerat voluptas? Eos adipisci sunt eaque delectus
-                    voluptatibus! Enim animi quidem perferendis amet blanditiis
-                    commodi ex temporibus maxime dolore mollitia earum soluta non
-                    inventore harum at, dicta beatae quasi eius maiores numquam dolor
-                    sint odit consequuntur hic! Veniam sapiente accusantium tempora
-                    voluptas. Cumque magnam id, quod sunt optio pariatur ad dolor
-                    quis provident omnis nemo placeat quo rerum iste sed sequi eaque
-                    animi quidem commodi voluptas repellat obcaecati quos sint
+                    The Department of Computer Science and Engineering established in 2017 offers an outstanding classroom teaching and a great research environment. 
+                    The Department offers both B.Tech. and Ph.D. programs.
                     <br />
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                    placeat fugiat necessitatibus. Et ab id minus tenetur consectetur
-                    molestias expedita minima delectus hic facere dicta rem fugit
-                    labore repudiandae ad deleniti tempore deserunt quisquam unde,
-                    consequuntur quaerat voluptas? Eos adipisci sunt eaque delectus
-                    voluptatibus! Enim animi quidem perferendis amet blanditiis
-                    commodi ex temporibus maxime dolore mollitia earum soluta non
-                    inventore harum at, dicta beatae quasi eius maiores numquam dolor
-                    sint odit consequuntur hic! Veniam sapiente accusantium tempora
-                    voluptas. Cumque magnam id, quod sunt optio pariatur ad dolor
-                    quis provident omnis nemo placeat quo rerum iste sed sequi eaque
-                    animi quidem commodi voluptas repellat obcaecati quos sint
+                    The Department features an excellent mix of young and experienced faculty in cyber and information security, artificial intelligence, machine learning, 
+                    and the Internet of Things, to name a few. 
+                    Our faculty merges advanced research experience with teaching to deliver top-notch education. 
+                    The Department's goal is to equip students with both theoretical and practical knowledge, preparing them for success in industry, research, and higher studies.
+                    <br />
+                    The Department offers a comprehensive curriculum covering all aspects of computer hardware and software, with a focus on practical learning. 
+                    The course structure is up to date, including courses on emerging areas such as Data Science, Blockchain, and Artificial Intelligence 
+                    to provide our students with the most recent breakthroughs in computer science and engineering. 
+                    Throughout the year, various student clubs are active, including Google Developer for Student Clubs (GDSC), Learn-Code-Solve (LCS), Free Open-Source Software (FOSS).
+                    <br />
+                    The Department is actively engaged in critical research domains such as artificial intelligence, data science, computer vision, 
+                    and information retrieval. Furthermore, our research initiatives extend to the creation of Internet protocols, real-time security solutions, 
+                    advancements in blockchain technology, and the analysis of social networks.
                     <img className='absolute bottom-25 right-20 pr-20' src={comms} alt="comms" />
                 </div>
-                
-                <div className="mt-8 font-semibold">Dr. Pradeep Kumar Roy</div>
+
+                <div className="mt-8 font-semibold">Dr. Sachin D. Patil</div>
                 <div className="text-base font-medium text-neutral-500">
                     HOD computer science
                 </div>
@@ -47,4 +38,4 @@ const ThreeComponent = () => {
     )
 }
 
-export default ThreeComponent;
+export default ThreeComponent;
