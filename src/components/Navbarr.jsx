@@ -64,7 +64,7 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Admission" index={2} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Undergraduate", to: "/admission" },
+                                { label: "Undergraduate", to: "/" },
                                 { label: "Postgraduate", to: "/" }
                             ]} />
 
@@ -142,7 +142,7 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Admission" index={2} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Undergraduate", to: "/admission" },
+                                { label: "Undergraduate", to: "/" },
                                 { label: "Postgraduate", to: "/" }
                             ]} />
 
