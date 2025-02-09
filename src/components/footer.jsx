@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className='sm:m-6 mt-0 mb-6'>
+    <div className='sm:p-6 py-5 bg-nav-color'>
       {/* First section */}
       <div className='flex flex-col sm:flex-row lg:flex-row justify-between items-start p-5 sm:p-6 pt-0'>
         {/* Useful Links */}

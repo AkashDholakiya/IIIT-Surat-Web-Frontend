@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PublicationDiv from '../components/cards/publicationComp_card';
-import data from '../Data/publicationData';
+import { data } from '../Data/publicationData';
 
 const Publications = () => {
     const {publications}=data;

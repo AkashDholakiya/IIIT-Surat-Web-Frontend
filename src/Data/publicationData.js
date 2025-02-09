@@ -875,4 +875,4 @@ const patentsdata=[
         "role": "Design Patent Granted on 06/03/2023",
       }
 ]
-export default {publications,patentsdata};
+export const data = {publications,patentsdata};

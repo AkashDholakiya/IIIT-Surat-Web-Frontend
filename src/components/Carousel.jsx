@@ -1,17 +1,29 @@
 import React, { useEffect, useState, useCallback  } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { backend_local } from '../utils/helper';
 
 function Carousel() {
-  const slides = ["/images/main.png", "/images/img-1.png","/images/img-2.jpg","/images/img-3.jpg","/images/img-4.jpg","/images/img-5.jpg"]
+  const [slides, setSlides] = useState(['/images/img-1.png', '/images/img-2.jpg', '/images/img-3.jpg', '/images/img-4.jpg', '/images/img-5.jpg']);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // useEffect(() => {
+  //   const fetchImg = async () => {
+  //     const res = await fetch(`${backend_local}/bannerimage/`);
+  //     const data = await res.json();
+  //     console.log(data);
+  //     setSlides(data.images);
+  //   }
+
+  //   fetchImg();
+  // }, [])
+
   //previous slide with memoization
   const prevSlide = useCallback(() => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   }, [currentIndex, slides.length]);
-
 
   //next slide with memoization so load it fast
   const nextSlide = useCallback(() => {

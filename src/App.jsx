@@ -23,23 +23,15 @@ import PlacementGuidelines from './components/tnp/PlacementGuidelines';
 import AllTnp from './components/tnp/AllTnp';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`${darkMode && 'dark'}`}>
+    <div>
       <Router>
-        <Navbarr setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Navbarr />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/vision" element={<Eleven />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/vision' element={<Eleven />} />
           <Route path="/director" element={<Nine />} />
-          <Route path="/clubs" element={<Clubs />} />
-          <Route path="/department" element={<Six />} />
-          <Route path="/rnc" element={<Rnc />} />
-          <Route path="/hostel" element={<HostelLife />} />
-          <Route path="/alumni" element={<Alumni />} />
-          <Route path="/page" element={<Page />} />
-          <Route path="/feasta" element={<Feasta />} />
           <Route path="/tnp" element={<AllTnp />}>
             <Route index element={<AboutTnp />} />
             <Route path="about-tnp" element={<AboutTnp />} />
@@ -49,6 +41,13 @@ function App() {
             <Route path="our-achievers" element={<OurAchievers />} />
             <Route path="placement-guidelines" element={<PlacementGuidelines />} />
           </Route>
+          <Route path='/clubs' element={<Clubs />} />
+          <Route path='/csedepartment' element={<Six />} />
+          <Route path='/rnc' element={<Rnc />} />
+          <Route path='/hostel' element={<HostelLife />} />
+          <Route path='/alumni' element={<Alumni/>}/>
+          <Route path='/page' element={<Page/>}/>
+          <Route path='/feasta' element={<Feasta/>}/>
         </Routes>
         <Footer />
       </Router>
