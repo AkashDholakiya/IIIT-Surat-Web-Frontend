@@ -1,5 +1,5 @@
 import PublicationDiv from '../components/cards/publicationComp_card';
-import data from "../Data/publicationData";   //change this file later👍
+import { data } from "../Data/publicationData";   //change this file later👍
 
 const Patents = () => {
     const { patentsdata } = data;

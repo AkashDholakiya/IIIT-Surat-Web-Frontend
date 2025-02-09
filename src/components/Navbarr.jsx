@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi'; // Hamburger and close icons
 
 const Navbarr = ({ setDarkMode }) => {
-    const HandleDark = () => {
-        setDarkMode((prevMode) => !prevMode);
-    };
 
     const [openDropdown, setOpenDropdown] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,8 +21,13 @@ const Navbarr = ({ setDarkMode }) => {
 
     return (
         <div className='text-nav-text-color'>
-            <nav className='bg-nav-color relative dark:text-white dark:bg-slate-800 text-sm font-medium w-full h-10 px-8'>
+            <nav className='bg-nav-color relativ text-sm font-medium w-full h-10 px-8'>
                 <div className='flex justify-between h-full items-center'>
+                    <div className="lg:hidden">
+                        <button onClick={toggleMenu} className="focus:outline-none">
+                            {menuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+                        </button>
+                    </div>
                     <ul className='hidden md:flex'>
                         <li className='cursor-pointer hover:underline'>Students</li><span>&nbsp;.&nbsp;</span>
                         <li className='cursor-pointer hover:underline'>Faculty & Staff</li><span>&nbsp;.&nbsp;</span>
@@ -33,23 +35,16 @@ const Navbarr = ({ setDarkMode }) => {
                         <li className='cursor-pointer hover:underline'>Contact us</li>
                     </ul>
                     <ul className='hidden md:flex items-center'>
-                        <li className='bg-white py-1 px-5 rounded-full mr-12 hover:cursor-pointer dark:text-black' onClick={HandleDark}>Dark mode</li>
                         <div className='flex h-full items-center'>
                             <li className='cursor-pointer hover:underline'>हिंदी</li><span>&nbsp;|&nbsp;</span>
                             <li className='cursor-pointer hover:underline'>ગુજરાતી</li><span>&nbsp;|&nbsp;</span>
                             <li className='cursor-pointer hover:underline'>English</li>
                         </div>
                     </ul>
-
-                    <div className="md:hidden">
-                        <button onClick={toggleMenu} className="focus:outline-none">
-                            {menuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-                        </button>
-                    </div>
                 </div>
 
                 {menuOpen && (
-                    <div className="md:hidden bg-nav-color left-0 absolute w-full z-10 pb-5">
+                    <div className="lg:hidden bg-nav-color left-0 absolute w-full z-10 pb-5">
                         <ul className='flex flex-col w-full h-full text-center justify-evenly items-center'>
                             <DropdownItem label="Discover IIIT Surat" index={1} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "About us", to: "/" },
@@ -78,8 +73,7 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Departments" index={4} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Overview", to: "/department" },
-                                { label: "Computer Science & Engineering", to: "/" },
+                                { label: "Computer Science & Engineering", to: "/csedepartment" },
                                 { label: "Electronics & Communication Engineering", to: "/" },
                                 { label: "Applied Science & Humanities", to: "/" },
                                 { label: "Adjunct professor", to: "/" }
@@ -96,11 +90,9 @@ const Navbarr = ({ setDarkMode }) => {
                                 }
                             ]} />
 
-                            <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Overview", to: "/rnc" },
-                                { label: "Projects", to: "/" },
-                                { label: "Publications", to: "/" }
-                            ]} />
+                            <Link to={'/rnc'} className="font-medium py-2 cursor-pointer select-none">
+                                Research & innovation
+                            </Link>
 
                             <DropdownItem label="Life at campus" index={7} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "Hostel Life", to: "/hostel" },
@@ -159,9 +151,8 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem label="Departments" index={4} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Overview", to: "/department" },
-                                { label: "Computer Science & Engineering", to: "/" },
-                                { label: "Electronics & Communication Engineering", to: "/" },
+                                { label: "Computer Science & Engineering", to: "/csedepartment" },
+                                { label: "Electronics & Communication Engineering", to: "/ecedepartment" },
                                 { label: "Applied Science & Humanities", to: "/" },
                                 { label: "Adjunct professor", to: "/" }
                             ]} />
@@ -177,11 +168,9 @@ const Navbarr = ({ setDarkMode }) => {
                                  }
                             ]} />
 
-                            <DropdownItem label="Research & innovation" index={6} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Overview", to: "/rnc" },
-                                { label: "Projects", to: "/" },
-                                { label: "Publications", to: "/" }
-                            ]} />
+                            <Link to={'/rnc'} className="font-medium py-2 hover:underline cursor-pointer select-none">
+                                Research & innovation
+                            </Link>
 
                             <DropdownItem label="Life at campus" index={7} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "Hostel Life", to: "/hostel" },

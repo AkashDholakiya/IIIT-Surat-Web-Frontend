@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -200,7 +201,7 @@ const Home = () => {
           <div className="bg-[#660000CC] w-full h-full z-40" />
           <div className="absolute z-50 text-white p-24">
             <h1 className='text-2xl font-semibold'>Research & Innovation</h1>
-            <p className='mt-4 text-lg'>Lorem ipsum, dolor sit amet consecte adipisicing elit. Asperiores quasi imp reLorem ipsum, dolor sit amet consecte adipisicing elit. Asperiores quasi imp reprehenderit sapiente cum voluptas. Tempore corrupti.</p>
+            <p className='mt-4 text-justify text-base'>IIIT Surat emphasises research activities at undergraduate and doctoral programmes. It has conducted several research projects funded by various funding agencies and several industries. It is determined to emerge as a knowledge enterprise that is closely engaged in research and innovation.</p>
           </div>
         </div>
         <div className="w-1/2 px-10">
@@ -218,7 +219,7 @@ const Home = () => {
               </div>
               <div className='flex flex-col w-1/3 text-center'>
                 <h1 className='text-3xl font-bold text-[#660000]'>06</h1>
-                <p className='text-lg text-[#474747]'>Workshop/<br />Seminar<br />
+                <p className='text-lg text-[#474747]'>Workshop/Seminar<br />
                   Organized</p>
               </div>
             </div>
@@ -232,6 +233,10 @@ const Home = () => {
                 <h1 className='text-3xl font-bold text-[#660000]'>04</h1>
                 <p className='text-lg text-[#474747]'>Patents</p>
               </div>
+              <div className='flex flex-col w-1/3 text-center'>
+                <h1 className='text-3xl font-bold text-[#660000]'>50+</h1>
+                <p className='text-lg text-[#474747]'>Paper Publications</p>
+              </div>
             </div>
           </div>
         </div>
@@ -244,7 +249,7 @@ const Home = () => {
             <div className="bg-[#660000CC] w-full h-full z-40" />
             <div className="absolute z-50 px-5 text-white">
               <h1 className='text-lg font-semibold'>Research & Innovation</h1>
-              <p className='mt-4 text-sm'>Lorem ipsum, dolor sit amet consecte adipisicing elit. Asperiores quasi imp reLorem ipsum, dolor sit amet consecte adipisicing elit. Asperiores quasi imp reprehenderit sapiente cum voluptas. Tempore corrupti.</p>
+              <p className='mt-4 text-sm'>IIIT Surat emphasises research activities at undergraduate and doctoral programmes. It has conducted several research projects funded by various funding agencies and several industries. It is determined to emerge as a knowledge enterprise that is closely engaged in research and innovation.</p>
             </div>
           </div>
         </div>
@@ -277,6 +282,10 @@ const Home = () => {
               <div className='flex flex-col w-1/3 text-center'>
                 <h1 className='text-2xl font-bold text-[#660000]'>04</h1>
                 <p className='text-sm font-medium text-[#474747]'>Patents</p>
+              </div>
+              <div className='flex flex-col w-1/3 text-center'>
+                <h1 className='text-2xl font-bold text-[#660000]'>50+</h1>
+                <p className='text-sm font-medium text-[#474747]'>Paper Publications</p>
               </div>
             </div>
           </div>
@@ -318,7 +327,7 @@ const Home = () => {
               <div className='flex flex-col items-center justify-center text-center'>
                 <h1 className='text-3xl font-bold'>64.030 LPA</h1>
                 <p className='font-medium text-xl'>Highest package</p>
-                <p className='font-light'>Vidhi Agrawal in <br /> Mathworks</p>
+                <p className='font-light'>Naitik Patil in <br /> Uber</p>
               </div>
               <div className='flex flex-col items-center justify-center text-center'>
                 <h1 className='text-3xl font-bold'>2400+</h1>
@@ -372,7 +381,7 @@ const Home = () => {
             <div className='flex flex-col items-center justify-center text-center'>
               <h1 className='text-xl font-bold text-[#660000]'>64.030 LPA</h1>
               <p className='font-medium text-sm'>Highest package</p>
-              <p className='font-light text-xs'>Vidhi Agrawal in <br /> Mathworks</p>
+              <p className='font-light text-xs'>Naitik Patil in <br /> Uber</p>
             </div>
             <div className='flex flex-col items-center justify-center text-center'>
               <h1 className='text-xl font-bold text-[#660000]'>2400+</h1>
@@ -413,31 +422,28 @@ const Home = () => {
       <div className="my-10 w-full max-lg:my-10">
         <h1 className="text-center text-[#660000] font-bold text-xl sm:text-2xl">MoE Initiatives</h1>
         <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap sm:w-full justify-center">
-          <div className="flex justify-center items-center mb-6 sm:mb-0 sm:mr-10 lg:mr-12">
+          <Link to={'https://dsel.education.gov.in/ebsb'} target='_blank' className="flex justify-center flex-col items-center mb-6 sm:flex-row sm:mb-0 sm:mr-10 lg:mr-12 cursor-pointer select-none">
             <img src="/images/moe/img-1.svg" alt="1" className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" />
-            <p className="text-[#003481] text-lg ml-3 font-semibold">Ek bharat <br /> Shresth bharat</p>
-          </div>
-          <div className="flex justify-center items-center mb-6 sm:mb-0 sm:mr-10 lg:mr-12">
+            <p className="text-[#003481] text-lg ml-3 font-semibold max-sm:mt-2 max-sm:text-center">Ek bharat <br /> Shresth bharat</p>
+          </Link>
+          <Link to={"https://dsel.education.gov.in/fit-india"} target='_blank' className="flex justify-center flex-col items-center mb-6 sm:flex-row sm:mb-0 sm:mr-10 lg:mr-12 cursor-pointer select-none">
             <img src="/images/moe/img-2.svg" alt="1" className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" />
-            <div className="flex flex-col ml-3">
+            <div className="flex flex-col ml-3 max-sm:text-center max-sm:mt-2">
               <p className="text-[#003481] text-lg font-semibold">Fit India</p>
-              <span className="text-[#6C6C6C] text-sm">Lorem ipsum.</span>
             </div>
-          </div>
-          <div className="flex justify-center items-center mb-6 sm:mb-0 sm:mr-10 lg:mr-12">
-            <img src="/images/moe/img-2.svg" alt="1" className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" />
-            <div className="flex flex-col ml-3">
-              <p className="text-[#003481] text-lg font-semibold">Fit India</p>
-              <span className="text-[#6C6C6C] text-sm">Lorem ipsum.</span>
+          </Link>
+          <Link to={'https://swayam.gov.in/'} target='_blank' className="flex justify-center items-center flex-col mb-6 sm:flex-row sm:mb-0 sm:mr-10 lg:mr-12 cursor-pointer select-none">
+            <img src="/images/moe/img-4.jpg" alt="1" className="w-[60px] h-[60px] sm:w-[120px] sm:h-[70px]" />
+            <div className="flex flex-col ml-3 max-sm:text-center max-sm:mt-2">
+              <p className="text-[#003481] text-lg font-semibold">Swayam</p>
             </div>
-          </div>
-          <div className="flex justify-center items-center">
-            <img src="/images/moe/img-3.svg" alt="1" className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" />
-            <div className="flex flex-col ml-3">
+          </Link>
+          <Link to={'https://aishe.gov.in/'} target='_blank' className="flex justify-center items-center flex-col sm:flex-row cursor-pointer select-none">
+            <img src="/images/moe/img-3.svg" alt="1" className="w-[60px] flex h-[60px] sm:w-[70px] sm:h-[70px]" />
+            <div className="flex flex-col ml-3 max-sm:text-center max-sm:mt-2">
               <p className="text-[#003481] text-lg font-semibold">AISHE</p>
-              <span className="text-[#6C6C6C] text-sm">Lorem ipsum.</span>
             </div>
-          </div>
+          </Link>
         </div>
 
       </div>

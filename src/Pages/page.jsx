@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { backend_local } from '../utils/helper.js';
 import ThreeComponent from './three'; 
 import FourComponent from './four'; 
 import FiveComponent from './five'; 
@@ -11,21 +12,26 @@ const Page = () => {
   const [contentHeight, setContentHeight] = useState('auto');
   const contentRef = useRef(null);
 
-  const links = [
-    { key: 'about', label: 'About Department', description: 'The Computer Science Department focuses on providing students with a solid foundation in computer science principles and practices.' },
-    { key: 'head', label: 'Head of Department', description: 'Dr. Pradeep Kumar Roy is a renowned expert in artificial intelligence and machine learning.' },
-    { key: 'faculty', label: 'Faculty', description: 'Our faculty members are dedicated to research and teaching, providing students with a rich learning experience.' },
-    { key: 'lab', label: 'Laboratory', description: 'Well equipped with 3 labs featuring the latest technology for hands-on learning and experimentation.' },
-    { key: 'syllabus', label: 'Curriculum', description: 'The curriculum is designed to meet industry standards and prepare students for future challenges in technology.' },
-    { key: 'seminar', label: 'Seminar Workshops', description: 'Regular seminars and workshops are held to keep students updated on current trends and research in computer science.' },
-    { key: 'events', label: 'Events and Achievements', description: 'Stay updated on our latest events and achievements in the department.' },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${backend_local}/depthomedesc/`);
+        const data = await response.json(); 
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const updateHeight = () => {
       if (contentRef.current) {
         const height = contentRef.current.scrollHeight;
-        setContentHeight(`${height}px`);
+        if (contentHeight !== height) {
+          setContentHeight(height);
+        }
       }
     };
 
@@ -40,7 +46,7 @@ const Page = () => {
         resizeObserver.unobserve(contentRef.current);
       }
     };
-  }, [activeContent]);
+  }, [activeContent]); // Only depend on activeContent
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -49,8 +55,18 @@ const Page = () => {
     setIsSidebarOpen(false);
   };
 
+  const links = [
+    { key: 'about', label: 'About Department', description: 'The Computer Science Department focuses on providing students with a solid foundation in computer science principles and practices.' },
+    { key: 'head', label: 'Head of Department', description: 'Dr. Pradeep Kumar Roy is a renowned expert in artificial intelligence and machine learning.' },
+    { key: 'faculty', label: 'Faculty', description: 'Our faculty members are dedicated to research and teaching, providing students with a rich learning experience.' },
+    { key: 'lab', label: 'Laboratory', description: 'Well equipped with 3 labs featuring the latest technology for hands-on learning and experimentation.' },
+    { key: 'syllabus', label: 'Curriculum', description: 'The curriculum is designed to meet industry standards and prepare students for future challenges in technology.' },
+    { key: 'seminar', label: 'Seminar Workshops', description: 'Regular seminars and workshops are held to keep students updated on current trends and research in computer science.' },
+    { key: 'events', label: 'Events and Achievements', description: 'Stay updated on our latest events and achievements in the department.' },
+  ];
+
   return (
-    <div className="relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: contentHeight }}>
+    <div className="relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: `${contentHeight}px` }}>
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-50 ease-in-out z-10 overflow-y-auto

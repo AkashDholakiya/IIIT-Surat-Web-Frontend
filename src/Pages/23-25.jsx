@@ -9,6 +9,8 @@ import Events from "../containers/25_temp";
 const Slide1 = () => {
     const [content, setContent] = useState('Saras');
     const [activeContent, setActiveContent] = useState('about');
+    const [parentContent, setParentContent] = useState('Saras');
+    const [childContent, setChildContent] = useState('Saras');
     const renderComponent=()=>{
         console.log(activeContent);
         // console.log(content);
@@ -30,7 +32,7 @@ const Slide1 = () => {
             </div>
 
             <div className="h-4/6 w-full flex flex-col">
-                <TitleBar setContent={setContent} />
+                <TitleBar setContent={setContent} parentContent={parentContent} setParentContent={setParentContent} childContent={childContent} setChildContent={setChildContent} />
                 {activeContent === 'about' && (
                     <div className="w-full h-2/6 object-cover mt-10">
                         {renderImage()}
