@@ -1,13 +1,16 @@
 import head from "../assets/images/example.png";
 import NavBar from "../components/cards/sidenav";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import TitleBar from "../components/cards/renderLink";
 import Group from "../containers/23_temp";
 import SarasComponent from "../containers/24_temp";
 import Events from "../containers/25_temp";
+
 const Slide1 = () => {
     const [content, setContent] = useState('Saras');
     const [activeContent, setActiveContent] = useState('about');
+    const [parentContent, setParentContent] = useState('Saras');
+    const [childContent, setChildContent] = useState('Saras');
     const renderComponent=()=>{
         console.log(activeContent);
         // console.log(content);
@@ -29,7 +32,7 @@ const Slide1 = () => {
             </div>
 
             <div className="h-4/6 w-full flex flex-col">
-                <TitleBar setContent={setContent} />
+                <TitleBar setContent={setContent} parentContent={parentContent} setParentContent={setParentContent} childContent={childContent} setChildContent={setChildContent} />
                 {activeContent === 'about' && (
                     <div className="w-full h-2/6 object-cover mt-10">
                         {renderImage()}
@@ -76,7 +79,7 @@ const renderImage = () => {
                         <p className="text-gray-700 text-sm">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati magni voluptates nihil iure quaerat.
                         </p>
-                        <button className="bg-[#003482] text-white px-5 py-0.5 my-2 text-base rounded-full">
+                        <button className="bg-blue-700 text-white px-2 my-2 text-base rounded-xl">
                             Saras Brochure
                         </button>
                     </div>

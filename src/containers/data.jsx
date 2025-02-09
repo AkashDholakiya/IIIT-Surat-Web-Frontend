@@ -1,7 +1,18 @@
 import identity from "../assets/images/case.png"
 import event from "../assets/images/bulb.png"
 import classes from "../assets/images/class.png"
-
+const Sports= [
+  {
+    "title": "Lorem ipsum, dolor consect adipisic elit.",
+    "description": "Lorem ipsum, dolor sit amet consecte adipisic elit. Read more",
+    "imgUrl": `${identity}`
+  },
+  {
+    "title": "Deep Focus",
+    "description": "Keep calm and focus with this music",
+    "imgUrl": "https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1766&q=80"
+  }
+]
 const peoples= [
       {
         "title": "Lorem ipsum, dolor consect adipisic elit.",
@@ -209,6 +220,6 @@ const publications =[
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {peoples, roles,publications, focusCardsData, sevendata, hod}
+export default {Sports,peoples, roles,publications, focusCardsData, sevendata, hod}
 
   
