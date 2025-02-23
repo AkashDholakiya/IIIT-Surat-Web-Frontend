@@ -3,6 +3,9 @@ import HostelImage from "../components/hostelLife/HostelImage";
 import Home from "../components/Home_Hostel";
 import HostelCommitee from "../components/Hostel_committee";
 import StudentC from "../components/hostelLife/StudentC";
+import HealthCare from '../components/hostelLife/HealthCare';
+import HostelFees from '../components/hostelLife/HostelFees';
+import HostelRules from '../components/hostelLife/HostelRules';
 
 const Page = () => {
   const [activeContent, setActiveContent] = useState('facilities'); // Default to 'facilities'
@@ -13,7 +16,7 @@ const Page = () => {
   const links = [
     { key: 'facilities', label: 'Hostel Facilities', description: '' },
     { key: 'committee', label: 'Hostel Committee', description: 'Dr. Shiva Rao' },
-    { key: 'studentCommittee', label: 'Student Committee', description: 'working for better future' },
+    { key: 'studentCommittee', label: 'Canteen Food Committee', description: 'working for better future' },
     { key: 'rules', label: 'Hostel Rule', description: 'Well equipped 3 labs' },
     { key: 'medical', label: 'Medical Facility', description: 'syllabus' },
     { key: 'fees', label: 'Hostel Fees', description: 'Research highlights' },
@@ -77,7 +80,7 @@ const Page = () => {
                 <span>{link.label}</span>
               </button>
               {link.description && (
-                <p className="text-sm text-gray-500 ml-6 mt-1">{link.description}</p>
+                <p className="text-sm text-gray-500 ml-2 mt-1">{link.description}</p>
               )}
             </div>
           ))}
@@ -120,9 +123,9 @@ const Page = () => {
           {activeContent === 'facilities' && <Home />}
           {activeContent === 'committee' && <HostelCommitee />}
           {activeContent === 'studentCommittee' && <StudentC />}
-          {activeContent === 'rules' && <Home />}
-          {activeContent === 'medical' && <Home />}
-          {activeContent === 'fees' && <Home />}
+          {activeContent === 'rules' && <HostelRules />}
+          {activeContent === 'medical' && <HealthCare />}
+          {activeContent === 'fees' && <HostelFees />}
         </div>
       </div>
     </div>
