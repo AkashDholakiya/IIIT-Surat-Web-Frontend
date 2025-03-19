@@ -2,7 +2,7 @@ import React from 'react';
 import stats8 from "../../assets/images/qq.png";
 import BrochurePDF from '../../assets/pdf/TNP_Brochure_2024_25_U1.pdf';
 import JAFPDF from '../../assets/pdf/IIIT_Surat_JAF.pdf';
-
+import tnpofficer from "../../assets/placement/jyoti_ranjan_tpo.jpg";
 function AboutTnpTnpOfficer() {
   return (
     <div className="flex z-10 flex-col px-5 md:px-20 mt-0 w-full max-w-screen-xl mx-auto">
@@ -21,7 +21,7 @@ function AboutTnpTnpOfficer() {
                     <div className="bg-sky-100 rounded-3xl overflow-hidden">
                       <img
                         loading="lazy"
-                        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6a015c22120f8f6ecba46033d67b10b13e6e70cb2d07c7cc206787face4da26c?apiKey=7c5b01f694034c0fb3ba724488afa998&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a015c22120f8f6ecba46033d67b10b13e6e70cb2d07c7cc206787face4da26c?apiKey=7c5b01f694034c0fb3ba724488afa998&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a015c22120f8f6ecba46033d67b10b13e6e70cb2d07c7cc206787face4da26c?apiKey=7c5b01f694034c0fb3ba724488afa998&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a015c22120f8f6ecba46033d67b10b13e6e70cb2d07c7cc206787face4da26c?apiKey=7c5b01f694034c0fb3ba724488afa998&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a015c22120f8f6ecba46033d67b10b13e6e70cb2d07c7cc206787face4da26c?apiKey=7c5b01f694034c0fb3ba724488afa998&width=1200 1200w"
+                        srcSet={tnpofficer}
                         alt="Profile Image"
                         className="w-full aspect-[0.88] object-cover"
                       />
