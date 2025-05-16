@@ -3,20 +3,20 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { backend_local } from '../utils/helper';
 
 function Carousel() {
-  const [slides, setSlides] = useState(['/images/img-1.png', '/images/img-2.jpg', '/images/img-3.jpg', '/images/img-4.jpg', '/images/img-5.jpg']);
+  const [slides, setSlides] = useState([]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const fetchImg = async () => {
-  //     const res = await fetch(`${backend_local}/bannerimage/`);
-  //     const data = await res.json();
-  //     console.log(data);
-  //     setSlides(data.images);
-  //   }
+  useEffect(() => {
+    const fetchImg = async () => {
+      const res = await fetch(`${backend_local}/banner-images/`);
+      const data = await res.json();
+      console.log(data);
+      setSlides(data.map((item) => backend_local + item.image));
+    }
 
-  //   fetchImg();
-  // }, [])
+    fetchImg();
+  }, [])
 
   //previous slide with memoization
   const prevSlide = useCallback(() => {
