@@ -858,21 +858,21 @@ const publications =[
 },
 ]
 const patentsdata=[
-  {
-         "name": " Nikhil Vyas",
-         "role": "Design Patent Granted on 27/10/2021",
-       },
-       {
-        "name": " Nikhil Vyas",
-        "role": "Design Patent Granted on 02/05/2022",
-      },
-      {
-        "name": " Nishant Singh",
-        "role": "Trademark Granted on 29/10/2022",
-      },
-      {
-        "name": "Jayesh Vishwakarma",
-        "role": "Design Patent Granted on 06/03/2023",
-      }
+    {
+      "name": " Nikhil Vyas",
+      "role": "Design Patent Granted on 27/10/2021",
+    },
+    {
+      "name": " Nikhil Vyas",
+      "role": "Design Patent Granted on 02/05/2022",
+    },
+    {
+      "name": " Nishant Singh",
+      "role": "Trademark Granted on 29/10/2022",
+    },
+    {
+      "name": "Jayesh Vishwakarma",
+      "role": "Design Patent Granted on 06/03/2023",
+    }
 ]
 export const data = {publications,patentsdata};
