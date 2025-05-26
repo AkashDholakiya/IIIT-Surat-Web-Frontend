@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Info from "./utils/info";
 import PlaylistView from "./Hostelchief";
 import StudentCoordinator from "./StudentCoordinator";
-import {url} from "../../utils/helper.js";
+import {backend_local} from "../../utils/helper.js";
 export default function StudentC() {
   const [peoples, setPeoples] = useState([]);
   const [roles, setRoles] = useState([]);
@@ -10,7 +10,7 @@ export default function StudentC() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${url}/canteen/`);
+        const response = await fetch(`${backend_local}/canteen/`);
         //console.log("Response status:", response.status);
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
