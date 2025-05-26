@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import StudentCoordinator from "../components/hostelLife/StudentCoordinator";
 import PlaylistView from "../components/hostelLife/Hostelchief";
-import {url} from "../utils/helper.js"
+import {backend_local} from "../utils/helper.js"
 
 export default function HostelCommitee() {
   const [peoples, setPeoples] = useState([]);
@@ -10,7 +10,7 @@ export default function HostelCommitee() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${url}/hostel/`);
+        const response = await fetch(`${backend_local}/hostel/`);
         //console.log("Response status:", response.status);
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
