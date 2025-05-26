@@ -3,7 +3,7 @@ import Info from "./utils/info"
 import PlaylistView from "./Hostelchief"
 
 
-import {url} from "../../utils/helper.js";
+import {backend_url} from "../../utils/helper.js";
 import StudentCoordinator from "./StudentCoordinator";
 import EmpanelledHospitals from "./EmpanelledHospitals.jsx";
 export default function HealthCare(){
@@ -13,7 +13,7 @@ export default function HealthCare(){
       useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`${url}/healthcare/`);
+            const response = await fetch(`${backend_url}/healthcare/`);
             //console.log("Response status:", response.status); 
             if (!response.ok)
               throw new Error(`HTTP error! status: ${response.status}`);
