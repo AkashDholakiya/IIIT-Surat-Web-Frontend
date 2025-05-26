@@ -1,9 +1,26 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import PublicationDiv from '../components/cards/publicationComp_card';
-import { data } from '../Data/publicationData';
+import { useEffect } from 'react';
+import { backend_local } from '../utils/helper'
 
 const Publications = () => {
-    const {publications}=data;
+    const [publicationdata, setPublicationdata] = useState([]);
+    const fetchPublicationdata = async () => {
+    try {
+      const response = await fetch(`${backend_local}/publication/`);
+      
+      const data = await response.json();
+     
+      setPublicationdata(data);
+      
+    } catch (err) {
+      console.log(err);
+    }
+  };
+   useEffect(() => {
+      fetchPublicationdata();
+    }, []);
+    const publications=publicationdata;
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 12;
     const indexOfLastItem = currentPage * itemsPerPage;
