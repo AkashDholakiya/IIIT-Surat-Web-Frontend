@@ -345,7 +345,7 @@ const Home = () => {
             )}
             <div className="absolute bottom-6 left-10 text-white z-10">
               <h1 className='text-2xl font-semibold'>{convocations.length > 0 && convocations[0].title}</h1>
-              <p className='font-light text-sm mt-2'>{convocations.length > 0 && convocations[0].subtitle}</p>
+              {/* <p className='font-light text-sm mt-2'>{convocations.length > 0 && convocations[0].subtitle}</p> */}
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@ const Home = () => {
           )}
           <div className="absolute z-10 bottom-6 left-5 text-white max-w-[90%]">
             <h1 className='text-base sm:text-lg font-semibold'>{convocations.length > 0 && convocations[0].title}</h1>
-            <p className='font-light text-xs sm:text-sm mt-2'>{convocations.length > 0 && convocations[0].subtitle}</p>
+            {/* <p className='font-light text-xs sm:text-sm mt-2'>{convocations.length > 0 && convocations[0].subtitle}</p> */}
           </div>
         </div>
       </div>      

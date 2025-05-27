@@ -21,7 +21,7 @@ const Members = ({ cardsData }) => {
 
 const CoordinatorCard = ({ title, description, imgUrl, contact }) => {
   return (
-    <div className="flex items-center border rounded-lg py-2 space-x-2 shadow-sm border-blue-500 ">
+    <div className="px-3 flex items-center border rounded-lg py-2 space-x-2 shadow-sm border-blue-500 ">
       <img
         className="w-12 h-12 rounded-full object-cover bg-lightBlue mr-2"
         src={imgUrl}
@@ -31,8 +31,8 @@ const CoordinatorCard = ({ title, description, imgUrl, contact }) => {
         <h2 className="text-m font-semibold text-base text-blue-700">
           {title}
         </h2>
-        <p className="text-gray-600 text-sm">{description}</p>
-        <p className="text-gray-600 text-sm">{contact}</p>
+        <p className="text-gray-600 text-xs">{description}</p>
+        <p className="text-gray-600 text-xs">{contact}</p>
       </div>
     </div>
   );

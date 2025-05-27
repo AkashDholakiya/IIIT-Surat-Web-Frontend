@@ -16,10 +16,10 @@ export default function HostelImage() {
         <div className="relative h-full flex flex-col justify-center px-6 md:px-16 lg:px-32">
           {/* Title */}
           <div className="w-full md:w-2/3 lg:w-1/2 mb-4">
-            <h1 className="text-white text-3xl md:text-4xl font-bold mb-2">
+            <h1 className="text-white text-2xl md:text-4xl font-bold mb-2">
               Hostel Life
             </h1>
-            <p className="text-white text-base md:text-lg text-justify">
+            <p className="text-white text-sm md:text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
               officiis nulla.
             </p>
@@ -27,7 +27,7 @@ export default function HostelImage() {
 
           {/* Description */}
           <div className="w-full md:w-2/3 lg:w-1/2">
-            <p className="text-white text-base md:text-lg text-justify">
+            <p className="text-white text-sm md:text-lg text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
               dolorum aliquam sed quidem labore ipsum consequuntur earum
               laboriosam fuga saepe beatae corrupti provident pariatur,
