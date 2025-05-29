@@ -1,6 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const linksArray = [
+    { name: 'National Overseas Scholarship Scheme For The 2022-23', link: 'http://iiitsurat.ac.in/docs/NOS_Scheme_for_2022-23.pdf' },
+    { name: 'Loksabha Research Fellowships', link: 'http://sri.nic.in/fellowship-scheme' },
+    { name: 'National Scholarship Portal', link: 'https://nsp.gov.in/' },
+    { name: 'SBI Collect', link: 'https://www.onlinesbi.sbi/sbicollect/icollecthome.htm' },
+    { name: 'Uttar Pradesh Government - Scholarship System', link: 'https://scholarship.up.nic.in/' },
+    { name: 'Study in India (SII) Portal - Student Registration Link', link: 'https://www.studyinindia.gov.in/admission/registrations' }, 
+    { name: 'Sitemap', link: 'https://iiitsurat.ac.in/' }, 
+    { name: 'Terms Of Use', link: 'https://iiitsurat.ac.in/' }
+  ];
+
+  const Partners = [
+    { name : 'GNFC', img : '/images/partners/GNFC.jpg', link : 'https://www.gnfc.in/' },
+    { name : 'Gujarat Informatics Limited', img : '/images/partners/GIL.jpg', link : 'https://www.gil.gujarat.gov.in/' },
+    { name : 'Gujarat Gas Limited', img : '/images/partners/gujarat-gas-logo.png', link : 'https://www.gujaratgas.com/' },
+  ]
+
   return (
     <div className='sm:p-6 py-5 bg-nav-color'>
       {/* First section */}
@@ -8,9 +26,11 @@ export default function Footer() {
         {/* Useful Links */}
         <div className='flex-1 mb-6 sm:mb-0'>
           <p className='text-custom-red font-semibold text-lg md:text-xl leading-7 md:leading-8'>USEFUL LINKS</p>
-          <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} className='text-footer-gray text-base md:text-lg leading-7 md:leading-8'>
-            {['National Overseas Scholarship Scheme For The 2022-23', 'Loksabha Research Fellowships', 'National Scholarship Portal', 'Uttar Pradesh Government - Scholarship System', 'Sitemap', 'Terms Of Use'].map((link, index) => (
-              <li key={index} className='cursor-pointer hover:text-[#660000]'>{link}</li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} className='text-footer-gray text-base md:text-base leading-7 md:leading-8'>
+            {linksArray.map((data, index) => (
+              <Link to={data.link} target='_blank' key={index}>
+                <li key={index} className='cursor-pointer hover:text-[#660000]'>{data.name}</li>
+              </Link>
             ))}
           </ul>
         </div>
@@ -19,14 +39,13 @@ export default function Footer() {
         <div className='flex-1 mb-6 sm:mb-0'>
           <p className='text-custom-red font-semibold text-lg md:text-xl leading-7 md:leading-8 mb-2'>Our partner</p>
           <div>
-            {['GNFC', 'Gujarat Informatics Limited', 'Gujarat Gas Limited', 'SBI Collect'].map((partner, index) => (
-              <div key={index} className='flex items-center mb-3'>
-                <img src='./images/partner.png' alt='partner-image' className='w-14 sm:w-16 h-14 sm:h-16 rounded-lg' />
+            {Partners.map((partner, index) => (
+              <Link key={index} to={partner.link} target='_blank' className='flex items-center mb-3'>
+                <img src={partner.img} alt='partner-image' className='w-14 sm:w-16 h-14 sm:h-16 rounded-lg' />
                 <div className='ml-4'>
-                  <p className='text-custom-blue font-semibold text-lg'>{partner}</p>
-                  <p className='text-footer-gray text-sm sm:text-base'>Lorem ipsum dolor sit amet</p>
+                  <p className='text-custom-blue font-semibold text-lg'>{partner.name}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
