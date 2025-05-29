@@ -251,6 +251,6 @@ const rab = [
 ];
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {Sports,peoples, roles,publications, focusCardsData, sevendata, hod}
+export default {Sports,peoples, roles,publications, focusCardsData, sevendata, hod, rab}
 
   
