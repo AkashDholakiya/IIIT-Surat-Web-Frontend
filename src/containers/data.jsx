@@ -217,7 +217,38 @@ const publications =[
 },
     // Add more cards as needed
 ];
-
+const rab = [
+  {
+    title: "Prof. Anurag Kumar",
+    description: "INSA Distinguished Professor J.C.Bose National Fellow(2011- 2021) Director, IISc(2014 - 2020) Honorary Professor, ECE Department, IISc Bengaluru",
+    imgUrl: `${identity}`,
+  },
+  {
+    title: "Dr. Giridhar Mandyam",
+    description: "MediaTek USA",
+    imgUrl: `${identity}`,
+  },
+  {
+    title: "Prof. Archan MISRA",
+    description: "Vice Provost (Research) Lee Kong Chian Professor of Computer Science Singapore Management University Singapore",
+    imgUrl: `${identity}`,
+  },
+  {
+    title: "Prof. Supratik Mukhopadhyay",
+    description: "Louisiana State University (LSU) Baton Rouge, LA USA",
+    imgUrl: `${identity}`,
+  },
+  {
+    title: "Prof. Vijay Raghunathan",
+    description: "Purdue University USA",
+    imgUrl: `${identity}`,
+  },
+  {
+    title: "Mr. Deepak Bansal",
+    description: "Corporate Vice-President & Technical Fellow Microsoft Azure, USA",
+    imgUrl: `${identity}`,
+  },
+];
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {Sports,peoples, roles,publications, focusCardsData, sevendata, hod}
