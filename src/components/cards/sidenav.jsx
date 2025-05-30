@@ -22,7 +22,10 @@ const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
+  const handleContentChange = (key) => {
+    setContent(key);
+    setIsSidebarOpen(false);
+  };
   return (
     <>
       {/* Sidebar */}
@@ -31,38 +34,31 @@ const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0 md:w-1/4 lg:w-1/6`}
       >
-        <div className="p-4">
-          <div className="space-y-4">
-            {links.map((link) => (
-              <div key={link.key} className="flex items-center space-x-2">
-                {/* Indicator for active link */}
-                {activeContent === link.key ? (
-                  <div className="w-1 bg-blue-700 h-6 rounded"></div>
-                ) : (
-                  <div className="w-1 h-6"></div>
+        <div className=" pl-4 pr-1 py-6">
+          <button
+            className="w-full text-left flex items-center px-2 py-1 font-semibold text-gray-700 mb-6"
+            onClick={() => handleContentChange('about')}
+          >
+            <span className="text-blue-700 ml-10">Computer Science</span>
+          </button>
+          {links.map((link) => (
+            <div key={link.key} className="mb-4 ml-10">
+              <button
+                onClick={() => handleContentChange(link.key)}
+                className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-50 ${
+                  activeContent === link.key ? 'text-blue-700 transform scale-105' : 'text-gray-700'
+                }`}
+              >
+                {activeContent === link.key && (
+                  <span className="inline-block w-1 h-6 mr-2 bg-blue-700 rounded-full"></span>
                 )}
-                {/* Link */}
-                <div>
-                  <button
-                    onClick={() => {
-                      setContent(link.key);
-                      setIsSidebarOpen(false); // Close sidebar on mobile when a link is clicked
-                    }}
-                    className={`text-base font-semibold ${
-                      activeContent === link.key
-                        ? "text-blue-700 hover:text-red-800"
-                        : "text-gray-700 hover:text-black"
-                    }`}
-                  >
-                    {link.label}
-                  </button>
-                  {link.description && (
-                    <p className="text-gray-500 text-sm">{link.description}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+                <span>{link.label}</span>
+              </button>
+              {link.description && (
+                <p className="text-sm text-gray-500 ml-2 mt-1">{link.description}</p>
+              )}
+            </div>
+          ))}
         </div>
         {/* Close Button for Mobile Sidebar */}
         <button

@@ -8,7 +8,7 @@ const Events = ({ childContent, parentContent }) => {
   const events = selectedClub?.events || [];
 
   return (
-    <div className="w-full px-6 py-4 flex flex-col space-y-6">
+    <div className="w-full px-28 py-4 flex flex-col space-y-6">
       <h2 className="text-3xl font-bold text-center text-blue-700">Events</h2>
 
       <div className="w-full overflow-x-auto scrollbar-hide">

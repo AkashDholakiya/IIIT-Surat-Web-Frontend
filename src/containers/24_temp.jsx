@@ -23,7 +23,7 @@ const SarasComponent = ({ childContent, parentContent }) => {
   console.log("lead", lead);
 
   return (
-    <div className="flex flex-col w-full overflow-y">
+    <div className="flex flex-col px-20 w-full overflow-y">
       <div className="w-full mx-auto">
         <Playlist cardsData={Array.isArray(lead) ? lead : [lead]} title="Lead" />
       </div>

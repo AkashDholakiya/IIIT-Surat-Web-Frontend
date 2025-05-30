@@ -33,7 +33,7 @@ const RenderContentComponent = ({ parentContent, childContent }) => {
 
 
   return (
-    <div className="p-6">
+    <div className="p-6 ">
       <h2 className="text-lg font-bold mb-4">{selectedClub.title}</h2>
       
       <div className="text-base lg:text-base md:text-sm sm:text-xs">

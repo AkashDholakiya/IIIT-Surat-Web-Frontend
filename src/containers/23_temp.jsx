@@ -13,9 +13,9 @@ const link = actualChildData?.link;
 console.log("Child Key:", childKey);
     
     return(
-        <div>
-        <div className="w-full h-2/6 object-cover mt-10">{renderImage({title,childKey,link})}</div>
-        <div className="h-full w-full mx-auto">
+    <div className=" flex px-20 flex-col max-md:w-full">
+        <div className="w-full h-2/6 object-cover mt-5">{renderImage({title,childKey,link})}</div>
+        <div className="h-full w-full mx-auto my-2">
                 <div className="flex items-center pl-10 pr-16 pb-4">
                     <h1 className="lg:text-xl md:text-l sm:text:base font-semibold text-red-800">About department</h1>
                     <div className="flex-grow ml-4 border-t border-red-800 border-bold"></div>
