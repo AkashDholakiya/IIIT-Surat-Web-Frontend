@@ -13,10 +13,10 @@ const TitleBar = ({
   const [isChildDropdownOpen, setChildDropdownOpen] = useState(false);
 
   const childLinksMap = {
-    Sports: ["Saras", "Abstract", "Swrang"],
-    Cultural: ["Malhar", "Groove", "Antra"],
-    Technical: ["Cineworks", "Exposure", "Management"],
-    Entrepreneur: ["Business Plan", "StartUp Fest", "Networking"],
+    Sports: [],
+    Cultural: ["Malhar", "Groove", "Antra", "Abstract", "Swrang", "Exposure", "Cineworks"],
+    Technical: ["GDG","MARC","LCS"],
+    Entrepreneur: [],
   };
 
   const toggleParentDropdown = () => {

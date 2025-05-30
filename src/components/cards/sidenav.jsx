@@ -1,9 +1,20 @@
 import React, { useState } from "react";
+import clubData from "../../Data/clubsData.js";
 
-const NavBar = ({ setContent, activeContent, content }) => {
+const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
+  const content = childContent || parentContent;
+  const leadName =
+  clubData?.[parentContent]?.[childContent]?.lead || // lead of specific childContent
+  clubData?.[parentContent]?.lead || // lead of parentContent directly
+  (clubData?.[parentContent] &&
+    typeof clubData[parentContent] === "object" &&
+    Object.values(clubData[parentContent])[0]?.lead) || // lead of first subclub under parent
+  "Club Lead Not Assigned";
+
+
   const links = [
     { key: "about", label: `About ${content}` },
-    { key: "lead", label: `${content} Lead`, description: "Dr. Vijaykumar Radadiya" },
+    { key: "lead", label: `${content} Lead`, description: leadName },
     { key: "events", label: "Events hosted", description: "Working for a better future" },
     { key: "gallery", label: "Photo gallery", description: "Well equipped with 3 labs" },
   ];

@@ -1,60 +1,46 @@
-import React from "react";
+import clubData from "../../Data/clubsData.js";
 
-const RenderContentComponent = ( {childContent, parentContent} ) => {
-  //const { childContent, parentContent } = content;
+const RenderContentComponent = ({ parentContent, childContent }) => {
+  const selectedClub = clubData[parentContent]?.[childContent] 
+  || Object.values(clubData[parentContent] || {})[0];
 
-  //console.log("Content prop: ", content);
-  //console.log("childContent: ", childContent);
-  //console.log("parentContent: ", parentContent);
-
-  const renderContent = () => {
-    if (childContent) {
-      //console.log(childContent)
-      switch (childContent) {
-        case "Saras":
-          return "Content for Saras under Sports Club.";
-        case "Abstract":
-          return "Content for Abstract under Sports Club.";
-        case "Swrang":
-          return "Content for Swrang under Sports Club.";
-        case "Malhar":
-          return "Content for Malhar under Cultural Club.";
-        case "Groove":
-          return "Content for Groove under Cultural Club.";
-        case "Antra":
-          return "Content for Antra under Cultural Club.";
-        case "Cineworks":
-          return "Content for Cineworks under Technical Club.";
-        case "Exposure":
-          return "Content for Exposure under Technical Club.";
-        case "Management":
-          return "Content for Management under Technical Club.";
-        default:
-          return `Content for ${childContent}.`;
-      }
-    } else if (parentContent) {
-      console.log(parentContent)
-      switch (parentContent) {
-        case "Sports":
-          return "General Content for Sports Club.";
-        case "Cultural":
-          return "General Content for Cultural Club.";
-        case "Technical":
-          return "General Content for Technical Club.";
-        case "Entrepreneur":
-          return "General Content for Entrepreneurship Club.";
-        default:
-          return `General Content for ${parentContent}.`;
-      }
+   console.log("Selected Club Data:", parentContent, childContent, selectedClub);
+  // if (!selectedClub) {
+  //   return <div className="text-red-500">Club content not found.</div>;
+  // }
+  const renderFormattedContent = (content) => {
+  return content.split("\n").map((line, idx) => {
+    if (line.trim().startsWith("•")) {
+      // Bullet point line
+      return (
+        <li key={idx} className="ml-6 list-disc text-gray-700">
+          {line.trim().substring(1).trim()}
+        </li>
+      );
+    } else if (line.trim() === "") {
+      // Empty line - just add a line break or skip
+      return null;
     } else {
-      return "Select a category to see the content.";
+      // Normal paragraph
+      return (
+        <p key={idx} className="mb-4 text-gray-800 text-justify">
+          {line.trim()}
+        </p>
+      );
     }
-  };
+  });
+};
+
 
   return (
-    <p className="ml-10 mr-16 mx-auto text-justify lg:text-base md:text-sm sm:text:xs">
-      {renderContent()}
-    </p>
+    <div className="p-6">
+      <h2 className="text-lg font-bold mb-4">{selectedClub.title}</h2>
+      
+      <div className="text-base lg:text-base md:text-sm sm:text-xs">
+  {renderFormattedContent(selectedClub.content)}
+</div>
+
+    </div>
   );
 };
 
