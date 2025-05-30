@@ -34,9 +34,9 @@ const Slide1 = () => {
           <div className="w-full h-2/6 object-cover mt-10">{renderImage()}</div>
         )} */}
 
-        <div className="flex flex-row h-full w-full mt-8">
+        <div className="flex flex-row h-full w-full mt-8 ">
           <NavBar setContent={setActiveContent} activeContent={activeContent} parentContent={parentContent} childContent={childContent} />
-          <div className="h-full w-5/6">{renderComponent()}</div>
+          <div className="h-full w-full md:w-4/5  ml-18 ">{renderComponent()}</div>
         </div>
       </div>
     </div>

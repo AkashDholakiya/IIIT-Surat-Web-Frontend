@@ -8,7 +8,7 @@ const Events = ({ childContent, parentContent }) => {
   const events = selectedClub?.events || [];
 
   return (
-    <div className="w-full px-6 py-4 flex flex-col space-y-6">
+    <div className="w-full lg:px-24 px-10 py-4 flex flex-col space-y-6">
       <h2 className="text-3xl font-bold text-center text-blue-700">Events</h2>
 
       <div className="w-full overflow-x-auto scrollbar-hide">
@@ -32,7 +32,7 @@ const Events = ({ childContent, parentContent }) => {
 };
 
 const Card = ({ title, description, imgUrl, date, time, venue, link }) => (
-  <div className="bg-white shadow-md rounded-xl w-72 xs:w-36 flex-none hover:scale-105 transition-transform duration-300 overflow-hidden">
+  <div className="bg-white shadow-md rounded-xl  w-[240px] flex-none hover:scale-105 transition-transform duration-300 overflow-hidden">
     <img src={imgUrl} alt={title} className="w-full h-40 object-cover" />
     
     <div className="p-4 space-y-1">
