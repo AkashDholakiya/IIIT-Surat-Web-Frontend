@@ -32,15 +32,10 @@ const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
       <div
         className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-300 ease-in-out z-20 overflow-y-auto ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 md:w-1/4 lg:w-1/6`}
+        } md:relative md:translate-x-0 md:w-1/4 lg:w-1/5`}
       >
-        <div className=" pl-4 pr-1 py-6">
-          <button
-            className="w-full text-left flex items-center px-2 py-1 font-semibold text-gray-700 mb-6"
-            onClick={() => handleContentChange('about')}
-          >
-            <span className="text-blue-700 ml-10">Computer Science</span>
-          </button>
+        <div className=" pl-4 pr-2 py-6">
+          
           {links.map((link) => (
             <div key={link.key} className="mb-4 ml-10">
               <button

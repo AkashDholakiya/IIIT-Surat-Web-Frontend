@@ -13,7 +13,7 @@ const link = actualChildData?.link;
 console.log("Child Key:", childKey);
     
     return(
-    <div className=" flex px-20 flex-col max-md:w-full">
+    <div className=" flex px-6 lg:px-20 xl:px-20 flex-col max-md:w-full">
         <div className="w-full h-2/6 object-cover mt-5">{renderImage({title,childKey,link})}</div>
         <div className="h-full w-full mx-auto my-2">
                 <div className="flex items-center pl-10 pr-16 pb-4">
@@ -30,8 +30,8 @@ const renderImage = ({title,childKey,link}) => (
   <div className="flex justify-center items-center h-full ">
     <div className="bg-lightBlue rounded-lg shadow-lg overflow-hidden flex w-5/6 h-full">
       <div className="px-10 py-2 flex flex-col justify-center items-center space-y-4 bg-gradient-to-r from-lightBlue via-transparent to-transparent w-4/6">
-        <div className="w-5/6">
-          <h2 className="text-blue-800 font-bold text-xl font-poppins">
+        <div className="w-1/1">
+          <h2 className="text-blue-800 font-bold text-lg  font-poppins">
             {title} Club
           </h2>
           <button className="bg-blue-700 text-white px-2 my-2 text-base rounded-xl">

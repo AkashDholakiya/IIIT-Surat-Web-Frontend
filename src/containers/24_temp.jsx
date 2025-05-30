@@ -23,7 +23,7 @@ const SarasComponent = ({ childContent, parentContent }) => {
   console.log("lead", lead);
 
   return (
-    <div className="flex flex-col px-20 w-full overflow-y">
+    <div className="flex flex-col px-2 lg:px-20 w-full overflow-y">
       <div className="w-full mx-auto">
         <Playlist cardsData={Array.isArray(lead) ? lead : [lead]} title="Lead" />
       </div>
@@ -46,9 +46,9 @@ const Division = ({ title, cardsData = [] }) => {
   const safeData = Array.isArray(cardsData) ? cardsData : [];
 
   return (
-    <div className="my-6 lg:mx-10 md:ml-10 mr-4 sm:mx-10  ml-10">
+    <div className="my-6 lg:mx-10 md:ml-10 mr-4 sm:mx-10  ml-6">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      <div className="ml-8 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="ml-2 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {safeData.map((card, index) => (
           <div key={index} className="p-4 border rounded-2xl shadow text-center bg-white">
             <img
@@ -97,7 +97,7 @@ const Playlist = ({ cardsData = [], title }) => {
   const safeData = Array.isArray(cardsData) ? cardsData : [];
 
   return (
-    <div className="my-8 lg:mx-10 md:ml-10 mr-4 sm:mx-10  ml-10">
+    <div className="my-8 lg:mx-10 md:ml-10 mr-4 sm:mx-10  ml-6">
       {title && (
         <h2 className="text-2xl font-bold  mb-4">{title}</h2>
       )}

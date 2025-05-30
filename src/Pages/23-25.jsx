@@ -36,7 +36,7 @@ const Slide1 = () => {
 
         <div className="flex flex-row h-full w-full mt-8 ">
           <NavBar setContent={setActiveContent} activeContent={activeContent} parentContent={parentContent} childContent={childContent} />
-          <div className="flex-1 p-6 overflow-y-auto max-w-full">{renderComponent()}</div>
+          <div className="h-full w-full md:w-4/5  ml-18 ">{renderComponent()}</div>
         </div>
       </div>
     </div>
