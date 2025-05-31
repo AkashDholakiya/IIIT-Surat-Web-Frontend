@@ -94,6 +94,12 @@ const Navbarr = ({ setDarkMode }) => {
                                 Research & innovation
                             </Link>
 
+
+                            <Link to={'/career'} className="font-medium py-2 cursor-pointer select-none">
+                                Career
+                            </Link>
+
+
                             <DropdownItem label="Life at campus" index={7} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "Hostel Life", to: "/hostel" },
                                 { label: "Student Clubs", to: "/clubs" },
@@ -170,6 +176,10 @@ const Navbarr = ({ setDarkMode }) => {
 
                             <Link to={'/rnc'} className="font-medium py-2 hover:underline cursor-pointer select-none">
                                 Research & innovation
+                            </Link>
+
+                            <Link to={'/career'} className="font-medium py-2 hover:underline cursor-pointer select-none">
+                                Career
                             </Link>
 
                             <DropdownItem label="Life at campus" index={7} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
