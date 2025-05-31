@@ -23,6 +23,8 @@ import AboutTnpStats from './components/tnp/AboutTnpStats';
 import PlacementGuidelines from './components/tnp/PlacementGuidelines';
 import AllTnp from './components/tnp/AllTnp';
 import Eight from './Pages/8';
+import Career from './Pages/CareerPage';
+
 function App() {
 
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/vision' element={<Eleven />} />
           <Route path='/et' element={<Eight />} />
+          <Route path='/career' element={<Career />} />
           <Route path="/director" element={<Nine />} />
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/department" element={<Six />} />
@@ -58,6 +61,7 @@ function App() {
           <Route path='/alumni' element={<Alumni/>}/>
           <Route path='/page' element={<Page/>}/>
           <Route path='/feasta' element={<Feasta/>}/>
+          <Route path='*' element={<Feasta/>}/>
         </Routes>
         <Footer />
       </Router>
