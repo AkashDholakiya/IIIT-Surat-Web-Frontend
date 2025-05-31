@@ -2,7 +2,7 @@ import Hostelimage from "../../assets/images/hostel_background.png";
 
 export default function HostelImage() {
   return (
-    <div>
+    <div className="mt-4">
       {/* Background Section */}
       <div className="bg-gradient-to-r h-[24rem] from-[#091a34] to-[#07377b] via-[#07295e] w-full relative">
         {/* Background Image with Overlay */}
