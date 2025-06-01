@@ -46,7 +46,7 @@ const ExpSection = ({ title, description, date }) => {
 const AlumniNet =()=>{
     return(
         <>
-        <div className='m-20 rounded-md flex justify-between bg-gradient-to-r from-blue-50 h-56'>
+        <div className='m-20 rounded-md flex justify-between bg-blue-50 h-56'>
           
         <div>
         <div className='text-xl mt-4 mx-8 text-[#003482] font-semibold '>Our Alumni Network</div>
@@ -55,14 +55,7 @@ const AlumniNet =()=>{
         </div>
         
         
-        <div
-                    className="w-2/6 bg-cover bg-center"
-                    style={{
-                        backgroundImage: `linear-gradient(to right, rgba(244, 248, 254, 1), rgba(244, 248, 254, 0)), url(${logo})`,
-                        width: '40%',
-                        backgroundPosition: 'right center',
-                    }}
-                ></div>
+       
         
         
         </div></>
@@ -91,37 +84,78 @@ const Alumni = () => {
   return (
     <>
     <div className="">
-            <AlumniNet/>
+            {/* <AlumniNet/> */}
       </div>
-    <div className="flex px-24 relative overflow-hidden m-12 lg:text-sm">
-            <div className="min-w-[15rem] mr-8">
-                <div className="w-[15rem] h-[15rem] overflow-hidden">
-                    <img src={fimg} alt="samp" className="object-cover object-top w-full h-full" />
-                </div>
-                
-            </div>
-            <div>
-                <h1 className="text-2xl text-[#932323] font-bold">Prof. Rajeev Shorey</h1>
-                <Info title="Computer Science Engineering,B.tech 24'">
-                    Indian Institute of Information Technology Surat
-                </Info>
-                <Info title="email id"><i>director@iiitsurat.ac.in</i> <button className=' ml-44 h-12  rounded-3xl  w-32 bg-[#003482] text-white font-semibold text-lg justify-center items-center flex'>Resume</button></Info>
-               
-                <Info>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad saepe sed reprehenderit blanditiis! Magnam, obcaecati! Dignissimos mollitia nostrum rem fugit, aspernatur, in soluta laudantium quasi iste minus voluptatem corporis fuga. Vel consequuntur necessitatibus aliquid in nobis hic aspernatur deleniti obcaecati ea, velit fugit asperiores nam earum reiciendis odit magnam sapiente repudiandae porro labore dolore quas sit veniam ipsum fugiat! Veritatis ab, eveniet omnis vero, sit nisi impedit id excepturi asperiores nesciunt similique libero autem eaque eius voluptatem veniam molestias ut. Commodi, fugit voluptatibus nemo error molestias aliquid enim rem amet sed placeat hic nostrum sequi id repellat, temporibus ab?</Info>
-            </div>
-            <img className='absolute bottom-0 right-0 pr-24' src={comms} alt="comms" />
+    <div className="flex px-8 relative overflow-hidden m-12 mt-16 lg:text-sm">
             
-           </div>
-           <div className='mt-2 ml-5'>
-           <button className=' ml-32 h-12  rounded-3xl  w-40 bg-[#003482] text-white font-semibold text-lg justify-center items-center flex'>Experience</button>
-           <div className="h-full mx-auto ">
-              <Contentsection 
-               information={information}
-              />
-          </div>
-           </div>
-           
+            <div>
+                <h1 className="text-2xl text-[#932323] font-bold">The College as Your Loopback Address</h1>
+                
+                <Info>As an institute, we see ourselves as the loopback address in the network of your lives. Just as the loopback address returns traffic to its source, we are always here, at the heart of your journey, ready to connect, support, and nurture you—no matter where life takes you.
+<br></br>
+<br></br>
+Though you have ventured far and wide, acquiring your own IP Addresses, making your mark in various domains, the college remains a central, unwavering part of your story. You may move forward, but we are always here for you, just as the loopback address is always present, quietly facilitating connections.
+<br></br>
+<br></br>
+In this ever-evolving world, we invite you to continue returning to us. As alumni, you are an integral part of the foundation we've built together. The knowledge, values, and networks forged within these walls are the ties that bind us, and we hope you will loop back to share your experiences, mentor the next generation, and continue to grow alongside us.
+<br></br>
+<br></br>
+No matter the distance, you will always have a home here. The college is your loopback address, and we are eager to see how you will continue to contribute to the legacy we've all created. We would be glad to "host" you as always!</Info>
 
+            </div>
+           
+           </div>
+           <div className='mt-2 ml-5 px-12'>
+           
+            <div className="text-2xl text-[#932323] font-bold">Vision</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
+              <div className="my-4 text-lg text-justify text-zinc-700 max-md:max-w-full">
+                Connecting the Past, Empowering the Future</div>
+              
+         
+           </div>
+           <div className='mt-2 ml-5 px-12'>
+           
+            <div className="text-2xl text-[#932323] font-bold">Mission</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
+              <div className="my-4 text-lg text-justify text-zinc-700 max-md:max-w-full">
+                The Alumni Association has been established to foster a stronger community for graduates. It will serve as a vital channel for communication and collaboration between alumni and the institute. With a continuous flow of ideas and suggestions, the Association will provide students with fresh perspectives and opportunities for growth.</div>
+              
+         
+           </div>
+              <div className='mt-2 ml-5 px-12'>
+           
+            <div className="text-2xl text-[#932323] font-bold">Contact Us</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
+              <div className="my-4 text-lg text-justify text-zinc-700 max-md:max-w-full">
+                Reach Out to the Alumni Office at 
+                 <a href= "mailto:alumni_association@iiitsurat.ac.in" className='text-blue-700'> alumni_association@iiitsurat.ac.in</a>
+
+</div>
+              
+         
+           </div>
+              <div className='mt-2 ml-5 px-12'>
+           
+            <div className="text-2xl text-[#932323] font-bold">Faculty Coordinators</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
+              <div className="my-4 text-lg text-justify text-zinc-700 max-md:max-w-full">
+                Dr. Sudeep Sharma</div>
+              
+         
+           </div>
+   <div className='mt-2 ml-5 px-12'>
+           
+            <div className="text-2xl text-[#932323] font-bold">Student Coordinators
+</div>
+              <div className="flex-grow border-t border-[#660000] border-bold" />
+              <div className="my-4 text-lg text-justify text-zinc-700 max-md:max-w-full">
+                Bhumil Ashokbhai Rangholiya<br/>
+Jugal Ishvarbhai Patel<br/>
+Spaarsh Mitesh Thakkar</div>
+              
+         
+           </div>
       </>
   )
 }
