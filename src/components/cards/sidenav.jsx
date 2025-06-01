@@ -63,12 +63,12 @@ const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
           &times;
         </button>
       </div>
-
+  <div className="pl-2">
       {/* Mobile Menu Icon */}
       {!isSidebarOpen && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-40 left-4 z-50 bg-white shadow-lg rounded-md p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 md:hidden"
+          className="top-40 left-4 z-50 bg-white shadow-lg rounded-md p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ const NavBar = ({ setContent, activeContent, childContent, parentContent }) => {
             />
           </svg>
         </button>
-      )}
+      )}</div>
     </>
   );
 };

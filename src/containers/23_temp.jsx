@@ -2,11 +2,16 @@ import RenderContentComponent from "../components/cards/renderContent"
 
 import clubData from "../Data/clubsData.js";
 const Group=({childContent , parentContent})=>{
+
+  if (!parentContent || !clubData[parentContent]) {
+    console.error(`Invalid or missing parentContent: ${parentContent}`);
+    return <div className="p-5 text-center text-red-600">Error: Invalid club category</div>;
+  }
     const parentKey = parentContent;
 const parentObject = clubData[parentKey]; // e.g., clubData.Cultural
 
 // If childContent exists in parentObject, use it, else fallback to first key
-const childKey = childContent && parentObject?.[childContent] ? childContent : Object.keys(parentObject)[0];
+const childKey = childContent && parentObject[childContent] ? childContent : Object.keys(parentObject)[0];
 const actualChildData = parentObject[childKey];
 const title = actualChildData?.title;
 const link = actualChildData?.link;

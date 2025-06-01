@@ -17,6 +17,9 @@ const AllTnp = () => {
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
+  const handleContentChange = () => {
+    setIsSidebarOpen(false);
+  };
   return (
     <div className="relative flex w-full max-w-screen overflow-hidden mt-20">
       {/* Sidebar */}
@@ -30,6 +33,7 @@ const AllTnp = () => {
             <div key={link.key} className="mb-4 ml-10">
               <Link
                 to={`/tnp/${link.key}`}
+                onClick={() => handleContentChange()}
                 className={`w-full text-left flex items-center px-2 py-1 font-semibold transition-transform duration-50 ${
                   location.pathname === `/tnp/${link.key}` ? 'text-blue-700 transform scale-105' : 'text-gray-700'
                 }`}
@@ -55,16 +59,33 @@ const AllTnp = () => {
 
       {/* Main Content Area */}
       <div className="flex-1 p-6 overflow-y-auto max-w-full">
-        {/* Menu Icon for mobile */}
+       
+         {/* Menu Icon for mobile */}
         {!isSidebarOpen && (
           <button
-            onClick={toggleSidebar}
-            className="text-2xl mb-4 top-4 left-4 z-20 md:hidden"
-            >
-              ☰
+        aria-label="Open sidebar"
+        onClick={toggleSidebar}
+        className={`top-10 left-4 z-30 bg-white p-2 rounded-md shadow-lg md:hidden transition-opacity ${
+          isSidebarOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+             <svg
+          className="w-7 h-7 text-gray-700"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
             </button>
           )}
-  
+  <br/>
+  <br/>
           {/* Render child components */}
           <Outlet />
         </div>
@@ -73,4 +94,3 @@ const AllTnp = () => {
   };
   
   export default AllTnp;
-  
