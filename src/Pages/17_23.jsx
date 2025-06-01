@@ -39,6 +39,7 @@ const Page = () => {
     }
     return () => {
       if (contentRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         resizeObserver.unobserve(contentRef.current);
       }
     };
@@ -95,26 +96,26 @@ const Page = () => {
       <div className="flex-1 p-6 overflow-y-auto max-w-full">
         {/* Menu Icon for mobile */}
         {!isSidebarOpen && (
-          <button
-            onClick={toggleSidebar}
-            className="text-2xl mb-4 top-4 left-4 z-20 bg-white p-2 rounded-md shadow-lg md:hidden"
+        <button
+          onClick={toggleSidebar}
+          className="text-2xl mb-4 top-4 ml-3 left-4 z-20 bg-white p-2 rounded-md shadow-lg md:hidden"
+        >
+          <svg
+            className="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              className="w-6 h-6 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-        )}
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      )}
 
         {/* Conditional Rendering of Components */}
         <div ref={contentRef}>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 // --- Sample Data (Replace with your real data or fetch from API) ---
 const facultyPositions = [
-  // Leave empty to show "no openings" state
+  // Example data (uncomment to test)
   {
     title: "Assistant Professor (CSE)",
     openDate: "01 June 2025",
@@ -58,6 +58,7 @@ const CareerPage = () => {
     }
     return () => {
       if (contentRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         resizeObserver.unobserve(contentRef.current);
       }
     };
@@ -75,29 +76,29 @@ const CareerPage = () => {
     activeContent === "Faculty Positions" ? facultyPositions : nonFacultyPositions;
 
   return (
-    <div className="bg-white min-h-screen px-2 py-4 md:px-8 lg:px-16">
+    <div className="bg-white min-h-screen p-6 md:px-8 lg:px-16">
       {/* Mobile Menu Icon */}
-      <button
-        aria-label="Open sidebar"
-        onClick={toggleSidebar}
-        className={`fixed top-14 left-4 z-30 bg-white p-2 rounded-md shadow-lg md:hidden transition-opacity ${
-          isSidebarOpen ? "opacity-0 pointer-events-none" : "opacity-100"
-        }`}
-      >
-        <svg
-          className="w-7 h-7 text-gray-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      {!isSidebarOpen && (
+        <button
+          onClick={toggleSidebar}
+          className="text-2xl mb-4 top-4 left-4 z-20 bg-white p-2 rounded-md shadow-lg md:hidden"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
+          <svg
+            className="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      )}
 
       <div
         className="relative flex flex-col md:flex-row w-full max-w-screen-xl mx-auto mt-8"
@@ -152,22 +153,23 @@ const CareerPage = () => {
           ref={contentRef}
           className="flex-1 mt-8 md:mt-0 md:ml-8 lg:ml-12 w-full"
         >
-          <div className="overflow-x-auto rounded-lg shadow border bg-white">
-            <table className="min-w-full text-sm">
+          {/* --- Responsive Table: Table for desktop/tablet, Cards for mobile --- */}
+          {/* Table for desktop/tablet */}
+          <div className="hidden sm:block overflow-x-auto rounded-lg shadow border bg-white">
+            <table className="min-w-full text-xs">
               <thead>
                 <tr className="bg-gray-50 text-left text-blue-800">
-                  <th className="py-3 px-4 font-semibold">Advertisement Title</th>
-                  <th className="py-3 px-4 font-semibold">Open Date</th>
-                  <th className="py-3 px-4 font-semibold">Closing Date</th>
-                  <th className="py-3 px-4 font-semibold">Details Doc.</th>
+                  <th className="py-2 px-2 font-semibold">Advertisement Title</th>
+                  <th className="py-2 px-2 font-semibold">Open Date</th>
+                  <th className="py-2 px-2 font-semibold">Closing Date</th>
+                  <th className="py-2 px-2 font-semibold">Details Doc.</th>
                 </tr>
               </thead>
               <tbody>
                 {tableData.length === 0 ? (
                   <tr>
-                    <td colSpan={4} className="py-12 px-4 text-center">
+                    <td colSpan={4} className="py-8 px-4 text-center">
                       <div className="flex flex-col items-center justify-center space-y-2">
-                      
                         <p className="text-gray-500 font-medium"></p>
                         <p className="text-sm text-gray-400">
                           Please check back later for new opportunities.
@@ -177,23 +179,23 @@ const CareerPage = () => {
                   </tr>
                 ) : (
                   tableData.map((row, idx) => (
-                    <tr key={idx} className="border-t  transition">
-                      <td className="py-3 px-4 font-semibold">{row.title}</td>
-                      <td className="py-3 px-4 font-semibold">
+                    <tr key={idx} className="border-t transition">
+                      <td className="py-2 px-2 font-semibold">{row.title}</td>
+                      <td className="py-2 px-2 font-semibold">
                         {row.openDate}
                         <br />
                         <span className="text-xs text-gray-400 font-semibold">
                           {row.openDay}
                         </span>
                       </td>
-                      <td className="py-3 px-4 font-semibold">
+                      <td className="py-2 px-2 font-semibold">
                         {row.closeDate}
                         <br />
                         <span className="text-xs text-gray-400 font-semibold">
                           {row.closeDay}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-2">
                         <ul className="space-y-1">
                           {row.docs.map((doc, dIdx) => (
                             <li key={dIdx}>
@@ -215,10 +217,52 @@ const CareerPage = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Card/List for mobile */}
+          <div className="block sm:hidden space-y-4">
+            {tableData.length === 0 ? (
+              <div className="py-8 px-4 text-center bg-gray-50 rounded shadow">
+                <p className="text-gray-500 font-medium"></p>
+                <p className="text-sm text-gray-400">
+                  Please check back later for new opportunities.
+                </p>
+              </div>
+            ) : (
+              tableData.map((row, idx) => (
+                <div key={idx} className="bg-white rounded shadow p-4 border">
+                  <div className="font-semibold text-blue-800 mb-2">{row.title}</div>
+                  <div className="text-sm mb-1">
+                    <span className="font-semibold">Open Date:</span> {row.openDate} <span className="text-xs text-gray-400">({row.openDay})</span>
+                  </div>
+                  <div className="text-sm mb-1">
+                    <span className="font-semibold">Closing Date:</span> {row.closeDate} <span className="text-xs text-gray-400">({row.closeDay})</span>
+                  </div>
+                  <div className="text-sm">
+                    <span className="font-semibold">Details:</span>
+                    <ul className="ml-2 list-disc">
+                      {row.docs.map((doc, dIdx) => (
+                        <li key={dIdx}>
+                          <a
+                            href={doc.url}
+                            className="text-blue-800 underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {doc.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))
+            )}
+            
+          </div>
         </main>
       </div>
     </div>
   );
 };
 
-export default CareerPage;
+export default CareerPage;

@@ -11,20 +11,20 @@ function AboutTnp() {
   const aboutRef = useRef(null);
   const tnpOfficerRef = useRef(null);
   const placementTeamRef = useRef(null);
-  const placementStatsRef = useRef(null);  // Remove unused refs
-  const Our_Achievers = useRef(null);
-  const guidelinesRef = useRef(null);
-  const researchHighlightsRef = useRef(null);
+  // const placementStatsRef = useRef(null);  // Remove unused refs
+  // const Our_Achievers = useRef(null);
+  // const guidelinesRef = useRef(null);
+  // const researchHighlightsRef = useRef(null);
 
  // Function to scroll to the specified section
-  const scrollToSection = (ref) => {  // Remove unused function
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  // const scrollToSection = (ref) => {  // Remove unused function
+  //   if (ref.current) {
+  //     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
 
   return (
-    <div className="mt-[-20px] h-full flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
+    <div className="mt-[-20px] flex flex-col px-4 sm:px-8 md:px-20 w-full max-w-full">
       {/* Hero Section */}
       <div className=" h-full relative overflow-hidden flex justify-center items-center mt-6 sm:mt-10 w-full max-w-7xl min-h-[205px]">
         <img

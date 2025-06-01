@@ -38,6 +38,7 @@ const Page = () => {
     }
     return () => {
       if (contentRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         resizeObserver.unobserve(contentRef.current);
       }
     };
