@@ -16,13 +16,14 @@ import Admission from "./Pages/Admission"
 import Rnc from './Pages/17_23';
 import Alumni from './components/Alumni';
 import Page from './Pages/page';
-import Feasta from './Pages/26_28';
+// import Feasta from './Pages/26_28';
 import OurAchievers from './components/tnp/OurAchievers';
 import AboutTnpStats from './components/tnp/AboutTnpStats';
 import PlacementGuidelines from './components/tnp/PlacementGuidelines';
 import AllTnp from './components/tnp/AllTnp';
 import Eight from './Pages/8';
 import Career from './Pages/CareerPage';
+import NotFound from './components/NotFound';
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
           <Route path='/hostel' element={<HostelLife />} />
           <Route path='/admission' element={<Admission />} />
           <Route path='/page' element={<Page/>}/>
-          <Route path='*' element={<Feasta/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
         <Footer />
       </Router>
