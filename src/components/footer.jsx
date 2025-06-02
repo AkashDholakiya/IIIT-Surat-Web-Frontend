@@ -1,7 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const [weatherData, setWeatherData] = useState(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch weather data
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      try {
+        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=21.27&longitude=72.94&current=temperature_2m,relative_humidity_2m,wind_speed_10m');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch weather data');
+        }
+        
+        const data = await response.json();
+        setWeatherData(data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching weather data:', err);
+        setError('Unable to load weather data');
+        setLoading(false);
+      }
+    };
+
+    fetchWeatherData();
+  }, []);
+
+  // Update time every minute
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  // Format current time
+  const formatDateTime = () => {
+    const options = { 
+      hour: 'numeric', 
+      minute: 'numeric', 
+      hour12: true,
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    };
+    
+    return currentTime.toLocaleDateString('en-US', options);
+  };
+
   const linksArray = [
     { name: 'National Overseas Scholarship Scheme For The 2022-23', link: 'http://iiitsurat.ac.in/docs/NOS_Scheme_for_2022-23.pdf' },
     { name: 'Loksabha Research Fellowships', link: 'http://sri.nic.in/fellowship-scheme' },
@@ -17,7 +71,7 @@ export default function Footer() {
     { name : 'GNFC', img : '/images/partners/GNFC.jpg', link : 'https://www.gnfc.in/' },
     { name : 'Gujarat Informatics Limited', img : '/images/partners/GIL.jpg', link : 'https://www.gil.gujarat.gov.in/' },
     { name : 'Gujarat Gas Limited', img : '/images/partners/gujarat-gas-logo.png', link : 'https://www.gujaratgas.com/' },
-  ]
+  ];
 
   return (
     <div className='sm:p-6 py-5 bg-nav-color'>
@@ -61,9 +115,20 @@ export default function Footer() {
           </div>
           <div className='mt-8'>
             <p className='text-custom-red text-xl'>Surat, Gujarat</p>
-            <p>1:15 am, Tuesday 18th June, 2024</p>
-            <p><span className='text-[#6C6C6C]'>Temp:</span> 38.09°C</p>
-            <p><span className='text-[#6C6C6C]'>Humidity:</span> 30% <span className=''>Wind:</span> 2.06 km/h</p>
+            <p>{formatDateTime()}</p>
+            {loading ? (
+              <p className='text-[#6C6C6C]'>Loading weather data...</p>
+            ) : error ? (
+              <p className='text-[#6C6C6C]'>{error}</p>
+            ) : (
+              <>
+                <p><span className='text-[#6C6C6C]'>Temp:</span> {weatherData?.current?.temperature_2m || 'N/A'}{weatherData?.current_units?.temperature_2m || '°C'}</p>
+                <p>
+                  <span className='text-[#6C6C6C]'>Humidity:</span> {weatherData?.current?.relative_humidity_2m || 'N/A'}{weatherData?.current_units?.relative_humidity_2m || '%'} 
+                  <span className='ml-2 text-[#6C6C6C]'>Wind:</span> {weatherData?.current?.wind_speed_10m || 'N/A'} km/h
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -91,7 +156,7 @@ export default function Footer() {
         </div>
         <div className='text-right max-lg:text-center max-lg:border-t max-lg:w-full max-lg:border-custom-red'>
           <p className='text-sm sm:text-base max-lg:mt-3'>Designed and developed by IIIT Surat students</p>
-          <p className='text-base  max-lg:text-sm'>Website last updated on 1:15 am, Tuesday 18th June, 2024</p>
+          <p className='text-base max-lg:text-sm'>Website last updated on {currentTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}, {currentTime.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
         </div>
       </div>
     </div>
