@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import PlaylistView from '../components/cards/cards';
-import data from './data';
 
 
-const FiveComponent = () => {
-  const { hod } = data;
+const FiveComponent = ({faculty}) => {
 
   const [selected, setSelected] = useState('Assistant professor');
   const renderComponent = () => {
     if (selected === 'All') {
       return (
         <div className='flex flex-col'>
-          <PlaylistView cardsData={hod} />
-          <PlaylistView cardsData={hod} />
+          <PlaylistView cardsData={faculty.Assistant_professor} />
+          <PlaylistView cardsData={faculty.Assistant_professor_contractual} />
+          <PlaylistView cardsData={faculty.Teaching_assistant} />
         </div>
       )
     }
     else if (selected === 'Assistant professor') {
-      return <PlaylistView cardsData={hod} />
+      return <PlaylistView cardsData={faculty.Assistant_professor} />
     }
     else if (selected === 'Assistant professor (Contractual)') {
-      return <PlaylistView cardsData={hod} />
+      return <PlaylistView cardsData={faculty.Assistant_professor_contractual} />
     }
     else {
-      return <PlaylistView cardsData={hod} />
+      return <PlaylistView cardsData={faculty.Teaching_assistant} />
     }
   }
   return (
