@@ -22,7 +22,6 @@ function AboutTnpPlacementTeam() {
     setActiveCategory(category);
   };
 
-  // Filter profiles based on activeCategory
   const filteredProfiles = placementTeam.filter((member) => {
     if (activeCategory === "All") return true;
     if (activeCategory === "Faculty In-charge" && member.pteam_role === "f") return true;
@@ -32,81 +31,71 @@ function AboutTnpPlacementTeam() {
   });
 
   return (
-    <div className="flex flex-col z-10 items-center px-5 w-full max-md:px-4">
-      <main className="w-full max-w-[1317px]">
-        <div className="flex gap-5 max-md:flex-col max-md:w-full">
-          {/* Main Section */}
-          <section className="flex flex-col w-full max-md:w-full max-md:ml-0">
-            <div className="flex flex-col mt-0 max-md:mt-0">
-              {/* Category Selection */}
-              <div className="flex gap-3 items-center text-lg text-[#003482] mb-5 max-md:text-sm">
-                {["All", "Faculty In-charge", "Student Coordinator(2022-23)", "Member(2023-24)"].map((category) => (
-                  <div
-                    key={category}
-                    className="flex items-center cursor-pointer"
-                    onClick={() => handleCategoryClick(category)}
-                  >
-                    {activeCategory === category && (
-                      <div className="w-2 h-2 bg-[#660000] rounded-full mr-1" />
-                    )}
-                    <span className={`${activeCategory === category ? "text-[#660000]" : ""}`}>
-                      {category}
-                    </span>
-                  </div>
-                ))}
-              </div>
+    <div className="flex flex-col z-10 items-center px-4 sm:px-6 lg:px-10 w-full">
+      <main className="w-full max-w-screen-xl">
+        <section className="flex flex-col w-full">
+          {/* Category Selection */}
+          <div className="flex flex-wrap gap-4 items-center text-base sm:text-lg text-[#003482] mb-6 justify-center">
+            {["All", "Faculty In-charge", "Student Coordinator(2022-23)", "Member(2023-24)"].map((category) => (
+              <button
+                key={category}
+                onClick={() => handleCategoryClick(category)}
+                className={`flex items-center gap-2 cursor-pointer px-3 py-1 rounded-full border ${
+                  activeCategory === category
+                    ? "bg-[#660000] text-white"
+                    : "border-[#003482] text-[#003482] hover:bg-[#003482]/10"
+                } transition-colors duration-200 text-sm sm:text-base`}
+              >
+                {activeCategory === category && <div className="w-2 h-2 bg-white rounded-full" />}
+                {category}
+              </button>
+            ))}
+          </div>
 
-              {/* Profile Cards */}
-              <div className="mt-3 grid grid-cols-4 gap-8 max-md:grid-cols-2 gap-4 w-full max-sm:grid-cols-1">
-                {filteredProfiles.map((member, index) => (
-                  <ProfileCard
-                    key={index}
-                    pteam_name={member.pteam_name}
-                    role={member.pteam_role}
-                    email={member.pteam_email}
-                    phone={member.pteam_mobile}
-                    photoName={member.pteam_photo}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
-        </div>
+          {/* Profile Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-0">
+            {filteredProfiles.map((member, index) => (
+              <ProfileCard
+                key={index}
+                pteam_name={member.pteam_name}
+                role={member.pteam_role}
+                email={member.pteam_email}
+                phone={member.pteam_mobile}
+                photoName={member.pteam_photo}
+              />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
 }
+
 const ProfileCard = ({ pteam_name, role, email, phone, photoName }) => {
   let imgSrc;
-  // console.log(photoName);
   try {
-    // Dynamically require the image based on the photo name
     imgSrc = require(`../../assets/placement/${photoName}`);
-  } catch (error) {
-    // Fallback image if the photo is not found
-    //console.error(`Image not found for ${photoName}`, error);
-    imgSrc = require("../../assets/placement/default.png"); // i have set `default.png` in the folder if any iamge not load
+  } catch {
+    imgSrc = require("../../assets/placement/default.png");
   }
 
   return (
-    <div className="mr-4 flex flex-col items-center mt-8 max-md:mt-10 ml-2 w-full">
-      {/* Profile Image */}
-      <div className="relative flex justify-center items-center w-40 h-40 max-md:w-32 max-md:h-32 bg-sky-100 rounded-full overflow-hidden group hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out">
+    <div className="flex flex-col items-center text-center">
+      {/* Image */}
+      <div className="w-36 h-36 sm:w-40 sm:h-40 bg-sky-100 rounded-full overflow-hidden group hover:scale-105 hover:shadow-md transition-transform duration-300">
         <img
           loading="lazy"
           src={imgSrc}
           alt={`Profile of ${pteam_name}`}
-          className="w-full h-full object-cover rounded-full"
+          className="w-full h-full object-cover"
         />
       </div>
 
-      {/* Profile Text */}
-      <div className="mt-7 mr-5 text-lg font-semibold text-center text-[#003482] max-md:text-sm">
-        <span>{pteam_name}</span>
-        <br />
-        <span className="mt-0 mr-15 text-sm text-black">{email}</span>
-        <br />
-        <span className="mt-0 mr-15 text-sm text-black">{phone}</span>
+      {/* Text Info */}
+      <div className="mt-5 text-[#003482]">
+        <div className="text-base sm:text-lg font-semibold">{pteam_name}</div>
+        <div className="text-sm sm:text-base text-black">{email}</div>
+        <div className="text-sm sm:text-base text-black">{phone}</div>
       </div>
     </div>
   );
