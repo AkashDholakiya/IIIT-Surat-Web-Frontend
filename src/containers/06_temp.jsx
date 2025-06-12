@@ -2,10 +2,7 @@ import FinalDiv from "../components/cards/coordinatorCard";
 import Playlist from "../components/cards/cards";
 import data from "./data";
 
-const SixComponent = () => {
-  const { focusCardsData } = data;
-  const { roles } = data;
-  const { hod } = data
+const SixComponent = ({Dep,assistants,focusCardsData,roles}) => {
   return (
     <div className="flex flex-col w-full overflow-y">
       <div className="h-4/6 w-11/12 mx-auto">
@@ -23,8 +20,8 @@ const SixComponent = () => {
             <div className="w-1 bg-red-800 h-8 rounded mr-4"></div>
 
             <div className="w-full mx-auto">
-              <h1 className="text-2xl font-semibold text-red-800">Lab Assistants, Computer Science Enginnering</h1>
-              <p className="text-red-800  text-base">Lab Assistants, Computer Science Enginnering</p>
+              <h1 className="text-2xl font-semibold text-red-800">Lab Assistants, {Dep}</h1>
+              <p className="text-red-800  text-base">Lab Assistants,{Dep}</p>
             </div>
           </div>
 
@@ -32,7 +29,7 @@ const SixComponent = () => {
         <div className="h-2/6 mt-5">
           <div className="h-full w-11/12 mx-auto ">
             <Playlist
-              cardsData={hod}
+              cardsData={assistants}
             />
           </div>
         </div>

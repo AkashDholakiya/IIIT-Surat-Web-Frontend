@@ -100,36 +100,35 @@ const Navbarr = ({ setDarkMode }) => {
                             </div>
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Discover IIIT Surat" index={1} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About us", to: "/notfound" },
-                                { label: "Vision & Mission", to: "/vision" },
-                                { label: "Director’s Desk", to: "/director" },
-                                { label: "Administration", to: "/notfound" },
-                                { label: "Board of governance", to: "/notfound" },
-                                { label: "Senate", to: "/notfound" },
-                                { label: "Finance committee", to: "/notfound" },
-                                { label: "MOUs", to: "/notfound" },
-                                { label: "Convocation", to: "/notfound" }
+                                { label: "About us", to: "/discover/about" },
+                                { label: "Vision & Mission", to: "/discover/vision" },
+                                { label: "Director’s Desk", to: "/discover/director" },
+                                { label: "Administration", to: "/discover/admin" },
+                                { label: "Board of governance", to: "/discover/Board-of-governance" },
+                                { label: "Finance committee", to: "/discover/finance" },
+                                { label: "Senate", to: "/discover/senate-members" },
+                                { label: "Building & Works Committee", to: "/discover/finance" },
+                                { label: "Website Development Team", to: "/discover/websiteteam" },
+                                { label: "MOUs", to: "/discover/mou" },
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Admission" index={2} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Undergraduate", to: "/admission" },
-                                { label: "Postgraduate", to: "/notfound" }
+                                { label: "Admission 2025-26", to: "/admission/fee-structure" },
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Academics" index={3} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Academic Calendar", to: "/notfound" },
-                                { label: "Holiday List", to: "/notfound" },
-                                { label: "B.Tech. Rule", to: "/notfound" },
-                                { label: "B.Tech. Fees Structure", to: "/notfound" },
-                                { label: "Ph.D. Rule", to: "/notfound" },
-                                { label: "Ph.D. Fees Structure", to: "/notfound" }
+                                 { label: "Academic Calendar", to: "/academics/academic-calendar" },
+                                { label: "Holiday List", to: "/academics/holiday-list" },
+                                { label: "B.Tech. Rule", to: "/academics/btech-academic-rules" },
+                                { label: "Ph.D. Rule", to: "/academics/phd-academic-rules" },
+                                { label: "Ph.D. Fees Structure", to: "/academics/phd-fee-structure" }
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Departments" index={4} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "Computer Science & Engineering", to: "/csedepartment" },
-                                { label: "Electronics & Communication Engineering", to: "/notfound" },
-                                { label: "Applied Science & Humanities", to: "/notfound" },
-                                { label: "Adjunct professor", to: "/notfound" }
+                                { label: "Electronics & Communication Engineering", to: "/ecedepartment" },
+                                { label: "Applied Science & Humanities", to: "/applied-science-and-humanities" },
+                                { label: "Adjunct professor", to: "/adjunct-professor" }
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
@@ -200,36 +199,35 @@ const Navbarr = ({ setDarkMode }) => {
                     <div className="w-full py-8 bg-nav-color hidden md:flex">
                         <ul className='flex w-full h-full text-center justify-center items-center text-[0.90rem]'>
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Discover IIIT Surat" index={1} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "About us", to: "/notfound" },
-                                { label: "Vision & Mission", to: "/vision" },
-                                { label: "Director’s Desk", to: "/director" },
-                                { label: "Administration", to: "/notfound" },
-                                { label: "Board of governance", to: "/notfound" },
-                                { label: "Senate", to: "/notfound" },
-                                { label: "Finance committee", to: "/notfound" },
-                                { label: "MOUs", to: "/notfound" },
-                                { label: "Convocation", to: "/notfound" }
+                                { label: "About us", to: "/discover/about" },
+                                { label: "Vision & Mission", to: "/discover/vision" },
+                                { label: "Director’s Desk", to: "/discover/director" },
+                                { label: "Administration", to: "/discover/admin" },
+                                { label: "Board of governance", to: "/discover/Board-of-governance" },
+                                { label: "Finance committee", to: "/discover/finance" },
+                                { label: "Senate", to: "/discover/senate-members" },
+                                { label: "Building & Works Committee", to: "/discover/finance" },
+                                { label: "Website Development Team", to: "/discover/websiteteam" },
+                                { label: "MOUs", to: "/discover/mou" },
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Admission" index={2} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Undergraduate", to: "/admission" },
-                                { label: "Postgraduate", to: "/notfound" }
+                                { label: "Admission 2025-26", to: "/admission/fee-structure" },
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Academics" index={3} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                { label: "Academic Calendar", to: "/notfound" },
-                                { label: "Holiday List", to: "/notfound" },
-                                { label: "B.Tech. Rule", to: "/notfound" },
-                                { label: "B.Tech. Fees Structure", to: "/notfound" },
-                                { label: "Ph.D. Rule", to: "/notfound" },
-                                { label: "Ph.D. Fees Structure", to: "/notfound" }
+                                { label: "Academic Calendar", to: "/academics/academic-calendar" },
+                                { label: "Holiday List", to: "/academics/holiday-list" },
+                                { label: "B.Tech. Rule", to: "/academics/btech-academic-rules" },
+                                { label: "Ph.D. Rule", to: "/academics/phd-academic-rules" },
+                                { label: "Ph.D. Fees Structure", to: "/academics/phd-fee-structure" }
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Departments" index={4} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "Computer Science & Engineering", to: "/csedepartment" },
                                 { label: "Electronics & Communication Engineering", to: "/ecedepartment" },
-                                { label: "Applied Science & Humanities", to: "/notfound" },
-                                { label: "Adjunct professor", to: "/notfound" }
+                                { label: "Applied Science & Humanities", to: "/applied-science-and-humanities" },
+                                { label: "Adjunct professor", to: "/adjunct-professor" }
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[

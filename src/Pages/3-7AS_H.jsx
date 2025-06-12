@@ -7,17 +7,16 @@ import FourComponent from '../containers/04_temp';
 import ThreeComponent from '../containers/03_temp';
 import fmig from "../assets/images/case.png";
 import data from '../containers/data';
+
 const Page = () => {
-  // Fatch from backend
-  const DEP="Computer Science Engineering";
-  const HOD=data.about_hod.CSE;
+  const DEP = "Applied Science and Humanities";
+  const HOD = data.about_hod.ASH;
+
   const faculty = {
-        Assistant_professor: data.hod,
-        Assistant_professor_contractual: data.hod,
-        Teaching_assistant: data.hod,
-      }
-
-
+    Assistant_professor: data.hod,
+    Assistant_professor_contractual: data.hod,
+    Teaching_assistant: data.hod,
+  };
 
   const [activeContent, setActiveContent] = useState('about');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -28,7 +27,7 @@ const Page = () => {
     { key: 'about', label: `About Department` },
     { key: 'head', label: `Head of Department`, description: HOD.name },
     { key: 'faculty', label: 'Faculty', description: 'Working for better future' },
-    { key: 'lab', label: 'Laboratory', description: 'Well equipped 3 labs' },
+    { key: 'lab', label: 'Laboratory', description: 'Well equipped labs' },
     { key: 'syllabus', label: 'Curriculum', description: 'Syllabus' },
     { key: 'seminar', label: 'Seminar Workshops', description: 'Research Highlights' },
   ];
@@ -40,9 +39,7 @@ const Page = () => {
         setContentHeight(`${height}px`);
       }
     };
-
     updateHeight();
-
     const resizeObserver = new ResizeObserver(updateHeight);
     if (contentRef.current) {
       resizeObserver.observe(contentRef.current);
@@ -55,7 +52,6 @@ const Page = () => {
   }, [activeContent]);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
   const handleContentChange = (key) => {
     setActiveContent(key);
     setIsSidebarOpen(false);
@@ -63,7 +59,6 @@ const Page = () => {
 
   return (
     <div className="relative flex w-full max-w-screen overflow-hidden mt-20" style={{ minHeight: contentHeight }}>
-      {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full bg-white w-64 transition-transform duration-50 ease-in-out z-10 overflow-y-auto
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
@@ -74,7 +69,7 @@ const Page = () => {
             className="w-full text-left flex items-center px-2 py-1 font-semibold text-gray-700 mb-6"
             onClick={() => handleContentChange('about')}
           >
-            <span className="text-blue-700 ml-10">Computer Science</span>
+            <span className="text-blue-700 ml-10">{DEP}</span>
           </button>
           {links.map((link) => (
             <div key={link.key} className="mb-4 ml-10">
@@ -103,9 +98,7 @@ const Page = () => {
         </button>
       </div>
 
-      {/* Main Content Area */}
       <div className="flex-1 p-6 overflow-y-auto max-w-full">
-        {/* Menu Icon for mobile */}
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
@@ -128,12 +121,11 @@ const Page = () => {
           </button>
         )}
 
-        {/* Conditional Rendering of Components */}
         <div ref={contentRef}>
-          {activeContent === 'about' && <ThreeComponent about={data.cse_about.text} Dep={DEP} HOD={HOD.name}/>}
-          {activeContent === 'head' && <FourComponent HOD={HOD}/>}
+          {activeContent === 'about' && <ThreeComponent about={data.applied_about.text} Dep={DEP} HOD={HOD.name} />}
+          {activeContent === 'head' && <FourComponent HOD={HOD} />}
           {activeContent === 'faculty' && <FiveComponent faculty={faculty} />}
-          {activeContent === 'lab' && <SixComponent Dep={"Computer Science Engineering"} assistants={faculty.Assistant_professor} focusCardsData={data.focusCardsData} roles={data.roles}/>}
+          {activeContent === 'lab' && <SixComponent Dep={DEP} assistants={faculty.Assistant_professor} focusCardsData={data.focusCardsData} roles={data.roles} />}
           {activeContent === 'seminar' && <SevenComponent />}
         </div>
       </div>

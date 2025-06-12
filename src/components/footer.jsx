@@ -156,7 +156,7 @@ export default function Footer() {
         </div>
         <div className='text-right max-lg:text-center max-lg:border-t max-lg:w-full max-lg:border-custom-red'>
           <p className='text-sm sm:text-base max-lg:mt-3'>Designed and developed by IIIT Surat students</p>
-          <p className='text-base max-lg:text-sm'>Website last updated on {currentTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}, {currentTime.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+          {/* <p className='text-base max-lg:text-sm'>Website last updated on {currentTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}, {currentTime.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p> */}
         </div>
       </div>
     </div>
