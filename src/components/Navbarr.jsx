@@ -8,7 +8,7 @@ const Navbarr = ({ setDarkMode }) => {
 
   
 
-    const translateToLanguage=(lang)=>{
+    /*const translateToLanguage=(lang)=>{
 
       const interval = setInterval(() => {
       const iframe = document.querySelector('iframe.VIpgJd-ZVi9od-xl07Ob-OEVmcd'); // or use [2], etc.
@@ -55,7 +55,7 @@ const Navbarr = ({ setDarkMode }) => {
     // Prevent scrolling when mobile menu is open
     useEffect(() => {
 
-    const addGoogleTranslateScript = () => {
+   /* const addGoogleTranslateScript = () => {
     
     if (document.getElementById("google-translate-script")) return;
 
@@ -70,7 +70,7 @@ const Navbarr = ({ setDarkMode }) => {
         {
           pageLanguage: "en",
          /* includedLanguages: "en,hi,bho",*/ // include languages you want
-          layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL
+       /*   layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL
         },
         "google_translate_element"
       );
@@ -104,7 +104,7 @@ const Navbarr = ({ setDarkMode }) => {
           subtree: true,
           attributes: true,
           attributeFilter: ["style", "class"],
-        });
+        });*/
 
   
 
