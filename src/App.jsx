@@ -7,6 +7,7 @@ import "./index.css";
 import Navbarr from "./components/Navbarr";
 import Home from "./Pages/Home";
 import AboutTnp from "./components/tnp/AboutTnp";
+import LangComponent from "./components/LangComponent/LangComponent";
 import AboutTnpOfficer from "./components/tnp/AboutTnpTnpOfficer";
 import AboutTnpPlacementTeam from "./components/tnp/AboutTnp_Placement_team";
 import Clubs from "./Pages/23-25";
@@ -63,6 +64,7 @@ function App() {
     <div>
       <Router>
         <Navbarr />
+        <LangComponent />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discover" element={<Discover />}>

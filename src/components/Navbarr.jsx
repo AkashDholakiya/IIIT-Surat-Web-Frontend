@@ -152,8 +152,8 @@ const Navbarr = ({ setDarkMode }) => {
                     </ul>
 
                    <div className="translate-wrapper flex justify-end items-center whitespace-nowrap" style={{ minWidth: '280px', maxWidth: '100%' }}>
-  <div id="google_translate_element" style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}></div>
-</div>
+  
+                          </div>
 
                      
                     <ul className='hidden md:flex items-center'>
@@ -185,9 +185,9 @@ const Navbarr = ({ setDarkMode }) => {
                             {/* Language selector for mobile */}
                             <div className="w-full max-w-[280px] mb-3 mt-2">
                                 <div className="flex justify-center items-center space-x-3 py-2 border-b border-gray-200 pb-4">
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" onClick={()=> translateToLanguage('Hindi')}>हिंदी</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" onClick={()=> translateToLanguage('Gujarati')}>ગુજરાતી</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 bg-blue-50 text-[#003481] rounded-md transition-colors"  onClick={()=> translateToLanguage('English')}>English</button>
+                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >हिंदी</button>
+                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >ગુજરાતી</button>
+                                    <button className="text-sm font-medium px-3 py-1.5 bg-blue-50 text-[#003481] rounded-md transition-colors" >English</button>
                                 </div>
                             </div>
                             
