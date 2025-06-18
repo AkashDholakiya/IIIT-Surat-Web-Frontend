@@ -9,10 +9,14 @@ function Carousel() {
 
   useEffect(() => {
     const fetchImg = async () => {
+      try{
       const res = await fetch(`${backend_local}/banner-images/`);
       const data = await res.json();
       console.log(data);
       setSlides(data.map((item) => backend_local + item.image));
+      }catch(err){
+        console.log(err);
+      }
     }
 
     fetchImg();
