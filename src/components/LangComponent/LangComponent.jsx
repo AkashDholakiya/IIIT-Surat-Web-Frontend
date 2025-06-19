@@ -12,18 +12,22 @@ export default function LangComponent() {
   useEffect(() => {
     // Load Google Translate script
 
-    const observe=new MutationObserver(()=>{
+    const toObserve=new MutationObserver(()=>{
       var banner=document.getElementById(":1.container");
       if(banner){
         var page=document.querySelector("#whole");
-        page.style.marginTop="40px";
+        if(page){
+          page.style.marginTop="40px";
+        }
       }else{
-        page.style.marginTop="0px";
+        if(page){
+          page.style.marginTop="0px";
+        }
       }
 
     });
 
-    observer.observe(document.body, {
+    toObserve.observe(document.body, {
     childList: true,
     subtree: true,
   });
@@ -149,7 +153,7 @@ export default function LangComponent() {
     document.addEventListener('keydown', handleEscape);
 
     return () => {
-      observe.disconnect();
+      toObserve.disconnect();
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleEscape);
     };
