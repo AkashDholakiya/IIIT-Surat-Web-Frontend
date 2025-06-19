@@ -14,7 +14,13 @@ export default function LangComponent() {
 
     const toObserve=new MutationObserver(()=>{
       var banner=document.querySelector("div.skiptranslate");
-      if(banner && banner.style.display==="none"){
+      if(!banner){
+        var page=document.querySelector("#whole");
+        if(page){
+          page.style.marginTop="0px";
+        }
+      }
+      else if(banner && banner.style.display==="none"){
         var page=document.querySelector("#whole");
         if(page){
           page.style.marginTop="0px";
