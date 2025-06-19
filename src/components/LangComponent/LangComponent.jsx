@@ -85,6 +85,7 @@ export default function LangComponent() {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 `
+        document.head.appendChild(styling);
         clearInterval(interv);
         }
         console.log("Dropdown not found!!");
