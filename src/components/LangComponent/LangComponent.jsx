@@ -178,7 +178,7 @@ export default function LangComponent() {
   return (
     <>
       <div
-        className={`language-selector ${isExpanded ? 'expanded' : ''}`}
+        className={`language-selector ${isExpanded ? 'expanded' : ''} notranslate`} translate="no"
         ref={selectorRef}
         onClick={(e) => {
           e.stopPropagation();
