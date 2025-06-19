@@ -167,28 +167,35 @@ const Navbarr = ({ setDarkMode }) => {
                     </ul>
                 </div>                
                 {menuOpen && (
-                    <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-nav-color z-20 flex flex-col pt-16 overflow-y-auto animate-fadeIn">
+                    <div id="whole" className="lg:hidden fixed top-0 left-0 w-full h-full bg-nav-color z-20 flex flex-col pt-16 overflow-y-auto animate-fadeIn" >
                         <div className="absolute top-0 left-0 w-full bg-white py-3 px-4 flex justify-between items-center border-b border-gray-100 shadow-sm">
                             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => {setMenuOpen(false); navigate('/')}}>
                                 <img className="h-8 w-8" src="./images/logo.svg" alt="IIIT Surat logo" />
                                 <span className="font-medium text-sm text-custom-blue">IIIT Surat</span>
                             </div>
-                            <button 
+                          {/*  <button 
                                 onClick={toggleMenu}
                                 className="p-2 focus:outline-none rounded-full hover:bg-gray-100 transition-colors duration-200"
                                 aria-label="Close menu"
                             >
                                 <HiX size={24} />
-                            </button>
+                            </button>*/}
                         </div>
                         <ul className='flex flex-col w-full text-center justify-start items-center space-y-4 px-4 pb-20 pt-4'>
                             {/* Language selector for mobile */}
                             <div className="w-full max-w-[280px] mb-3 mt-2">
-                                <div className="flex justify-center items-center space-x-3 py-2 border-b border-gray-200 pb-4">
+                                 <button 
+                                onClick={toggleMenu}
+                                className="p-2 focus:outline-none rounded-full hover:bg-gray-100 transition-colors duration-200"
+                                aria-label="Close menu"
+                            >
+                                <HiX size={24} />
+                               </button>
+                              {/*}  <div className="flex justify-center items-center space-x-3 py-2 border-b border-gray-200 pb-4">
                                     <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >हिंदी</button>
                                     <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >ગુજરાતી</button>
                                     <button className="text-sm font-medium px-3 py-1.5 bg-blue-50 text-[#003481] rounded-md transition-colors" >English</button>
-                                </div>
+                                </div>*/}
                             </div>
                             
                             <div className="w-full max-w-[280px] mb-2">
