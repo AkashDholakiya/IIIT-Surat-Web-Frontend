@@ -13,15 +13,16 @@ export default function LangComponent() {
     // Load Google Translate script
 
     const toObserve=new MutationObserver(()=>{
-      var banner=document.getElementById(":1.container");
-      if(banner){
+      var banner=document.querySelector("div.skiptranslate");
+      if(banner && banner.style.display==="none"){
+        var page=document.querySelector("#whole");
+        if(page){
+          page.style.marginTop="0px";
+        }
+      }else{
         var page=document.querySelector("#whole");
         if(page){
           page.style.marginTop="40px";
-        }
-      }else{
-        if(page){
-          page.style.marginTop="0px";
         }
       }
 
