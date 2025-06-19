@@ -28,9 +28,10 @@ export default function LangComponent() {
       }, 'google_translate_element');
 
       const anInterval=setInterval(()=>{
-        var im=document.querySelector("img");
+        var im=document.querySelector(".VIpgJd-ZVi9od-l4eHX-hSRGPd img");
         if(im){
             im.style.display="inline";
+            console.log("Img found");
             clearInterval(anInterval);
         }
         console.log("Img not found");
