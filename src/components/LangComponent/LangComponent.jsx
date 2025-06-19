@@ -26,6 +26,16 @@ export default function LangComponent() {
         includedLanguages: 'en,hi,gu',
         layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
       }, 'google_translate_element');
+
+      const anInterval=setInterval(()=>{
+        var im=document.querySelector("img");
+        if(im){
+            im.style.display="inline";
+            clearInterval(anInterval);
+        }
+        console.log("Img not found");
+      },300);
+
     }catch(err){
     console.log("Error")
     };
