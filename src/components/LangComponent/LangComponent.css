@@ -25,6 +25,10 @@
   gap: 8px;
 }
 
+.globe-container.shifted {
+    margin-left: 300px;
+  }
+
 
 
 /*.goog-logo-link {
@@ -43,9 +47,7 @@
     width: 400px;
   }
 
-  .globe-container.shifted {
-    margin-left: 300px;
-  }
+
 
   .globe-icon {
     font-size: 26px;
