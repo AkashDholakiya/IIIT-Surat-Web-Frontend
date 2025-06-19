@@ -37,10 +37,68 @@ export default function LangComponent() {
         console.log("Img not found");
       },300);
 
+      const interv=setInterval(()=>{
+        var dropdown=document.querySelector(".goog-te-combo");
+        if(dropdown){
+            var styling=document.createElement("style");
+            styling.innerHTML=`/* Google Translate dropdown styling */
+.goog-te-combo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Black border for visibility */
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #6c757d;
+    min-width: 120px;
+    max-width: 140px;
+    height: 26px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 6px center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    padding-right: 26px;
+}
+
+.goog-te-combo:hover {
+    border-color: #10b981; /* Green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+    background-color: #fefefe;
+}
+
+
+.goog-te-combo:focus {
+    border-color: #10b981; /* Green on focus */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1), 0 4px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+    background-color: #ffffff;
+}
+
+.goog-te-combo:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+`
+        clearInterval(interv);
+        }
+        console.log("Dropdown not found!!");
+
+
+      },300);
+      
+
+
+
     }catch(err){
     console.log("Error")
     };
-}
+};
 
     // Monitor dropdown change
     const observer = setInterval(() => {
