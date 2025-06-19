@@ -168,3 +168,9 @@
 .language-dropdown option:hover {
   background-color: #f8f9fa;
 }
+
+@media (max-width: 512px){
+  .language-selector.expanded {
+    width: auto;
+  }
+}
