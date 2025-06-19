@@ -14,7 +14,8 @@ export default function LangComponent() {
 
     const toObserve=new MutationObserver(()=>{
       var banner=document.querySelector("div.skiptranslate");
-      if(!banner){
+      var iframe=document.getElementById(":1.container");
+      if(!iframe){
         var page=document.querySelector("#whole");
         if(page){
           page.style.marginTop="0px";
