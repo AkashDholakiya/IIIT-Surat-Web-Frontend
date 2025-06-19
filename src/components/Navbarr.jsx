@@ -6,47 +6,6 @@ import { HiMenu, HiX } from 'react-icons/hi'; // Hamburger and close icons
 
 const Navbarr = ({ setDarkMode }) => {
 
-  
-
-    /*const translateToLanguage=(lang)=>{
-
-      const interval = setInterval(() => {
-      const iframe = document.querySelector('iframe.VIpgJd-ZVi9od-xl07Ob-OEVmcd'); // or use [2], etc.
-
-    if (iframe && iframe.contentWindow && iframe.contentWindow.document) {
-      clearInterval(interval);
-      const iframeContent = iframe.contentWindow.document;
-      console.log("Got iframe document:", iframeContent);
-
-      const newInterval=setInterval(()=>{
-        var langList=iframeContent.querySelectorAll("span.text");
-        if(langList){
-          langList.forEach((language)=>{
-            if(language.innerHTML===lang){
-                console.warn("Found it");
-                language.click();
-            }else{
-                 console.warn("Searching");
-            }
-          });
-          clearInterval(newInterval);
-        }
-      },500);
-
-    
-    } else {
-      console.log("Waiting for iframe...");
-    }
-  }, 500);
-     
-
-    };
-
-   /* function translateToLanguage(lang) {
-      const currentUrl = window.location.href;
-       const translatedUrl = `https://translate.google.com/translate?hl=${lang}&sl=auto&u=${encodeURIComponent(currentUrl)}`;
-      window.location.href = translatedUrl;
-   }*/
 
     const location = useLocation();
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -54,59 +13,6 @@ const Navbarr = ({ setDarkMode }) => {
     const navigate = useNavigate();
     // Prevent scrolling when mobile menu is open
     useEffect(() => {
-
-   /* const addGoogleTranslateScript = () => {
-    
-    if (document.getElementById("google-translate-script")) return;
-
-    const script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    document.body.appendChild(script);
-
-    window.googleTranslateElementInit = function () {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-         /* includedLanguages: "en,hi,bho",*/ // include languages you want
-       /*   layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL
-        },
-        "google_translate_element"
-      );
-    };
-
-   
-
-  };
-
-  addGoogleTranslateScript();
-
-        const removeDropdownInterval=setInterval(()=>{
-            var toBeHidden=document.getElementById(":0.targetLanguage");
-        if(toBeHidden){
-          //  toBeHidden.style.display="none";
-            clearInterval(removeDropdownInterval);
-        }else{
-            console.warn("Not found");
-        }
-        },500);
-
-        const observer=new MutationObserver(()=>{
-          var rateTranslation=document.getElementById("goog-gt-tt");
-          if(rateTranslation && rateTranslation.style.display!=="none"){
-            rateTranslation.style.display="none";
-          }
-        });
-
-        observer.observe(document.body, {
-          childList: true,
-          subtree: true,
-          attributes: true,
-          attributeFilter: ["style", "class"],
-        });*/
-
-  
 
         if (menuOpen) {
             document.body.style.overflow = 'hidden';
@@ -157,13 +63,7 @@ const Navbarr = ({ setDarkMode }) => {
 
                      
                     <ul className='hidden md:flex items-center'>
-                        
-                        
-                        {/*<div className='flex h-full items-center'>
-                            <li className='cursor-pointer hover:underline' onClick={()=> translateToLanguage('Hindi')} >हिंदी</li><span>&nbsp;|&nbsp;</span>
-                            <li className='cursor-pointer hover:underline'  onClick={()=> translateToLanguage('Gujarati')}>ગુજરાતી</li><span>&nbsp;|&nbsp;</span>
-                            <li className='cursor-pointer hover:underline' onClick={()=> translateToLanguage('English')}>English</li>
-                        </div>*/}
+                      
                     </ul>
                 </div>                
                 {menuOpen && (
@@ -182,14 +82,9 @@ const Navbarr = ({ setDarkMode }) => {
                             </button>
                         </div>
                         <ul className='flex flex-col w-full text-center justify-start items-center space-y-4 px-4 pb-20 pt-4'>
-                            {/* Language selector for mobile */}
+                            
                             <div className="w-full max-w-[280px] mb-3 mt-2">
-                               
-                              {/*}  <div className="flex justify-center items-center space-x-3 py-2 border-b border-gray-200 pb-4">
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >हिंदी</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors" >ગુજરાતી</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 bg-blue-50 text-[#003481] rounded-md transition-colors" >English</button>
-                                </div>*/}
+                            
                             </div>
                             
                             <div className="w-full max-w-[280px] mb-2">
