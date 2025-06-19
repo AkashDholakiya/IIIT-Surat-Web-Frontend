@@ -25,9 +25,9 @@
   gap: 8px;
 }
 
-.goog-logo-link {
+/*.goog-logo-link {
   white-space: nowrap;
-}
+}*/
 
 @media (min-width: 1024px) {
   .language-selector {
