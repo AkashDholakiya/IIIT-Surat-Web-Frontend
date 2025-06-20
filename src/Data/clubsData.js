@@ -294,7 +294,7 @@ Key focus areas:
             venue: "CSE Lab 3 (Offline)",
             speaker: "Aditya Kumar (GDG Lead) and Core Members",
             audience: "180+ First-year Students",
-            imgUrl: "/images/orientation.jpg",
+            imgUrl: "/images/gdgorientation.png",
             link: "https://gdg.community.dev/events/details/google-gdg-on-campus-indian-institute-of-information-technology-surat-india-presents-gdg-orientation-session-2k24/"
         },
         {
@@ -302,9 +302,9 @@ Key focus areas:
             description: "Hands-on sessions covering Google Cloud (Dataplex, Vision API, etc.) and Generative AI using Vertex AI and Gemini.",
             date: "8th Oct – 18th Nov",
             time: "—",
-            venue: "—",
+            venue: "IIIT Surat",
             participation: "150+ Students",
-            imgUrl: "/images/genai-cloud.jpg",
+            imgUrl: "/images/genai-cloud.png",
             link: "https://gdg.community.dev/events/details/google-gdg-on-campus-indian-institute-of-information-technology-surat-india-presents-build-with-ai/"
         },
         {
@@ -312,7 +312,7 @@ Key focus areas:
             description: "Screening and interviews to identify top 2nd-year developers and foster a coding culture.",
             date: "7th November",
             time: "—",
-            venue: "—",
+            venue: "IIIT Surat",
             imgUrl: "/images/recruitment.jpg",
             link: "—"
         },
@@ -331,7 +331,7 @@ Key focus areas:
             date: "—",
             time: "—",
             venue: "Online",
-            imgUrl: "/images/postman.jpg",
+            imgUrl: "/images/postman.png",
             link: "https://gdg.community.dev/e/m8t7sz/",
             youtube: "https://youtu.be/5weRsWbyigE?si=Q5ZBhw5Z1WRbPSil"
         },
@@ -363,7 +363,7 @@ Key focus areas:
         instagram: "https://www.instagram.com/gdg_iiitsurat/",
         website: "https://gdg.community.dev/gdg-on-campus-indian-institute-of-information-technology-surat-india/"
       },
-      gallery: [] // Add image filenames if available
+      gallery: ["/images/gdgorientation.png","/images/postman.png","/images/genai-cloud.png","/images/gdg1.png","/images/gdg2.png","/images/gdg3.png","/images/gdg4.png"] // Add image filenames if available
     },
 
     MARC: {
@@ -410,11 +410,84 @@ MARC is a movement. Join us and be a part of the future.`,
       title: "Learn Code Solve(LCS)",
       lead: "Prakhar Mishra", // Add lead name if available
         link:`${head}`,
-      content: ``,
-      events: [
+      content: `Learn Code Solve (LCS) is the official competitive programming club of IIIT Surat, dedicated to nurturing a strong foundation in Data Structures, Algorithms, and logical problem-solving among students. As one of the most active and intellectually driven communities on campus, LCS fosters a collaborative environment where aspiring developers and competitive programmers grow through consistent practice, guidance, and peer-to-peer learning.
+LCS is driven by the core belief that problem-solving is a fundamental skill for all developers. The club conducts regular sessions on algorithmic thinking, organizes internal coding contests, and encourages participation in global platforms like Codeforces, LeetCode, HackerRank, and CodeChef. These contests not only strengthen coding skills but also prepare members for technical interviews and national-level competitive events.
+A unique aspect of the club is its student-led learning model—seniors mentor juniors through topic-wise sessions, doubt-solving discussions, and mock contests. From beginners to seasoned coders, everyone finds a place to learn, improve, and compete.
+LCS is also involved in interdisciplinary collaborations with other clubs and initiatives, such as GDSC to promote a broader understanding of software development and open-source. Whether you're aiming to ace your placements, build an Olympiad-level problem-solving mindset, or simply improve your logical reasoning, LCS is the ideal platform to start and scale.
+In essence, LCS is not just a club—it's a mindset. A mindset of continuous learning, fearless debugging, and thriving under pressure. It’s a launchpad for every coder at IIIT Surat who dreams of becoming a top-notch problem solver, software engineer, or competitive programming expert.`,
+      events: [{
+            title: "Orientation Info Session for First Years",
+            description: "Emphasized the importance of Data Structures & Algorithms (DSA) for technical interviews and coding excellence",
+            date: "12th November",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "Prakhar Mishra (LCS Lead)",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DCMuEA-iBSx/?igsh=MXN4ZHdtc2h1YmRyMQ=="
+        },
+        {
+            title: "Introduction to Competitive Programming",
+            description: "First official hands-on workshop focused on Competitive Programming (CP) for beginners.",
+            date: "15th January",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "Prakhar Mishra (LCS Lead) and Aman Parmar (Co-lead)",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DE0JTV3ilMh/?igsh=MTF2bjU5Z3JodWgyMw=="
+        },
+        {
+            title: "CodeWave 3.0",
+            description: "An exciting coding contest exclusively designed for 2nd-year students. Provided a platform for students to learn, win, and gain experience—each submission bringing them closer to mastery.",
+            date: "30th January",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "Core Members of LCS ",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DFS8RSuiNT8/?igsh=ZWt1ZnR0NWoya21n"
+        },
+        {
+            title: "Code Relay",
+            description: "A unique relay-style coding challenge where teammates passed code to solve progressively. Encouraged teamwork, communication, and modular coding practices.",
+            date: "10th April",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "LCS Fest Committee",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DH4C4YwiP-u/?igsh=MW1sNno1bGVnZnJydQ=="
+        },
+        {
+            title: "Speed Coding – The Ultimate Coding Race",
+            description: "A fast-paced ICPC-style coding competition for teams of three. Participants solved challenging algorithmic problems under tight time constraints.",
+            date: "11th April",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "LCS Fest Committee",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DH4C0ATiz_A/?igsh=em5qbjlkc3lucDN5"
+        },
+        {
+            title: "Code Sprint – From Buggy to Brilliant",
+            description: "○	A thrilling contest challenge designed to test participants’ code analysis and fixing skills. Focused on real-world contests, encouraging practical problem-solving.",
+            date: "12th April",
+            time: "—",
+            venue: "CSE Lab 3",
+            speaker: "Prakhar Mishra (LCS Lead)",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://www.instagram.com/p/DH4CuTMiDIU/?igsh=MW05cmZqdzhycTZmYQ=="
+        },
+        {
+            title: "LCS Weekly Contest",
+            description: "A weekly practice contest hosted on Codeforces, open to students from all years.	Included 5-6 problems, closely modeled on Division-2 level difficulty.",
+            date: "Every Week",
+            time: "—",
+            venue: "Online",
+            speaker: "Prakhar Mishra (LCS Lead)",
+            imgUrl: "/images/ai-expert.jpg",
+            link: "https://codeforces.com/contestInvitation/caaa891f56c5c47c1e894a7bdb1bd054a136d95b"
+        }
         // Add events if data is provided
       ],
-      handles: {}, // Add social media if available
+      handles: { instagram: "https://www.instagram.com/lcs.iiitsurat/"}, // Add social media if available
       gallery: []
     }
   },
