@@ -9,31 +9,38 @@ const Navbarr = ({ setDarkMode }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
 
-    const styling={
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundColor: "#ffffff",
-        border: "1px solid #ced4da",
-        borderRadius: "4px",
-        padding: "4px 8px",
-        fontSize: "12px",
-        color: "#6c757d",
-        minWidth: "120px",
-        maxWidth: "140px",
-        height: "26px",
-        outline: "none",
-        cursor: "pointer",
-        transition: "all 0.2s ease",
-        boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
-        appearance: "none", // works in modern browsers
-        backgroundImage:
-            "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")",
-        backgroundPosition: "right 6px center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "14px",
-        paddingRight: "26px",
-    };
+
     // Prevent scrolling when mobile menu is open
     useEffect(() => {
+
+
+    const toObserve=new MutationObserver(()=>{
+      var banner=document.querySelector("div.skiptranslate");
+      var iframe=document.getElementById(":1.container");
+      if(!iframe){
+        var page=document.querySelector("#whole");
+        if(page){
+          page.style.marginTop="0px";
+        }
+      }
+      else if(banner && banner.style.display==="none"){
+        var page=document.querySelector("#whole");
+        if(page){
+          page.style.marginTop="0px";
+        }
+      }else{
+        var page=document.querySelector("#whole");
+        if(page){
+          page.style.marginTop="40px";
+        }
+      }
+
+    });
+
+    toObserve.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 
         const addGoogleTranslateWidget=()=>{
 
@@ -57,6 +64,101 @@ const Navbarr = ({ setDarkMode }) => {
     };
 
         addGoogleTranslateWidget();
+
+         const anInterval=setInterval(()=>{
+        var im=document.querySelector(".VIpgJd-ZVi9od-l4eHX-hSRGPd img");
+        if(im){
+            im.style.display="inline";
+            console.log("Img found");
+            clearInterval(anInterval);
+        }
+        console.log("Img not found");
+      },300);
+
+      const interv=setInterval(()=>{
+        var dropdown=document.querySelector(".goog-te-combo");
+        if(dropdown){
+            var styling=document.createElement("style");
+            styling.innerHTML=`.goog-te-combo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 13px;
+    color: #495057;
+    min-width: 120px;
+    max-width: 140px;
+    height: 32px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 32px;
+    position: relative;
+}
+
+.goog-te-combo:hover {
+    border-color: #4285f4;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.15);
+    color: #212529;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234285f4' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    transform: translateY(-1px);
+}
+
+.goog-te-combo:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1), 0 2px 8px rgba(66, 133, 244, 0.15);
+    color: #212529;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234285f4' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    transform: translateY(-1px);
+}
+
+.goog-te-combo:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(66, 133, 244, 0.2);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234285f4' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 14l4-4 4 4'/%3e%3c/svg%3e");
+}
+
+/* Optional: Add a subtle animation for the dropdown arrow on hover */
+.goog-te-combo:hover {
+    background-position: right 8px center;
+    animation: arrowBounce 0.3s ease-in-out;
+}
+
+@keyframes arrowBounce {
+    0%, 100% { background-position: right 8px center; }
+    50% { background-position: right 6px center; }
+}
+
+/* Disabled state styling */
+.goog-te-combo:disabled {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+    box-shadow: none;
+    transform: none;
+}
+
+.goog-te-combo:disabled:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #e9ecef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236c757d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}`;
+        document.head.appendChild(styling);
+        clearInterval(interv);
+        }
+        console.log("Dropdown not found!!");
+
+
+      },300);
 
         if (menuOpen) {
             document.body.style.overflow = 'hidden';
@@ -100,17 +202,15 @@ const Navbarr = ({ setDarkMode }) => {
                             </ul>
                            <div className='flex items-center mr-2 md:mr-4 lg:mr-6'>
                                 <div className='flex h-full items-center'>
-                                    {/*<div id="google_translate_element" className="text-xs min-w-[200px] mr-48 sm:mr-40 md:mr-32 lg:mr-24 xl:mr-20"></div>*/}
+                                   
                                     <div id="google_translate_element" className="text-xs min-w-[200px] mr-8 sm:mr-24 md:mr-16 lg:mr-24 xl:mr-20"></div>
                                 </div>
                             </div>
-                           {/*} <li className='cursor-pointer hover:underline'>हिंदी</li><span>&nbsp;|&nbsp;</span>
-                            <li className='cursor-pointer hover:underline'>ગુજરાતી</li><span>&nbsp;|&nbsp;</span>
-                            <li className='cursor-pointer hover:underline'>English</li>*/}
+                           
                          
                 </div>                
                 {menuOpen && (
-                    <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-nav-color z-20 flex flex-col pt-16 overflow-y-auto animate-fadeIn">
+                    <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-nav-color z-20 flex flex-col pt-16 overflow-y-auto animate-fadeIn" id="whole">
                         <div className="absolute top-0 left-0 w-full bg-white py-3 px-4 flex justify-between items-center border-b border-gray-100 shadow-sm">
                             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => {setMenuOpen(false); navigate('/')}}>
                                 <img className="h-8 w-8" src="./images/logo.svg" alt="IIIT Surat logo" />
@@ -125,14 +225,7 @@ const Navbarr = ({ setDarkMode }) => {
                             </button>
                         </div>
                         <ul className='flex flex-col w-full text-center justify-start items-center space-y-4 px-4 pb-20 pt-4'>
-                            {/* Language selector for mobile */}
-                            <div className="w-full max-w-[280px] mb-3 mt-2">
-                                <div className="flex justify-center items-center space-x-3 py-2 border-b border-gray-200 pb-4">
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors">हिंदी</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors">ગુજરાતી</button>
-                                    <button className="text-sm font-medium px-3 py-1.5 bg-blue-50 text-[#003481] rounded-md transition-colors">English</button>
-                                </div>
-                            </div>
+                            
                             
                             <div className="w-full max-w-[280px] mb-2">
                                 <div className="flex flex-col space-y-2 w-full">
