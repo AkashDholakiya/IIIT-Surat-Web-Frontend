@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi'; // Hamburger and close icons
-import './Navbarr.css';
+
 
 const Navbarr = ({ setDarkMode }) => {
     const location = useLocation();

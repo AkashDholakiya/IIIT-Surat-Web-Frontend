@@ -4,7 +4,7 @@ import Eleven from "./Pages/11";
 import Nine from "./Pages/9";
 import Footer from "./components/footer";
 import "./index.css";
-import Navbarr from "./components/Navbarr/Navbarr";
+import Navbarr from "./components/Navbarr";
 import Home from "./Pages/Home";
 import AboutTnp from "./components/tnp/AboutTnp";
 import AboutTnpOfficer from "./components/tnp/AboutTnpTnpOfficer";
