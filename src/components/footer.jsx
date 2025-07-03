@@ -152,7 +152,7 @@ export default function Footer() {
       <div className='flex flex-col sm:flex-row justify-between items-center p-5 sm:p-6 text-[#003482]'>
         <div className='max-lg:text-center max-lg:border-t max-lg:w-full max-lg:mb-3 max-lg:border-custom-red'>
           <p className='text-sm sm:text-base max-lg:mt-3'>Terms of use . Privacy Policy . Visit us . Contact us</p>
-          <p className='text-base max-lg:text-sm'>All copyright © reserved on 2024 by IIIT Surat.</p>
+          <p className='text-base max-lg:text-sm'>All copyright © reserved on {new Date().getFullYear()} by IIIT Surat.</p>
         </div>
         <div className='text-right max-lg:text-center max-lg:border-t max-lg:w-full max-lg:border-custom-red'>
           <p className='text-sm sm:text-base max-lg:mt-3'>Designed and developed by IIIT Surat students</p>
