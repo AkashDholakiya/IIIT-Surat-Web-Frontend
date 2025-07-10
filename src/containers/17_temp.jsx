@@ -14,7 +14,7 @@ const AboutRnc = () => {
             Research & Innovation Cell - IIIT, Surat
           </div>
           <div className="mt-3.5 text-zinc-700 max-w-[506px] max-md:max-w-full">
-            This Page is Under Construction...
+          Where curiosity meets creativity — enabling research that matters.
           </div>
           <div className="flex gap-4 mt-8 font-medium text-white max-md:flex-wrap">
             <div className="px-8 py-2.5 bg-blue-900 rounded-[50px] max-md:px-5">
@@ -37,23 +37,116 @@ const AboutRnc = () => {
 
               </div>
               <div className="mt-9 text-lg text-justify text-zinc-700 max-md:max-w-full">
-                This Page is Under Construction...
+               The Research & Innovation Cell (R&C Cell) at Indian Institute of Information Technology, Surat (IIIT Surat) is the driving force behind the institute’s pursuit of academic excellence and societal impact through cutting-edge research, interdisciplinary collaboration, and innovation-led initiatives.
+
+Though IIIT Surat is a relatively young institute, it has rapidly built a reputation for nurturing research and innovation across domains such as artificial intelligence, data science, embedded systems, VLSI, wireless communication, cybersecurity, and IoT.
                 <br />
-                This Page is Under Construction...
+               
               </div>
               <div className="mt-10 max-md:max-w-full">Research</div>
               <div className="flex-grow border-t border-[#660000] border-bold" />
               <div className="mt-6 text-lg text-justify text-zinc-700 max-md:max-w-full">
-                This Page is Under Construction...
+                The Research Department at IIIT Surat is dedicated to fostering a culture of inquiry, experimentation, and advancement in science and technology. It plays a key role in transforming classroom knowledge into real-world impact through focused research initiatives.<br></br>
+<br></br>
+<div>
+  <p>🔍 Key Objectives:</p><br></br>
+  <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
+    <li style={{ marginBottom: '12px' }}>
+      Encourage faculty-led and student-driven research projects across core and emerging domains.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Secure funding from government bodies like DST, AICTE, MeitY, and industrial collaborations.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Promote multidisciplinary research across fields like:
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Artificial Intelligence & Machine Learning.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Cybersecurity & Cryptography.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      VLSI Design & Embedded Systems.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Wireless Communication & Signal Processing.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Internet of Things (IoT) and Smart Systems.
+    </li>
+    <li>
+      Data Science & Analytics.
+    </li>
+  </ul>
+</div>
+
                 <br />
-                This Page is Under Construction...
+            <div>
+  <p>🤝Collaborations & Mentorship</p>
+  <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
+    <li style={{ marginBottom: '12px' }}>
+     Leading institutions like IIT Gandhinagar, DAIICT, and NIT Surat.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+     Industry partners such as Gujarat Informatics, GNFC, MediaTek, and others.
+    </li>
+  </ul>
+</div>
+
               </div>
               <div className="mt-10 max-md:max-w-full">Innovation</div>
               <div className="flex-grow border-t border-[#660000] border-bold" />
               <div className="mt-6 text-lg text-justify text-zinc-700 max-md:max-w-full my-11">
-                This Page is Under Construction...
+               <div>
+  <p>
+    At IIIT Surat, innovation is not just encouraged — it is embedded in our culture.
+    The Innovation vertical of the R&amp;C Cell is committed to turning bold ideas into impactful solutions that address real-world problems.
+  </p>
+
+  <p style={{ marginTop: '16px' }}>🚀 What We Do</p>
+  <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
+    <li style={{ marginBottom: '12px' }}>
+      Support student-led prototypes through funding and mentorship under programs like SSIP Gujarat.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Organize innovation challenges, hackathons, and idea-pitching events to spark creativity across disciplines.
+    </li>
+    <li>
+      Promote a mindset of design thinking, rapid prototyping, and product development.
+    </li>
+  </ul>
+</div>
+
                 <br />
-                This Page is Under Construction...
+               <div>
+  <p>🏢 Ecosystem & Support</p>
+  <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
+    <li style={{ marginBottom: '12px' }}>
+      Our in-house innovation cell works closely with the Entrepreneurship Cell (Ruminate).
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Students receive guidance on IP filing, product validation, and startup incubation.
+    </li>
+    <li>
+      Active collaboration with industry and government programs ensures real-world exposure and market-readiness.
+    </li>
+  </ul>
+
+  <p style={{ marginTop: '24px' }}>🌱 Student Startups & Prototypes</p>
+  <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
+    <li style={{ marginBottom: '12px' }}>
+      Several innovative ideas developed at IIIT Surat have received SSIP Grant Funding.
+    </li>
+    <li style={{ marginBottom: '12px' }}>
+      Recognition at state and national hackathons.
+    </li>
+    <li>
+      Pathways to incubation and startup registration under the Gujarat Startup Policy.
+    </li>
+  </ul>
+</div>
+
               </div>
             </div>
           </div>
