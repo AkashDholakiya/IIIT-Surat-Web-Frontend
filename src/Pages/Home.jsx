@@ -234,7 +234,7 @@ const Home = () => {
           <img className='-z-10 absolute w-full h-full' src="/images/main.png" alt="iiit" />
           <div className="bg-[#660000CC] w-full h-full z-40" />
           <div className="absolute z-50 text-white p-24">
-            <h1 className='text-2xl font-semibold'>Research & Innovation</h1>
+            <h1 className='text-2xl font-semibold'>Research, Innovation & Development</h1>
             <p className='mt-4 text-justify text-base'>IIIT Surat emphasises research activities at undergraduate and doctoral programmes. It has conducted several research projects funded by various funding agencies and several industries. It is determined to emerge as a knowledge enterprise that is closely engaged in research and innovation.</p>
           </div>
         </div>
