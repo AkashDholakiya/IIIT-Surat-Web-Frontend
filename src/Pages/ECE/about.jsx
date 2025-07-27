@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { backend_local } from '../../utils/helper';
 
-const API_URL = "http://127.0.0.1:8000/depthomedesc/";
+const API_URL = `${backend_local}/depthomedesc/`;
 const TARGET_DEPT_ID = "UGECE";
 
 const AboutECE = () => {

@@ -14,72 +14,72 @@ const Navbarr = ({ setDarkMode }) => {
     useEffect(() => {
 
 
-    const toObserve=new MutationObserver(()=>{
-      var banner=document.querySelector("div.skiptranslate");
-      var iframe=document.getElementById(":1.container");
-      if(!iframe){
-        var page=document.querySelector("#whole");
-        if(page){
-          page.style.marginTop="0px";
-        }
-      }
-      else if(banner && banner.style.display==="none"){
-        var page=document.querySelector("#whole");
-        if(page){
-          page.style.marginTop="0px";
-        }
-      }else{
-        var page=document.querySelector("#whole");
-        if(page){
-          page.style.marginTop="40px";
-        }
-      }
+        const toObserve = new MutationObserver(() => {
+            var banner = document.querySelector("div.skiptranslate");
+            var iframe = document.getElementById(":1.container");
+            if (!iframe) {
+                var page = document.querySelector("#whole");
+                if (page) {
+                    page.style.marginTop = "0px";
+                }
+            }
+            else if (banner && banner.style.display === "none") {
+                var page = document.querySelector("#whole");
+                if (page) {
+                    page.style.marginTop = "0px";
+                }
+            } else {
+                var page = document.querySelector("#whole");
+                if (page) {
+                    page.style.marginTop = "40px";
+                }
+            }
 
-    });
+        });
 
-    toObserve.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+        toObserve.observe(document.body, {
+            childList: true,
+            subtree: true,
+        });
 
-        const addGoogleTranslateWidget=()=>{
+        const addGoogleTranslateWidget = () => {
 
-          if (document.getElementById("google-translate-script")) return;
-          var script=document.createElement("script");
-          script.id="google-translate-script";
-          script.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-          document.body.appendChild(script);
+            if (document.getElementById("google-translate-script")) return;
+            var script = document.createElement("script");
+            script.id = "google-translate-script";
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            document.body.appendChild(script);
 
 
         };
-           window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages: "en,hi,gu",
-          layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-        },
-        "google_translate_element"
-      );
-    };
+        window.googleTranslateElementInit = () => {
+            new window.google.translate.TranslateElement(
+                {
+                    pageLanguage: "en",
+                    includedLanguages: "en,hi,gu",
+                    layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                },
+                "google_translate_element"
+            );
+        };
 
         addGoogleTranslateWidget();
 
-         const anInterval=setInterval(()=>{
-        var im=document.querySelector(".VIpgJd-ZVi9od-l4eHX-hSRGPd img");
-        if(im){
-            im.style.display="inline";
-            console.log("Img found");
-            clearInterval(anInterval);
-        }
-        console.log("Img not found");
-      },300);
+        const anInterval = setInterval(() => {
+            var im = document.querySelector(".VIpgJd-ZVi9od-l4eHX-hSRGPd img");
+            if (im) {
+                im.style.display = "inline";
+                console.log("Img found");
+                clearInterval(anInterval);
+            }
+            console.log("Img not found");
+        }, 300);
 
-      const interv=setInterval(()=>{
-        var dropdown=document.querySelector(".goog-te-combo");
-        if(dropdown){
-            var styling=document.createElement("style");
-            styling.innerHTML=`.goog-te-combo {
+        const interv = setInterval(() => {
+            var dropdown = document.querySelector(".goog-te-combo");
+            if (dropdown) {
+                var styling = document.createElement("style");
+                styling.innerHTML = `.goog-te-combo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
     border: 1px solid #ced4da;
@@ -152,20 +152,20 @@ const Navbarr = ({ setDarkMode }) => {
     border-color: #e9ecef;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236c757d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 }`;
-        document.head.appendChild(styling);
-        clearInterval(interv);
-        }
-        console.log("Dropdown not found!!");
+                document.head.appendChild(styling);
+                clearInterval(interv);
+            }
+            console.log("Dropdown not found!!");
 
 
-      },300);
+        }, 300);
 
         if (menuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
         }
-        
+
         return () => {
             document.body.style.overflow = 'auto';
         };
@@ -181,42 +181,42 @@ const Navbarr = ({ setDarkMode }) => {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-    };    return (
+    }; return (
         <div className='text-nav-text-color'>
             <nav className='bg-nav-color relative text-sm font-medium w-full h-10 px-4 md:px-8'>
                 <div className='flex justify-between lg:justify-start h-full items-center'>
-                           <div className="lg:hidden flex items-center justify-center">
-                                <button 
-                                    onClick={toggleMenu} 
-                                    className="p-1 focus:outline-none rounded-full hover:bg-gray-200 transition-colors duration-200"
-                                    aria-label="Open menu"
-                                >
-                                    <HiMenu size={24} />
-                                </button>
-                            </div>
-                            <ul className='hidden min-[810px]:flex lg:flex-1'>
-                                <li className='cursor-pointer hover:underline'>Students</li><span>&nbsp;.&nbsp;</span>
-                                <li className='cursor-pointer hover:underline'>Faculty & Staff</li><span>&nbsp;.&nbsp;</span>
-                                <li className='cursor-pointer hover:underline'>Alumni</li><span>&nbsp;.&nbsp;</span>
-                                <li className='cursor-pointer hover:underline'>Contact us</li>
-                            </ul>
-                           <div className='flex items-center mr-2 md:mr-4 lg:mr-6'>
-                                <div className='flex h-full items-center'>
-                                   
-                                    <div id="google_translate_element" className="text-xs min-w-[200px] mr-8 sm:mr-24 md:mr-16 lg:mr-24 xl:mr-20"></div>
-                                </div>
-                            </div>
-                           
-                         
-                </div>                
+                    <div className="lg:hidden flex items-center justify-center">
+                        <button
+                            onClick={toggleMenu}
+                            className="p-1 focus:outline-none rounded-full hover:bg-gray-200 transition-colors duration-200"
+                            aria-label="Open menu"
+                        >
+                            <HiMenu size={24} />
+                        </button>
+                    </div>
+                    <ul className='hidden min-[810px]:flex lg:flex-1'>
+                        <li className='cursor-pointer hover:underline'>Students</li><span>&nbsp;.&nbsp;</span>
+                        <li className='cursor-pointer hover:underline'>Faculty & Staff</li><span>&nbsp;.&nbsp;</span>
+                        <li className='cursor-pointer hover:underline'>Alumni</li><span>&nbsp;.&nbsp;</span>
+                        <li className='cursor-pointer hover:underline'>Contact us</li>
+                    </ul>
+                    <div className='flex items-center mr-2 md:mr-4 lg:mr-6'>
+                        <div className='flex h-full items-center'>
+
+                            <div id="google_translate_element" className="text-xs min-w-[200px] mr-8 sm:mr-24 md:mr-16 lg:mr-24 xl:mr-20"></div>
+                        </div>
+                    </div>
+
+
+                </div>
                 {menuOpen && (
                     <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-nav-color z-20 flex flex-col pt-16 overflow-y-auto animate-fadeIn" id="whole">
                         <div className="absolute top-0 left-0 w-full bg-white py-3 px-4 flex justify-between items-center border-b border-gray-100 shadow-sm">
-                            <div className="flex items-center space-x-2 cursor-pointer" onClick={() => {setMenuOpen(false); navigate('/')}}>
+                            <div className="flex items-center space-x-2 cursor-pointer" onClick={() => { setMenuOpen(false); navigate('/') }}>
                                 <img className="h-8 w-8" src="./images/logo.svg" alt="IIIT Surat logo" />
                                 <span className="font-medium text-sm text-custom-blue">IIIT Surat</span>
                             </div>
-                            <button 
+                            <button
                                 onClick={toggleMenu}
                                 className="p-2 focus:outline-none rounded-full hover:bg-gray-100 transition-colors duration-200"
                                 aria-label="Close menu"
@@ -225,8 +225,8 @@ const Navbarr = ({ setDarkMode }) => {
                             </button>
                         </div>
                         <ul className='flex flex-col w-full text-center justify-start items-center space-y-4 px-4 pb-20 pt-4'>
-                            
-                            
+
+
                             <div className="w-full max-w-[280px] mb-2">
                                 <div className="flex flex-col space-y-2 w-full">
                                     <Link to="/students" className="text-sm font-medium py-2 px-3 hover:bg-blue-50 hover:text-[#003481] rounded-md transition-colors">
@@ -262,7 +262,7 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Academics" index={3} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                 { label: "Academic Calendar", to: "/academics/academic-calendar" },
+                                { label: "Academic Calendar", to: "/academics/academic-calendar" },
                                 { label: "Holiday List", to: "/academics/holiday-list" },
                                 { label: "B.Tech. Rule", to: "/academics/btech-academic-rules" },
                                 { label: "Ph.D. Rule", to: "/academics/phd-academic-rules" },
@@ -286,28 +286,26 @@ const Navbarr = ({ setDarkMode }) => {
                                 {
                                     label: "Placement Guidelines", to: "/tnp/placement-guidelines"
                                 }
-                            ]} />                            <div className="w-full max-w-[280px] flex justify-center">                            <Link 
-                                to={'/rnc'} 
-                                onClick={() => setMenuOpen(false)} 
-                                className={`font-medium py-3 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${
-                                    location.pathname === '/rnc' || location.pathname.startsWith('/rnc/') 
-                                        ? 'text-[#003481] bg-blue-50' 
+                            ]} />                            <div className="w-full max-w-[280px] flex justify-center">                            <Link
+                                to={'/rnc'}
+                                onClick={() => setMenuOpen(false)}
+                                className={`font-medium py-3 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${location.pathname === '/rnc' || location.pathname.startsWith('/rnc/')
+                                        ? 'text-[#003481] bg-blue-50'
                                         : 'hover:text-[#660000]'
-                                }`}
+                                    }`}
                             >
                                 Research & innovation
                             </Link>
                             </div>
 
                             <div className="w-full max-w-[280px] flex justify-center">
-                                <Link 
-                                    to={'/career'} 
-                                    onClick={() => setMenuOpen(false)} 
-                                    className={`font-medium py-3 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${
-                                        location.pathname === '/career' || location.pathname.startsWith('/career/') 
-                                            ? 'text-[#003481] bg-blue-50' 
+                                <Link
+                                    to={'/career'}
+                                    onClick={() => setMenuOpen(false)}
+                                    className={`font-medium py-3 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${location.pathname === '/career' || location.pathname.startsWith('/career/')
+                                            ? 'text-[#003481] bg-blue-50'
                                             : 'hover:text-[#660000]'
-                                    }`}
+                                        }`}
                                 >
                                     Career
                                 </Link>
@@ -320,11 +318,11 @@ const Navbarr = ({ setDarkMode }) => {
                                 // { label: "Events and gallery", to: "/notfound" },
                                 // { label: "Annual Fest", to: "/notfound" },
                                 { label: "Institute Committee", to: "/notfound" }
-                            ]} />                        
+                            ]} />
                         </ul>
                     </div>
                 )}
-            </nav>            
+            </nav>
             <div className='w-full max-lg:h-40 h-36 relative'>
                 <div className="flex mt-5 w-full">
                     <div className='w-full max-lg:px-2'>
@@ -378,27 +376,25 @@ const Navbarr = ({ setDarkMode }) => {
                             ]} />
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Training & placement" index={5} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
-                                 { label: "About TNP", to: "/tnp/about-tnp" },
-                                 { label: "TNP Officer", to: "/tnp/tnp-officer" },
-                                 { label: "Placement Team", to: "/tnp/placement-team" },
-                                 { label: "Placement Stats", to: "/tnp/placement-statistics" },
-                                 { label: "Our Achievers", to: "/tnp/our-achievers" },
-                                 {
-                                     label: "Placement Guidelines", to: "/tnp/placement-guidelines"
-                                 }
-                            ]} />                            <Link to={'/rnc'} className={`font-medium py-2 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${
-                                location.pathname === '/rnc' || location.pathname.startsWith('/rnc/') 
-                                    ? 'text-[#003481] bg-blue-50' 
+                                { label: "About TNP", to: "/tnp/about-tnp" },
+                                { label: "TNP Officer", to: "/tnp/tnp-officer" },
+                                { label: "Placement Team", to: "/tnp/placement-team" },
+                                { label: "Placement Stats", to: "/tnp/placement-statistics" },
+                                { label: "Our Achievers", to: "/tnp/our-achievers" },
+                                {
+                                    label: "Placement Guidelines", to: "/tnp/placement-guidelines"
+                                }
+                            ]} />                            <Link to={'/rnc'} className={`font-medium py-2 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${location.pathname === '/rnc' || location.pathname.startsWith('/rnc/')
+                                    ? 'text-[#003481] bg-blue-50'
                                     : 'hover:text-[#660000]'
-                            }`}>
+                                }`}>
                                 Research & innovation
                             </Link>
 
-                            <Link to={'/career'} className={`font-medium py-2 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${
-                                location.pathname === '/career' || location.pathname.startsWith('/career/') 
-                                    ? 'text-[#003481] bg-blue-50' 
+                            <Link to={'/career'} className={`font-medium py-2 cursor-pointer select-none transition-colors duration-200 px-2 rounded-md ${location.pathname === '/career' || location.pathname.startsWith('/career/')
+                                    ? 'text-[#003481] bg-blue-50'
                                     : 'hover:text-[#660000]'
-                            }`}>
+                                }`}>
                                 Career
                             </Link>
 
@@ -421,16 +417,16 @@ const DropdownItem = ({ setOpenDropdown, setMenuOpen, label, index, openDropdown
     const [isMobile, setIsMobile] = useState(false);
     const location = useLocation();
     const currentPath = location.pathname;
-    
+
     // Default link for the parent item (first link in the dropdown)
     const defaultLink = links.length > 0 ? links[0].to : '/';
-    
+
     // Check if any of the links match the current path
-    const isActive = links.some(link => 
-        currentPath === link.to || 
+    const isActive = links.some(link =>
+        currentPath === link.to ||
         (link.to !== '/' && currentPath.startsWith(link.to + '/'))
     );
-    
+
     useEffect(() => {
         const checkIsMobile = () => {
             setIsMobile(window.innerWidth < 1024);
@@ -439,7 +435,7 @@ const DropdownItem = ({ setOpenDropdown, setMenuOpen, label, index, openDropdown
         window.addEventListener('resize', checkIsMobile);
         return () => window.removeEventListener('resize', checkIsMobile);
     }, []);
-    
+
     const handleClick = () => {
         setOpenDropdown(null);
         setMenuOpen(false);
@@ -451,19 +447,19 @@ const DropdownItem = ({ setOpenDropdown, setMenuOpen, label, index, openDropdown
             openDropdown === index ? closeDropdown() : toggleDropdown(index);
         }
     };
-    
+
     return (
         <div
             className={`relative ${isMobile ? 'w-full max-w-[280px]' : 'mx-5'}`}
             onMouseEnter={() => !isMobile && toggleDropdown(index)}
             onMouseLeave={() => !isMobile && closeDropdown()}
         >
-            <Link 
+            <Link
                 to={defaultLink}
                 onClick={handleParentClick}
                 className={`font-medium py-2 cursor-pointer select-none transition-colors duration-200 w-full block relative
-                    ${isActive 
-                        ? 'text-[#003481] bg-blue-50 rounded-md' 
+                    ${isActive
+                        ? 'text-[#003481] bg-blue-50 rounded-md'
                         : 'hover:text-[#660000] hover:rounded-md'}`}
             >
                 {label}
@@ -478,15 +474,15 @@ const DropdownItem = ({ setOpenDropdown, setMenuOpen, label, index, openDropdown
                     text-sm text-left rounded-lg bg-white p-3 z-30 shadow-lg border border-gray-100
                     animate-fadeIn`}>
                     {links.map((link, idx) => {
-                        const isLinkActive = currentPath === link.to || 
+                        const isLinkActive = currentPath === link.to ||
                             (link.to !== '/' && currentPath.startsWith(link.to + '/'));
                         return (
-                            <Link 
-                                key={idx} 
-                                to={link.to} 
-                                onClick={() => handleClick()} 
+                            <Link
+                                key={idx}
+                                to={link.to}
+                                onClick={() => handleClick()}
                                 className={`block font-medium p-2 transition-colors duration-200 rounded-md
-                                    ${isLinkActive 
+                                    ${isLinkActive
                                         ? 'bg-blue-50 text-[#003481]'
                                         : 'hover:bg-gray-50 hover:text-[#660000]'
                                     }`}

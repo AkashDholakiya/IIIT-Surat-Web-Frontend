@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { backend_local } from '../../utils/helper';
 
 const semesterOrder = {
   'Curriculum': 0,
@@ -22,7 +23,7 @@ const SyllabusUGCSE = () => {
   useEffect(() => {
     const fetchSyllabus = async () => {
       try {
-        const res = await fetch('http://127.0.0.1:8000/syllabus/');
+        const res = await fetch(`${backend_local}/syllabus/`);
         if (!res.ok) throw new Error('Failed to fetch syllabus data');
         const data = await res.json();
         const filteredUGCSE = data.filter(

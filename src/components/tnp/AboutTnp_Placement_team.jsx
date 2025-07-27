@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { backend_local } from "../../utils/helper";
 
 function AboutTnpPlacementTeam() {
   const [placementTeam, setPlacementTeam] = useState([]);
@@ -6,7 +7,7 @@ function AboutTnpPlacementTeam() {
 
   const fetchPlacementTeam = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/placementteam/");
+      const response = await fetch(`${backend_local}/placementteam/`);
       const data = await response.json();
       setPlacementTeam(data);
     } catch (err) {

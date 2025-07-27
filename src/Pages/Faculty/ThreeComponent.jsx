@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { backend_local } from '../../utils/helper';
 
 const ThreeComponent = ({ facultyId, facultyName }) => {
   const [faculty, setFaculty] = useState(null);
@@ -29,8 +30,8 @@ const ThreeComponent = ({ facultyId, facultyName }) => {
       setLoading(true);
       try {
         const [resFac, resDscr] = await Promise.all([
-          fetch('http://127.0.0.1:8000/faculty/'),
-          fetch('http://127.0.0.1:8000/facultydscr/'),
+          fetch(`${backend_local}/faculty/`),
+          fetch(`${backend_local}/facultydscr/`),
         ]);
 
         const facultyData = await resFac.json();

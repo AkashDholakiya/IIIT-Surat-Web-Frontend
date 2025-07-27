@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { backend_local } from '../../utils/helper';
 
 const FourComponent = ({ facultyId, facultyName }) => {
   const [qualifications, setQualifications] = useState([]);
@@ -11,8 +12,8 @@ const FourComponent = ({ facultyId, facultyName }) => {
       setLoading(true);
       try {
         const [qualRes, facRes] = await Promise.all([
-          axios.get('http://127.0.0.1:8000/facultyqualification/'),
-          axios.get('http://127.0.0.1:8000/faculty/'),
+          axios.get(`${backend_local}/facultyqualification/`),
+          axios.get(`${backend_local}/faculty/`),
         ]);
 
         const filteredQuals = qualRes.data

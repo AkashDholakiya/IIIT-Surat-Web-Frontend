@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { backend_local } from '../../utils/helper';
 
 const FacultyECE = () => {
   const [faculties, setFaculties] = useState([]);
@@ -13,7 +14,7 @@ const FacultyECE = () => {
   useEffect(() => {
     const fetchFaculties = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/faculty/');
+        const response = await fetch(`${backend_local}/faculty/`);
         if (!response.ok) throw new Error('Failed to fetch faculties');
         const data = await response.json();
 

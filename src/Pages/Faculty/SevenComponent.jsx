@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { backend_local } from '../../utils/helper';
 
 // Helper to convert month number to month name
 const monthNames = [
@@ -26,7 +27,7 @@ const SevenComponent = ({ facultyId, facultyName }) => {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/fother/');
+        const response = await axios.get(`${backend_local}/fother/`);
         // Filter by facultyId and active status
         const filtered = response.data.filter(
           (item) => item.fac_id === facultyId && item.active === 1

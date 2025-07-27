@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { backend_local } from '../../utils/helper';
 
 const pubTypeMap = {
   IJ: 'Journal',
@@ -14,7 +15,7 @@ const SixComponent = ({ facultyId, facultyName }) => {
   useEffect(() => {
     const fetchPublications = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/publication/');
+        const response = await axios.get(`${backend_local}/publication/`);
         let filtered = response.data.filter(
           item => item.fac_id === facultyId && item.active === 1
         );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { backend_local } from '../../utils/helper';
 const ResearchScholars = () => {
   const [scholars, setScholars] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -8,7 +8,7 @@ const ResearchScholars = () => {
   useEffect(() => {
     const fetchScholars = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/research_scholars/');
+        const response = await fetch(`${backend_local}/research_scholars/`);
         if (!response.ok) throw new Error('Failed to fetch scholars');
         const data = await response.json();
         setScholars(data.filter(s => s.active === 1));

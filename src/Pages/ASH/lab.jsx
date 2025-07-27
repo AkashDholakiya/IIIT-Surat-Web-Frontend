@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { backend_local } from '../../utils/helper';
+
 
 // Utility: safely render HTML, keeping <br> formatting
 function renderHTML(html) {
@@ -13,7 +15,7 @@ const ASHLab = () => {
   useEffect(() => {
     const fetchLabs = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/laboratory/');
+        const response = await fetch(`${backend_local}/laboratory/`);
         if (!response.ok) throw new Error('Failed to fetch labs');
         const data = await response.json();
         const filtered = data.filter(

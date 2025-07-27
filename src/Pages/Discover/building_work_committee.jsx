@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card8 from "../../components/cards/Card_8";
 import profile from "../../assets/images/case.png";
+import { backend_local } from "../../utils/helper";
 
 const committeeName = "Building & Works Committee";
 
@@ -10,7 +11,7 @@ const BWC = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/authorities/")
+    fetch(`${backend_local}/authorities/`)
       .then((response) => {
         if (!response.ok) throw new Error("Network response was not ok");
         return response.json();
