@@ -8,11 +8,11 @@ const AllTnp = () => {
 
   const links = [
     { key: 'about-tnp', label: 'About TNP Cell', description: '' },
-    { key: 'tnp-officer', label: 'T&P Officer', description: 'Dr. Vijaykumar Radadiya' },
-    { key: 'placement-team', label: 'Placement Team', description: 'Working for better future' },
-    { key: 'placement-statistics', label: 'Placement Statistics', description: 'Well equipped 3 labs' },
-    { key: 'our-achievers', label: 'Our Achievers', description: 'Syllabus' },
-    { key: 'placement-guidelines', label: 'Placement Guidelines', description: 'Research Highlights' },
+    { key: 'tnp-officer', label: 'T&P Officer' },
+    { key: 'placement-team', label: 'Placement Team' },
+    { key: 'placement-statistics', label: 'Placement Statistics' },
+    { key: 'our-achievers', label: 'Our Achievers' },
+    { key: 'placement-guidelines', label: 'Placement Guidelines' },
   ];
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
