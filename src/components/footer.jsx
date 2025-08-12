@@ -91,7 +91,7 @@ export default function Footer() {
 
         {/* Our Partner */}
         <div className='flex-1 mb-6 sm:mb-0'>
-          <p className='text-custom-red font-semibold text-lg md:text-xl leading-7 md:leading-8 mb-2'>Our partner</p>
+          <p className='text-custom-red font-semibold text-lg md:text-xl leading-7 md:leading-8 mb-2'>OUR PARTNER</p>
           <div>
             {Partners.map((partner, index) => (
               <Link key={index} to={partner.link} target='_blank' className='flex items-center mb-3'>

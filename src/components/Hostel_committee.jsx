@@ -38,7 +38,7 @@ export default function HostelCommitee() {
       <div className="flex gap-10">
         <PlaylistView cardsData={peoples} />
       </div>
-      <StudentCoordinator title={"Student Coordinator"} cardsData={roles} />
+      <StudentCoordinator title={"Cheif Warden"} cardsData={roles} />
     </div>
   );
 }
