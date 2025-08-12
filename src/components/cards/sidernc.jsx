@@ -3,7 +3,7 @@ import React from 'react';
 const SideRnc = ({ setContent, activeContent, content }) => {
     const links = [
         { key: 'about', label: `About R&c cell` },
-        { key: 'head', label: `R&c Officer`, description: 'Dr. Vijaykumar Radadiya' },
+        { key: 'head', label: `R&c Officer` },
         { key: 'board', label: 'Research Advisory Board', description: 'Working for better future' },
         { key: 'patents', label: 'Patents & Research', description: 'Working for better future' },
         { key: 'publication', label: 'Publications', description: 'Well equipped 3 labs' },
