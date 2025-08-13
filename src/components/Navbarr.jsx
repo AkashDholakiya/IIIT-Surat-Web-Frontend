@@ -246,13 +246,13 @@ const Navbarr = ({ setDarkMode }) => {
 
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Discover IIIT Surat" index={1} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "About us", to: "/discover/about" },
-                                { label: "Vision & Mission", to: "/discover/vision" },
+                                { label: "Vision & Mission", to: "/discover/vision-mission" },
                                 { label: "Director’s Desk", to: "/discover/director" },
                                 { label: "Administration", to: "/discover/admin" },
                                 { label: "Board of governance", to: "/discover/Board-of-governance" },
                                 { label: "Finance committee", to: "/discover/finance" },
                                 { label: "Senate", to: "/discover/senate-members" },
-                                { label: "Building & Works Committee", to: "/discover/finance" },
+                                { label: "Building & Works Committee", to: "/discover/building-work-committee" },
                                 { label: "Website Development Team", to: "/discover/websiteteam" },
                                 { label: "MOUs", to: "/discover/mou" },
                             ]} />
@@ -344,13 +344,13 @@ const Navbarr = ({ setDarkMode }) => {
                         <ul className='flex w-full h-full text-center justify-center items-center text-[0.90rem]'>
                             <DropdownItem setOpenDropdown={setOpenDropdown} setMenuOpen={setMenuOpen} label="Discover IIIT Surat" index={1} openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeDropdown={closeDropdown} links={[
                                 { label: "About us", to: "/discover/about" },
-                                { label: "Vision & Mission", to: "/discover/vision" },
+                                { label: "Vision & Mission", to: "/discover/vision-mission" },
                                 { label: "Director’s Desk", to: "/discover/director" },
                                 { label: "Administration", to: "/discover/admin" },
                                 { label: "Board of governance", to: "/discover/Board-of-governance" },
                                 { label: "Finance committee", to: "/discover/finance" },
                                 { label: "Senate", to: "/discover/senate-members" },
-                                { label: "Building & Works Committee", to: "/discover/finance" },
+                                { label: "Building & Works Committee", to: "/discover/building-work-committee" },
                                 { label: "Website Development Team", to: "/discover/websiteteam" },
                                 { label: "MOUs", to: "/discover/mou" },
                             ]} />

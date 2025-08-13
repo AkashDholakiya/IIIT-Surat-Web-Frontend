@@ -8,8 +8,8 @@ const Members = ({ cardsData }) => {
           {cardsData.map((item, index) => (
             <CoordinatorCard
               key={index}
-              name={item.name} // Assuming 'title' corresponds to name
-              role={item.role} // Assuming 'description' corresponds to role
+              name={item.pub_author} // Assuming 'title' corresponds to name
+              role={item.pub_jour_conf} // Assuming 'description' corresponds to role
               imgSrc={item.imgSrc} // Assuming 'imgUrl' corresponds to imgSrc
               linkurl={item.linkurl}
             />
